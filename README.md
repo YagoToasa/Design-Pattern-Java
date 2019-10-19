@@ -1,6 +1,6 @@
 # Design-Pattern-Java
 
-![](https://img.shields.io/badge/Language-Java-green)
+![](https://img.shields.io/badge/Language-Java-green)	![](https://img.shields.io/badge/Number%20of%20team-10-orange)
 
 ## Creational patterns
 
