@@ -19,6 +19,14 @@ public class ShopAssistantFactory extends AbstractFactory {
     public static ShopAssistantFactory getInstance(){
         return singleton;
     }
+    /**
+     * @methodName: createShopAssistant
+     * @author: Wenyue Li
+     * @description: 
+     * @date: 1:05 上午 2019/10/22
+     * @param [name]
+     * @return Person.ShopAssistant
+     **/
     @Override
     public ShopAssistant createShopAssistant(String name){
         new ShopAssistant(name);
