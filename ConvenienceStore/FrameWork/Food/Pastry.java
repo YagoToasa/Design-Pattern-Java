@@ -1,5 +1,7 @@
 package Food;
 
+import World.WorldObserver;
+
 import java.util.*;
 
 /**
@@ -14,4 +16,8 @@ public class Pastry extends FoodPrototype implements WorldObserver {
     }
 
 
+    @Override
+    public void update() {
+
+    }
 }
