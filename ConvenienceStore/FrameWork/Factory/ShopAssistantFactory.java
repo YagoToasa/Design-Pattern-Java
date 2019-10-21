@@ -5,12 +5,12 @@ import java.util.*;
 /**
  * 
  */
-public abstract class AbstractFactory {
+public class ShopAssistantFactory extends AbstractFactory {
 
     /**
      * Default constructor
      */
-    public AbstractFactory() {
+    public ShopAssistantFactory() {
     }
 
 }
