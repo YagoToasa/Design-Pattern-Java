@@ -1,17 +1,19 @@
 package Coupons;
 
-import java.util.*;
-
 /**
- * 
+ * @className: Discount
+ * @author: Shidan Cheng
+ * @description: 折扣信息抽象类 实现化角色
+ * @designPattern: Bridge
+ * @date: 2:23 上午 2019/10/22
+ * @version: v1.0
  */
-public class Discount {
+public abstract class Discount {
+    protected float discountOff;
 
-    /**
-     * Default constructor
-     */
-    public Discount() {
+
+    public float getDiscountOff(){
+        return discountOff;
     }
-
 
 }

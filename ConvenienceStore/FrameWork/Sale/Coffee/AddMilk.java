@@ -10,13 +10,21 @@ import Price.PriceTable;
  * @date: 12:01 上午 2019/10/22
  */
 public class AddMilk extends AddDecorator {
+
+    /**
+     * 默认构造器-加牛奶
+     *
+     * @methodName: AddMilk
+     * @param coffee: 需要装饰的咖啡
+     * @return:
+     */
     public AddMilk(CoffeeMachine coffee) {
-        this.coffee = coffee;
+        super(coffee);
         this.addMaterial();
     }
 
     @Override
     public void addMaterial() {
-        this.coffee.addMaterial("+牛奶",PriceTable.MATERIAL_MILK);
+        this.coffee.addMaterial("+牛奶", PriceTable.MATERIAL_MILK);
     }
 }

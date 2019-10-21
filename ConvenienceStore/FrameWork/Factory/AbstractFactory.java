@@ -22,7 +22,7 @@ public abstract class AbstractFactory {
      * @author: Wenyue Li
      * @description: 生成人物
      * @date: 8:39 下午 2019/10/21
-     * @param [name]
+     * @param name:
      * @return Person.Person
      **/
 

@@ -12,13 +12,19 @@ import Sale.Coffee.CoffeeMachine;
  */
 public class DecoratorDemo {
     public static void main(String[] args) {
-        CoffeeMachine coffee = new BasicCoffee();
-        coffee.describeCoffeeInfo();
-        coffee = new AddSugar(coffee.getCoffee());
-        coffee.describeCoffeeInfo();
-        coffee = new AddMilk(coffee.getCoffee());
-        coffee.describeCoffeeInfo();
-        coffee = new AddMilk(coffee.getCoffee());
-        coffee.describeCoffeeInfo();
+        System.out.println("START ========================= Decorator Demo =========================");
+        System.out.println("> 顾客: 请做一杯原味咖啡。");
+        CoffeeMachine coffeeMix = new BasicCoffee();
+        coffeeMix.describeCoffeeInfo();
+        System.out.println("> 顾客: 太苦了，请加点糖。");
+        coffeeMix = new AddSugar(coffeeMix.getCoffee());
+        coffeeMix.describeCoffeeInfo();
+        System.out.println("> 顾客: 还是有些苦，请再加点牛奶。");
+        coffeeMix = new AddMilk(coffeeMix.getCoffee());
+        coffeeMix.describeCoffeeInfo();
+        System.out.println("> 顾客: 算了，还是在再加点糖吧！");
+        coffeeMix = new AddSugar(coffeeMix.getCoffee());
+        coffeeMix.describeCoffeeInfo();
+        System.out.println("E N D ========================= Decorator Demo =========================");
     }
 }

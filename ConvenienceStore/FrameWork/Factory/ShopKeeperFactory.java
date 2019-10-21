@@ -10,9 +10,6 @@ import java.util.*;
  * @date: 8:42 下午 2019/10/21
  * @version: v1.0
  */
-/**
- * 
- */
 public class ShopKeeperFactory extends AbstractFactory {
     private volatile static ShopKeeperFactory singleton = new ShopKeeperFactory();
     //singleton
@@ -21,7 +18,7 @@ public class ShopKeeperFactory extends AbstractFactory {
      * @author: Wenyue Li
      * @description: 返回店主工厂实例
      * @date: 12:35 上午 2019/10/22
-     * @param []
+     * @param:
      * @return Factory.ShopKeeperFactory
      **/
     public static ShopKeeperFactory getInstance(){
@@ -32,7 +29,7 @@ public class ShopKeeperFactory extends AbstractFactory {
      * @author: Wenyue Li
      * @description: 新店主，并打印店主名
      * @date: 12:43 上午 2019/10/22
-     * @param [name]
+     * @param:
      * @return Person.ShopKeeper
      **/
     @Override

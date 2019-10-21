@@ -10,6 +10,10 @@ package Sale.Coffee;
 public abstract class AddDecorator implements CoffeeMachine {
     protected CoffeeMachine coffee;
 
+    public AddDecorator(CoffeeMachine coffee){
+        this.coffee = coffee;
+    }
+
     @Override
     public CoffeeMachine getCoffee() {
         return this.coffee;
@@ -34,5 +38,11 @@ public abstract class AddDecorator implements CoffeeMachine {
         return null;
     }
 
+    /**
+     * 抽象方法: 加配料
+     *
+     * @methodName: addMaterial
+     * @return: void
+     */
     public abstract void addMaterial();
 }

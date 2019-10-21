@@ -10,8 +10,9 @@ import Price.PriceTable;
  * @date: 12:02 上午 2019/10/22
  */
 public class BasicCoffee implements CoffeeMachine {
-    private int price;
-    private String material;
+
+    private int price;                              //价格
+    private String material;                        //配料
 
     public BasicCoffee() {
         this.price = PriceTable.COFFEE;
@@ -25,7 +26,7 @@ public class BasicCoffee implements CoffeeMachine {
 
     @Override
     public void describeCoffeeInfo() {
-        System.out.println("制作成功: 咖啡[基础] * 1, 价格 = "+ this.price + " 元");
+        System.out.println("制作成功: 咖啡[基础] * 1, 价格 = " + this.price + " 元");
     }
 
     @Override

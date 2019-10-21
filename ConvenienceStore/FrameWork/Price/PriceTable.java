@@ -9,6 +9,6 @@ package Price;
 public class PriceTable {
     public final static int COFFEE = 7;
     public final static int MATERIAL_MILK = 3;
-    public final static int MATERIAL_SUGAR = 3;
+    public final static int MATERIAL_SUGAR = 2;
 
 }

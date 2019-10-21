@@ -24,7 +24,7 @@ public class ShopAssistantFactory extends AbstractFactory {
      * @author: Wenyue Li
      * @description: 
      * @date: 1:05 上午 2019/10/22
-     * @param [name]
+     * @param name: 
      * @return Person.ShopAssistant
      **/
     @Override

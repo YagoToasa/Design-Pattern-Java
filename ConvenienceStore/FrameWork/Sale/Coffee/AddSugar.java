@@ -11,8 +11,14 @@ import Price.PriceTable;
  */
 public class AddSugar extends AddDecorator {
 
+    /**
+     * 默认构造器-加糖
+     *
+     * @methodName: AddSugar
+     * @param coffee: 需要装饰的咖啡
+     */
     public AddSugar(CoffeeMachine coffee) {
-        this.coffee = coffee;
+        super(coffee);
         this.addMaterial();
     }
 

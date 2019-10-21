@@ -16,9 +16,9 @@ public class CustomerFactory extends AbstractFactory {
     /**
      * @methodName: createCustomer
      * @author: Wenyue Li
-     * @description: 
+     * @description:
      * @date: 1:05 上午 2019/10/22
-     * @param [name]
+     * @param name:
      * @return Person.Customer
      **/
     @Override
