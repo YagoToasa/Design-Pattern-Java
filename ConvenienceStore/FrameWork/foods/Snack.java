@@ -22,12 +22,14 @@ public class Snack extends Food implements WorldObserver {
 
     @Override
     public Food createClone() {
-        try{
+        try {
+            System.out.printf(">>> 克隆-食品原型: %s", this.name);
             return (Food) this.clone();
-        } catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
-            return null;
         }
+        System.out.println(">>> 失败");
+        return null;
     }
 
     @Override

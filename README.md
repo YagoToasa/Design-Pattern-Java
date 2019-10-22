@@ -24,7 +24,7 @@
 - [ ] Builder
 - [ ] factory Method
 - [ ] Object Pool
-- [ ] Prototype
+- [x] Prototype
 - [ ] Singleton
 
 ## Structural patterns
@@ -36,7 +36,7 @@
 - [ ] Facade
 - [ ] Flyweight
 - [ ] Private Class Data
-- [ ] Proxy
+- [x] Proxy
 
 ## Behavioral patterns
 

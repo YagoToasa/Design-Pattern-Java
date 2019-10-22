@@ -18,16 +18,16 @@ public class StateDemo {
         FoodState normalNearSpoilage = new Normal(1);
         FoodState spoilage = new Spoilage(0);
         Food cola = new Drink("可乐");
-        cola.describeFoodInfomation();
+        cola.describeFoodDetailInformation();
         System.out.println("---");
         cola.setFoodState(normal);
-        cola.describeFoodInfomation();
+        cola.describeFoodDetailInformation();
         System.out.println("---");
         cola.setFoodState(normalNearSpoilage);
-        cola.describeFoodInfomation();
+        cola.describeFoodDetailInformation();
         System.out.println("---");
         cola.setFoodState(spoilage);
-        cola.describeFoodInfomation();
+        cola.describeFoodDetailInformation();
         System.out.println("E N D =========================== State Demo ===========================\n");
     }
 }

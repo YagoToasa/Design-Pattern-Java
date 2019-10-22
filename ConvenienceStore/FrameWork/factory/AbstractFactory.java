@@ -48,7 +48,7 @@ public abstract class AbstractFactory {
      * @update: by Shidan Cheng
      **/
     public Food createFood(String name, FoodType type){
-        return new FoodProxy().createFood(name, type);
+        return new FoodProxy(FoodFactory.getInstance()).createFood(name, type);
     }
 
 }
