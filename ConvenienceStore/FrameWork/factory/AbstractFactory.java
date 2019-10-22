@@ -1,6 +1,7 @@
 package factory;
 
 import foods.Food;
+import foods.FoodProxy;
 import person.Customer;
 import person.ShopAssistant;
 import person.ShopKeeper;
@@ -44,10 +45,10 @@ public abstract class AbstractFactory {
      * @param name: 食品名称
      * @param type: 食品类型
      * @return Food.FoodPrototype
+     * @update: by Shidan Cheng
      **/
     public Food createFood(String name, FoodType type){
-
-        return null;
+        return new FoodProxy().createFood(name, type);
     }
 
 }

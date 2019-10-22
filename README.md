@@ -19,11 +19,11 @@
 
 ## Creational patterns
 
-- [ ] Abstract factory
-- [ ] Builder
-- [ ] factory Method
+- [x] Abstract factory
+- [x] Builder
+- [x] factory Method
 - [ ] Object Pool
-- [ ] Prototype
+- [x] Prototype
 - [x] Singleton
 
 ## Structural patterns
@@ -34,19 +34,19 @@
 - [x] Decorator
 - [ ] Facade
 - [ ] Flyweight
-- [ ] Private Class Data
-- [ ] Proxy
+- [x] Private Class Data
+- [x] Proxy
 
 ## Behavioral patterns
 
 - [ ] Chain of responsibility
 - [ ] Command
 - [ ] Interpreter
-- [ ] Iterator
+- [x] Iterator
 - [ ] Mediator
 - [ ] Memento
 - [ ] Null Object
-- [ ] Observer
+- [x] Observer
 - [ ] State
 - [ ] Strategy
 - [ ] Template Method
