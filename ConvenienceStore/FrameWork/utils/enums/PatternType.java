@@ -8,15 +8,12 @@ package utils.enums;
  * @version: v1.0
  */
 public enum PatternType {
-    // Creational patterns
     AbstractFactory,
     Builder,
     FactoryMethod,
     ObjectPool,
     Prototype,
     Singleton,
-
-    // Structural patterns
     Adaptor,
     Bridge,
     Composite,
@@ -25,8 +22,6 @@ public enum PatternType {
     Flyweight,
     PrivateClassData,
     Proxy,
-
-    // Behavioral patterns
     ChainOfResponsibility,
     Command,
     Interpreter,
@@ -39,8 +34,6 @@ public enum PatternType {
     Strategy,
     TemplateMethod,
     Visitor,
-
-    // Unknown patterns
     Filer,
     CompositeEntity,
     Specification,
