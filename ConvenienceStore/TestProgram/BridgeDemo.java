@@ -2,7 +2,7 @@ import coupons.*;
 
 /**
  * @className: BridgeDemo
- * @description: 桥梁模式测试程序
+ * @description: Bridge 桥梁模式 测试程序
  * @author: Shidan Cheng
  * @date: 3:04 上午 2019/10/22
  * @version: v1.0
@@ -33,7 +33,7 @@ public class BridgeDemo {
         snacksCoupon.discribeCouponInfo();
         snacksCoupon = new SnacksCoupon(discount70off);
         snacksCoupon.discribeCouponInfo();
-        System.out.println("E N D =========================== Bridge Demo ==========================");
+        System.out.println("E N D =========================== Bridge Demo ==========================\n");
 
     }
 }

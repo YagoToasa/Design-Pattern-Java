@@ -13,4 +13,5 @@ public abstract interface Iterator {
 
     public boolean hasNext();
     public Food next();
+    public boolean remove();
 }

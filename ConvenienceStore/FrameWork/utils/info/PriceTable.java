@@ -23,6 +23,13 @@ public class PriceTable {
         FOOD_PRICE_MAP.put("可乐", 3);
         FOOD_PRICE_MAP.put("雪碧", 3);
         FOOD_PRICE_MAP.put("矿泉水", 2);
+        FOOD_PRICE_MAP.put("巧克力", 8);
+        FOOD_PRICE_MAP.put("饼干", 5);
+        FOOD_PRICE_MAP.put("薯片", 6);
+        FOOD_PRICE_MAP.put("蛋挞", 4);
+        FOOD_PRICE_MAP.put("饭团", 3);
+        FOOD_PRICE_MAP.put("蛋黄酥", 8);
+
     }
 
 }

@@ -16,15 +16,16 @@
 - 注释: 必须包含作者
 
 
+> 注: 写完Demo的才算完成
 
 ## Creational patterns
 
-- [x] Abstract factory
-- [x] Builder
-- [x] factory Method
+- [ ] Abstract factory
+- [ ] Builder
+- [ ] factory Method
 - [ ] Object Pool
-- [x] Prototype
-- [x] Singleton
+- [ ] Prototype
+- [ ] Singleton
 
 ## Structural patterns
 
@@ -34,8 +35,8 @@
 - [x] Decorator
 - [ ] Facade
 - [ ] Flyweight
-- [x] Private Class Data
-- [x] Proxy
+- [ ] Private Class Data
+- [ ] Proxy
 
 ## Behavioral patterns
 
@@ -46,8 +47,8 @@
 - [ ] Mediator
 - [ ] Memento
 - [ ] Null Object
-- [x] Observer
-- [ ] State
+- [ ] Observer
+- [x] State
 - [ ] Strategy
 - [ ] Template Method
 - [ ] Visitor

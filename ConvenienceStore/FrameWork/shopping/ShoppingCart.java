@@ -12,7 +12,7 @@ import utils.info.ConstantTable;
  */
 public class ShoppingCart {
 
-    private Food[] foods;                  //食品容器
+    private Food[] foods;                           //食品容器
     private int maxSize;                            //购物车最大容量
     private int currentSize;                        //购物车当前容量
 

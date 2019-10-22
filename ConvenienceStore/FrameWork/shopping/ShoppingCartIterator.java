@@ -24,13 +24,14 @@ public class ShoppingCartIterator implements Iterator {
         this.shoppingCart = shoppingCart;
         this.shoppingCartSize = shoppingCart.getCurrentSize();
     }
-    
+
     /**
      * 移除游标对应的食品
      *
      * @methodName: remove
      * @return: boolean
      */
+    @Override
     public boolean remove() {
         boolean result = shoppingCart.removeFoodByIndex(cursor);
         shoppingCartSize = shoppingCart.getCurrentSize();
@@ -38,10 +39,12 @@ public class ShoppingCartIterator implements Iterator {
         return result;
     }
 
+
     @Override
     public boolean hasNext() {
         return cursor != shoppingCartSize;
     }
+
 
     @Override
     public Food next() {
@@ -51,5 +54,4 @@ public class ShoppingCartIterator implements Iterator {
             return shoppingCart.getFoodByIndex(cursor++);
         }
     }
-
 }
