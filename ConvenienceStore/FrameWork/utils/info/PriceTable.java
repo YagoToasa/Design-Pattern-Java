@@ -1,5 +1,8 @@
 package utils.info;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @className: PriceList
  * @description: 杂货店价格表
@@ -13,5 +16,13 @@ public class PriceTable {
 
     public final static int A_COMBO_REDUCE_PRICE = 3;
     public final static int B_COMBO_REDUCE_PRICE = 5;
+
+    public final static Map<String, Integer> FOOD_PRICE_MAP = new HashMap<>();
+
+    static {
+        FOOD_PRICE_MAP.put("可乐", 3);
+        FOOD_PRICE_MAP.put("雪碧", 3);
+        FOOD_PRICE_MAP.put("矿泉水", 2);
+    }
 
 }

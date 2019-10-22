@@ -9,6 +9,6 @@ package utils.enums;
  */
 public enum FoodType {
     Drink,              //饮料
-    Snack,              //小吃
+    Snack,              //零食
     Pastry,             //糕点
 }
