@@ -61,12 +61,12 @@
 
 ### Creational patterns
 
-- [ ] Abstract Factory
+- [x] Abstract Factory
 - [x] Builder
 - [ ] Factory Method
 - [ ] Object Pool
 - [x] Prototype
-- [ ] Singleton
+- [x] Singleton
 
 ### Structural patterns
 

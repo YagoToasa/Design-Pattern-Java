@@ -31,8 +31,6 @@ public class AbstractFactoryDemo {
             foodList.add(food);
         }
         System.out.println("> 开始生产食品 [Completed]");
-
-
         System.out.println("E N D ====================== AbstractFactory Demo ======================\n");
     }
 }

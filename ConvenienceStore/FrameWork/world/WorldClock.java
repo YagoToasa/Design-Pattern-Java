@@ -12,7 +12,7 @@ import java.util.List;
  * @date: 7:59 下午 2019/10/21
  */
 public class WorldClock {
-    private int day = 0;                                                    //世界天数
+    private int day = 1;                                                    //世界天数
     private List<WorldObserver> worldObserversList = new ArrayList<>();     //观测者列表
 
     private static class WorldClockHolder {
@@ -20,6 +20,7 @@ public class WorldClock {
     }
 
     private WorldClock() {
+        this.day = 1;
     }
 
     /**

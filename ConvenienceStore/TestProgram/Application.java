@@ -81,6 +81,7 @@ public class Application {
                     PrototypeDemo.main(args);
                     break;
                 case "6":
+                    SingletonDemo.main(args);
                     break;
                 case "7":
                     break;
