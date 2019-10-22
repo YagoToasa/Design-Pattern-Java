@@ -19,9 +19,9 @@
 
 ## Creational patterns
 
-- [ ] Abstract Factory
+- [ ] Abstract factory
 - [ ] Builder
-- [ ] Factory Method
+- [ ] factory Method
 - [ ] Object Pool
 - [ ] Prototype
 - [x] Singleton

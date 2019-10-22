@@ -77,7 +77,7 @@
 											"top": -278,
 											"width": 81.61181640625,
 											"height": 13,
-											"text": "(from Factory)"
+											"text": "(from factory)"
 										},
 										{
 											"_type": "LabelView",
@@ -253,7 +253,7 @@
 											"top": -46,
 											"width": 81.61181640625,
 											"height": 13,
-											"text": "(from Factory)"
+											"text": "(from factory)"
 										},
 										{
 											"_type": "LabelView",
@@ -429,7 +429,7 @@
 											"top": -62,
 											"width": 81.61181640625,
 											"height": 13,
-											"text": "(from Factory)"
+											"text": "(from factory)"
 										},
 										{
 											"_type": "LabelView",
@@ -793,7 +793,7 @@
 											"top": 64,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Person)"
+											"text": "(from person)"
 										},
 										{
 											"_type": "LabelView",
@@ -969,7 +969,7 @@
 											"top": 48,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Person)"
+											"text": "(from person)"
 										},
 										{
 											"_type": "LabelView",
@@ -1319,7 +1319,7 @@
 											"top": 431,
 											"width": 44.07177734375,
 											"height": 13,
-											"text": "Person"
+											"text": "person"
 										},
 										{
 											"_type": "LabelView",
@@ -1333,7 +1333,7 @@
 											"top": 144,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Person)"
+											"text": "(from person)"
 										},
 										{
 											"_type": "LabelView",
@@ -1697,7 +1697,7 @@
 											"top": 138,
 											"width": 81.61181640625,
 											"height": 13,
-											"text": "(from Factory)"
+											"text": "(from factory)"
 										},
 										{
 											"_type": "LabelView",
@@ -1874,7 +1874,7 @@
 											"top": 122,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Food)"
+											"text": "(from foods)"
 										},
 										{
 											"_type": "LabelView",
@@ -3403,7 +3403,7 @@
 											"top": 2624,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Store)"
+											"text": "(from store)"
 										},
 										{
 											"_type": "LabelView",
@@ -3579,7 +3579,7 @@
 											"top": 1488,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Store)"
+											"text": "(from store)"
 										},
 										{
 											"_type": "LabelView",
@@ -4034,7 +4034,7 @@
 							"top": 280,
 							"width": 137,
 							"height": 25,
-							"text": "Factory Method"
+							"text": "factory Method"
 						},
 						{
 							"_type": "UMLAssociationView",
@@ -6370,7 +6370,7 @@
 											"top": 165,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Person)"
+											"text": "(from person)"
 										},
 										{
 											"_type": "LabelView",
@@ -6819,7 +6819,7 @@
 											"top": 48,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Food)"
+											"text": "(from foods)"
 										},
 										{
 											"_type": "LabelView",
@@ -7183,7 +7183,7 @@
 											"top": 48,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Food)"
+											"text": "(from foods)"
 										},
 										{
 											"_type": "LabelView",
@@ -7359,7 +7359,7 @@
 											"top": 16,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Food)"
+											"text": "(from foods)"
 										},
 										{
 											"_type": "LabelView",
@@ -7629,7 +7629,7 @@
 											"top": 32,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Food)"
+											"text": "(from foods)"
 										},
 										{
 											"_type": "LabelView",
@@ -8100,7 +8100,7 @@
 											"top": -576,
 											"width": 100.4072265625,
 											"height": 13,
-											"text": "(from Repository)"
+											"text": "(from repository)"
 										},
 										{
 											"_type": "LabelView",
@@ -8289,7 +8289,7 @@
 											"top": -544,
 											"width": 100.4072265625,
 											"height": 13,
-											"text": "(from Repository)"
+											"text": "(from repository)"
 										},
 										{
 											"_type": "LabelView",
@@ -8465,7 +8465,7 @@
 											"top": -560,
 											"width": 100.4072265625,
 											"height": 13,
-											"text": "(from Repository)"
+											"text": "(from repository)"
 										},
 										{
 											"_type": "LabelView",
@@ -8914,7 +8914,7 @@
 											"top": -624,
 											"width": 100.4072265625,
 											"height": 13,
-											"text": "(from Repository)"
+											"text": "(from repository)"
 										},
 										{
 											"_type": "LabelView",
@@ -9090,7 +9090,7 @@
 											"top": -640,
 											"width": 100.4072265625,
 											"height": 13,
-											"text": "(from Repository)"
+											"text": "(from repository)"
 										},
 										{
 											"_type": "LabelView",
@@ -9266,7 +9266,7 @@
 											"top": -640,
 											"width": 100.4072265625,
 											"height": 13,
-											"text": "(from Repository)"
+											"text": "(from repository)"
 										},
 										{
 											"_type": "LabelView",
@@ -10274,7 +10274,7 @@
 											"top": 448,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from World)"
+											"text": "(from world)"
 										},
 										{
 											"_type": "LabelView",
@@ -10722,7 +10722,7 @@
 											"top": 142,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Food)"
+											"text": "(from foods)"
 										},
 										{
 											"_type": "LabelView",
@@ -10898,7 +10898,7 @@
 											"top": 478,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Food)"
+											"text": "(from foods)"
 										},
 										{
 											"_type": "LabelView",
@@ -11074,7 +11074,7 @@
 											"top": 306,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Food)"
+											"text": "(from foods)"
 										},
 										{
 											"_type": "LabelView",
@@ -11251,7 +11251,7 @@
 											"top": 320,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from World)"
+											"text": "(from world)"
 										},
 										{
 											"_type": "LabelView",
@@ -16523,7 +16523,7 @@
 											"top": -80,
 											"width": 93.208984375,
 											"height": 13,
-											"text": "(from Shopping)"
+											"text": "(from shopping)"
 										},
 										{
 											"_type": "LabelView",
@@ -16699,7 +16699,7 @@
 											"left": 432,
 											"width": 93.208984375,
 											"height": 13,
-											"text": "(from Shopping)"
+											"text": "(from shopping)"
 										},
 										{
 											"_type": "LabelView",
@@ -16873,7 +16873,7 @@
 											"top": -272,
 											"width": 93.208984375,
 											"height": 13,
-											"text": "(from Shopping)"
+											"text": "(from shopping)"
 										},
 										{
 											"_type": "LabelView",
@@ -17954,7 +17954,7 @@
 											"top": 1775,
 											"width": 44.07177734375,
 											"height": 13,
-											"text": "Person"
+											"text": "person"
 										},
 										{
 											"_type": "LabelView",
@@ -17968,7 +17968,7 @@
 											"top": 2802,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Person)"
+											"text": "(from person)"
 										},
 										{
 											"_type": "LabelView",
@@ -18619,7 +18619,7 @@
 											"top": 16,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Store)"
+											"text": "(from store)"
 										},
 										{
 											"_type": "LabelView",
@@ -18887,7 +18887,7 @@
 											"top": -32,
 											"width": 73.67724609375,
 											"height": 13,
-											"text": "(from Store)"
+											"text": "(from store)"
 										},
 										{
 											"_type": "LabelView",
@@ -19893,7 +19893,7 @@
 											"top": 1475,
 											"width": 56.32275390625,
 											"height": 13,
-											"text": "Coupons"
+											"text": "coupons"
 										},
 										{
 											"_type": "LabelView",
@@ -19907,7 +19907,7 @@
 											"top": 256,
 											"width": 90.30810546875,
 											"height": 13,
-											"text": "(from Coupons)"
+											"text": "(from coupons)"
 										},
 										{
 											"_type": "LabelView",
@@ -20084,7 +20084,7 @@
 											"top": -366,
 											"width": 90.30810546875,
 											"height": 13,
-											"text": "(from Coupons)"
+											"text": "(from coupons)"
 										},
 										{
 											"_type": "LabelView",
@@ -20260,7 +20260,7 @@
 											"top": -222,
 											"width": 90.30810546875,
 											"height": 13,
-											"text": "(from Coupons)"
+											"text": "(from coupons)"
 										},
 										{
 											"_type": "LabelView",
@@ -20436,7 +20436,7 @@
 											"top": 50,
 											"width": 90.30810546875,
 											"height": 13,
-											"text": "(from Coupons)"
+											"text": "(from coupons)"
 										},
 										{
 											"_type": "LabelView",
@@ -20894,7 +20894,7 @@
 											"top": 64,
 											"width": 90.30810546875,
 											"height": 13,
-											"text": "(from Coupons)"
+											"text": "(from coupons)"
 										},
 										{
 											"_type": "LabelView",
@@ -21335,7 +21335,7 @@
 											"font": "Arial;13;0",
 											"width": 90.30810546875,
 											"height": 13,
-											"text": "(from Coupons)"
+											"text": "(from coupons)"
 										},
 										{
 											"_type": "LabelView",
@@ -21505,7 +21505,7 @@
 											"top": -16,
 											"width": 90.30810546875,
 											"height": 13,
-											"text": "(from Coupons)"
+											"text": "(from coupons)"
 										},
 										{
 											"_type": "LabelView",
@@ -21681,7 +21681,7 @@
 											"top": 32,
 											"width": 90.30810546875,
 											"height": 13,
-											"text": "(from Coupons)"
+											"text": "(from coupons)"
 										},
 										{
 											"_type": "LabelView",
@@ -22152,7 +22152,7 @@
 											"top": 342,
 											"width": 79.4599609375,
 											"height": 13,
-											"text": "(from Person)"
+											"text": "(from person)"
 										},
 										{
 											"_type": "LabelView",
@@ -22422,7 +22422,7 @@
 											"top": -32,
 											"width": 81.61181640625,
 											"height": 13,
-											"text": "(from Factory)"
+											"text": "(from factory)"
 										},
 										{
 											"_type": "LabelView",
@@ -22737,7 +22737,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Factory",
+					"name": "factory",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -22900,7 +22900,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Person",
+					"name": "person",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -22908,7 +22908,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFt7f8ViFtAJBE="
 							},
-							"name": "Person",
+							"name": "person",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -23046,7 +23046,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Food",
+					"name": "foods",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -23374,7 +23374,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Repository",
+					"name": "repository",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -23619,7 +23619,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Store",
+					"name": "store",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -23875,7 +23875,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Sale",
+					"name": "sale",
 					"ownedElements": [
 						{
 							"_type": "UMLPackage",
@@ -24163,7 +24163,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "World",
+					"name": "world",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -24250,7 +24250,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Pay",
+					"name": "pay",
 					"ownedElements": [
 						{
 							"_type": "UMLPackage",
@@ -24537,7 +24537,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Shopping",
+					"name": "shopping",
 					"ownedElements": [
 						{
 							"_type": "UMLInterface",
@@ -24630,7 +24630,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Coupons",
+					"name": "coupons",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -24638,7 +24638,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFt7g4ecXJlRzY="
 							},
-							"name": "Coupons",
+							"name": "coupons",
 							"isAbstract": true
 						},
 						{

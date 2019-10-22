@@ -1,6 +1,6 @@
-import Shopping.Iterator;
-import Shopping.ShoppingCart;
-import Shopping.ShoppingCartIterator;
+import shopping.Iterator;
+import shopping.ShoppingCart;
+import shopping.ShoppingCartIterator;
 
 /**
  * @className: IteratorDemo

@@ -1,4 +1,4 @@
-import Coupons.*;
+import coupons.*;
 
 /**
  * @className: BridgeDemo

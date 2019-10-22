@@ -1,7 +1,7 @@
-import Sale.Coffee.AddMilk;
-import Sale.Coffee.AddSugar;
-import Sale.Coffee.BasicCoffee;
-import Sale.Coffee.CoffeeMachine;
+import sale.coffee.AddMilk;
+import sale.coffee.AddSugar;
+import sale.coffee.BasicCoffee;
+import sale.coffee.CoffeeMachine;
 
 /**
  * @className: DecoratorDemo
