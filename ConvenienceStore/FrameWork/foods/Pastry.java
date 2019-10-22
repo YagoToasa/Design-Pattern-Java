@@ -2,6 +2,7 @@ package foods;
 
 import foods.state.Normal;
 import foods.state.Spoilage;
+import utils.enums.PatternType;
 import utils.info.ConstantTable;
 import utils.info.PriceTable;
 import world.WorldObserver;
@@ -21,14 +22,14 @@ public class Pastry extends Food implements WorldObserver {
     }
 
     @Override
-    public Food createClone() {
+    public Food createClone(PatternType patternType) {
         try {
-            System.out.printf(">>> 克隆-食品原型: %s", this.name);
-            return (Food) this.clone();
+            createCloneHeader(patternType);
+            Food result =  (Food) this.clone();
+            return result;
         } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
+            System.out.println("[x]");
         }
-        System.out.println(">>> 失败");
         return null;
     }
 

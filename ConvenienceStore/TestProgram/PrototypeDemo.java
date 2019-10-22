@@ -1,6 +1,7 @@
 import factory.FoodFactory;
 import foods.Food;
 import foods.FoodProxy;
+import utils.enums.PatternType;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,59 +24,65 @@ public class PrototypeDemo {
      * @return: Map<String, Food>
      */
     public static Map<String, Food> initFoodPrototype() {
-
+        System.out.println("> 初始化食物原型映射表");
         FoodProxy foodProxy = new FoodProxy(FoodFactory.getInstance());
         Map<String, Food> foodPrototypeMap = new HashMap<>();
 
         FOOD_ITEM_TYPE_MAP.forEach((k, v) -> {
             foodPrototypeMap.put(k, foodProxy.createFood(k, v));
         });
-        System.out.println("> 初始化食物原型映射表 [Completed]\n");
+        System.out.println("> 初始化食物原型映射表 [Completed]");
+        System.out.println("---");
         return foodPrototypeMap;
     }
 
 
     public static void main(String[] args) {
         System.out.println("START ========================= Prototype Demo =========================");
-        System.out.println("> 初始化食物原型映射表");
+
         Map<String, Food> foodPrototypeMap = initFoodPrototype();
         System.out.println("> 展示食物原型映射表");
         foodPrototypeMap.forEach((k, v) -> {
             v.describeFoodBriefInformation();
         });
-        System.out.println("> 展示食物原型映射表 [Completed]\n");
+        System.out.println("> 展示食物原型映射表 [Completed]");
+        System.out.println("---");
 
         System.out.println("> 开始基于原型克隆食品");
         Map<String, Food> foodCloned = new HashMap<>();
         foodPrototypeMap.forEach((k, v) -> {
-            foodCloned.put(k, v.createClone());
+            foodCloned.put(k, v.createClone(PatternType.Prototype));
             System.out.println("[√]");
         });
-        System.out.println("> 开始基于原型克隆食品 [Completed]\n");
+        System.out.println("> 开始基于原型克隆食品 [Completed]");
+        System.out.println("---");
 
         System.out.println("> 展示克隆食品表");
         foodCloned.forEach((k, v) -> {
             v.describeFoodBriefInformation();
         });
-        System.out.println("> 展示克隆食品表 [Completed]\n");
+        System.out.println("> 展示克隆食品表 [Completed]");
+        System.out.println("---");
 
         System.out.println("> 改变食物原型的价格 全体涨价10元");
         foodPrototypeMap.forEach((k, v) -> {
             v.setPrice(v.getPrice() + 10);
         });
-        System.out.println("> 改变食品原型的价格 [Completed]\n");
+        System.out.println("> 改变食品原型的价格 [Completed]");
+        System.out.println("---");
 
         System.out.println("> 展示食物原型映射表");
         foodPrototypeMap.forEach((k, v) -> {
             v.describeFoodBriefInformation();
         });
-        System.out.println("> 展示食物原型映射表 [Completed]\n");
+        System.out.println("> 展示食物原型映射表 [Completed]");
+        System.out.println("---");
 
         System.out.println("> 展示克隆食品表");
         foodCloned.forEach((k, v) -> {
             v.describeFoodBriefInformation();
         });
-        System.out.println("> 展示克隆食品表 [Completed]\n");
+        System.out.println("> 展示克隆食品表 [Completed]");
 
         System.out.println("E N D ========================= Prototype Demo =========================\n");
     }

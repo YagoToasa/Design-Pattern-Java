@@ -2,6 +2,7 @@ package sale.combo;
 
 import foods.Food;
 import shopping.ShoppingCart;
+import utils.info.ConstantTable;
 
 /**
  * @className: FoodCombo
@@ -14,16 +15,15 @@ import shopping.ShoppingCart;
 public class FoodCombo {
     private ShoppingCart shoppingCart;
 
-    FoodCombo(){
+    public FoodCombo() {
         try {
-            this.shoppingCart = new ShoppingCart();
-        }catch (Exception e){
+            this.shoppingCart = new ShoppingCart(ConstantTable.FOOD_COMBO_SIZE);
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public void addItem(Food food){
+    public void addItem(Food food) {
         shoppingCart.addFood(food);
     }
-
 }

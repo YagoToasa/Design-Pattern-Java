@@ -2,6 +2,7 @@ package foods;
 
 import foods.state.FoodState;
 import foods.state.Normal;
+import utils.enums.PatternType;
 import utils.info.PriceTable;
 
 import static utils.info.ConstantTable.FOOD_SHELF_LIFE_MAP;
@@ -14,7 +15,7 @@ import static utils.info.ConstantTable.FOOD_SHELF_LIFE_MAP;
  * @date: 8:48 上午 2019/10/22
  * @version: v1.0
  */
-public abstract class Food implements Cloneable{
+public abstract class Food implements Cloneable {
     protected FoodState state;          //食品品质
     protected String name;              //食品名称
     protected String type;              //食品类型
@@ -34,7 +35,24 @@ public abstract class Food implements Cloneable{
      * @methodName: createDeepClone
      * @return: foods.Food
      */
-    public abstract Food createClone();
+    public abstract Food createClone(PatternType patternType);
+
+    /**
+     * 辅助方法, 根据不同的模式调整输出克隆文本信息
+     *
+     * @methodName: createCloneHeader
+     * @param patternType: PatternType 模式名称
+     * @return: void
+     */
+    protected void createCloneHeader(PatternType patternType) {
+        if (patternType == PatternType.Prototype) {
+            System.out.printf(">>> 克隆-食品原型: %s", this.name);
+        } else if (patternType == PatternType.Iterator) {
+            System.out.printf(">>> 添加-食品: %s", this.name);
+        } else {
+            System.out.printf(">>> 制作-食品: %s", this.name);
+        }
+    }
 
     /**
      * 描述食品的详细信息
@@ -56,8 +74,8 @@ public abstract class Food implements Cloneable{
      * @methodName: describeFoodBriefInformation
      * @return: void
      */
-    public void describeFoodBriefInformation(){
-        System.out.printf("食品名称:%-5s\t类型:%-5s\t售价:%d元;\n", this.name,this.type,this.price );
+    public void describeFoodBriefInformation() {
+        System.out.printf("食品名称:%-5s\t类型:%-5s\t售价:%d元;\n", this.name, this.type, this.price);
     }
 
 
@@ -93,5 +111,15 @@ public abstract class Food implements Cloneable{
      */
     public int getPrice() {
         return price;
+    }
+
+    /**
+     * 获取食品名称
+     *
+     * @methodName: getName
+     * @return: String
+     */
+    public String getName() {
+        return name;
     }
 }

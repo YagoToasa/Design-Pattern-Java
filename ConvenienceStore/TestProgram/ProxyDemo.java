@@ -19,7 +19,8 @@ public class ProxyDemo {
         System.out.println("START =========================== Proxy Demo ===========================");
         System.out.println("> 获取食品工厂代理");
         FoodProxy foodProxy = new FoodProxy(FoodFactory.getInstance());
-        System.out.println("> 获取食品工厂代理 [Completed]\n");
+        System.out.println("> 获取食品工厂代理 [Completed]");
+        System.out.println("---");
 
         System.out.println("> 通过食品工厂代理制作食品");
         Map<String, Food> foodCreatedMap = new HashMap<>();
@@ -29,13 +30,14 @@ public class ProxyDemo {
             foodCreatedMap.put(k, foodProxy.createFood(k, v));
             System.out.println("[√]");
         });
-        System.out.println("> 通过食品工厂代理制作食品 [Completed]\n");
+        System.out.println("> 通过食品工厂代理制作食品 [Completed]");
+        System.out.println("---");
 
         System.out.println("> 展示制作的食品清单");
         foodCreatedMap.forEach((k, v) -> {
             v.describeFoodBriefInformation();
         });
-        System.out.println("> 展示制作的食品清单 [Completed]\n");
+        System.out.println("> 展示制作的食品清单 [Completed]");
 
 
         System.out.println("E N D =========================== Proxy Demo ===========================\n");

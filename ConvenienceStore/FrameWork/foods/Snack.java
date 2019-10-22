@@ -2,6 +2,7 @@ package foods;
 
 import foods.state.Normal;
 import foods.state.Spoilage;
+import utils.enums.PatternType;
 import utils.info.ConstantTable;
 import utils.info.PriceTable;
 import world.WorldObserver;
@@ -16,25 +17,25 @@ import world.WorldObserver;
  */
 public class Snack extends Food implements WorldObserver {
 
-    public Snack(String name){
+    public Snack(String name) {
         super(name, "零食");
     }
 
     @Override
-    public Food createClone() {
+    public Food createClone(PatternType patternType) {
         try {
-            System.out.printf(">>> 克隆-食品原型: %s", this.name);
-            return (Food) this.clone();
+            createCloneHeader(patternType);
+            Food result = (Food) this.clone();
+            return result;
         } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
+            System.out.println("[x]");
         }
-        System.out.println(">>> 失败");
         return null;
     }
 
     @Override
     public void update() {
-        if(this.state.changeTheState()){
+        if (this.state.changeTheState()) {
             this.state = new Spoilage(this.state.getRemainDays());
         }
     }

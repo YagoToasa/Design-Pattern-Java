@@ -16,13 +16,14 @@
 - 注释: 必须包含作者
 
 
+***
 > 注: 写完Demo的才算完成
 
 ## Creational patterns
 
-- [ ] Abstract factory
-- [ ] Builder
-- [ ] factory Method
+- [ ] Abstract Factory
+- [x] Builder
+- [ ] Factory Method
 - [ ] Object Pool
 - [x] Prototype
 - [ ] Singleton
@@ -40,7 +41,7 @@
 
 ## Behavioral patterns
 
-- [ ] Chain of responsibility
+- [ ] Chain Of Responsibility
 - [ ] Command
 - [ ] Interpreter
 - [x] Iterator

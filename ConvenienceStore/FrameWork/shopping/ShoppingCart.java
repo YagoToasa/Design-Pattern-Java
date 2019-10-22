@@ -40,8 +40,9 @@ public class ShoppingCart {
             this.foods = new Food[maxSize];
             this.currentSize = 0;
         } else {
-            throw new Exception("This value is not valid!");
+            throw new Exception("> 抱歉, 不提供该尺寸的购物车!");
         }
+        System.out.printf("> 获取 购物车[容量:%d] * 1\n",this.maxSize);
     }
 
     /**
@@ -85,8 +86,11 @@ public class ShoppingCart {
     public boolean addFood(Food food) {
         if (currentSize < maxSize) {
             this.foods[currentSize++] = food;
-            return false;
+            System.out.println("[√]");
+            return true;
         } else {
+            System.out.println("[x]");
+            System.out.println(">>> 购物车已满, 不可再添加商品!");
             return false;
         }
     }
