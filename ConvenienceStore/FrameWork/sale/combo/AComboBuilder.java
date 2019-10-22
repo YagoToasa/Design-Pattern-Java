@@ -24,24 +24,24 @@ public class AComboBuilder extends ComboBuilder {
     }
 
     @Override
-    public void addDrink() {
-        Food food = foodProxy.createFood("可乐", FoodType.Drink);
+    protected void addDrink() {
+        Food food = foodProxy.createFood("可乐");
         System.out.printf(">>> A套餐-添加-饮品: %s", food.getName());
         this.foodCombo.addItem(food);
         this.comboPrice += food.getPrice();
     }
 
     @Override
-    public void addPastry() {
-        Food food = foodProxy.createFood("蛋挞", FoodType.Pastry);
+    protected void addPastry() {
+        Food food = foodProxy.createFood("蛋挞");
         System.out.printf(">>> A套餐-添加-糕点: %s", food.getName());
         this.foodCombo.addItem(food);
         this.comboPrice += food.getPrice();
     }
 
     @Override
-    public void addSnack() {
-        Food food = foodProxy.createFood("薯片", FoodType.Snack);
+    protected void addSnack() {
+        Food food = foodProxy.createFood("薯片");
         System.out.printf(">>> A套餐-添加-零食: %s", food.getName());
         this.foodCombo.addItem(food);
         this.comboPrice += food.getPrice();

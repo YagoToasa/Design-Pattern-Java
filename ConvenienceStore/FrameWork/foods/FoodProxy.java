@@ -20,7 +20,7 @@ public class FoodProxy extends AbstractFactory {
     }
 
     @Override
-    public Food createFood(String name, FoodType type) {
-        return foodFactory.createFood(name, type);
+    public Food createFood(String name) {
+        return foodFactory.createFood(name);
     }
 }

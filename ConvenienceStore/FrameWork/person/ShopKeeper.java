@@ -1,47 +1,28 @@
 package person;
+
 import utils.enums.PersonType;
+import utils.info.ConstantTable;
+
 /**
  * @className: ShopKeeper
- * @description:生成一个店主，单例
+ * @description: 店主单例类
  * @author: Wenyue Li
+ * @designPattern: AbstractFactory
  * @date: 8:42 下午 2019/10/21
- * @version: v1.0
- */
-/**
- * 
+ * @version: v1.1
  */
 public class ShopKeeper extends Person {
-    private volatile static ShopKeeper singleton = new ShopKeeper();
-    //单例
-    /**
-     * Default constructor
-     */
-    public ShopKeeper() {
-        setName("name");
-        setType(PersonType.ShopKeeper);
-    }
-    /**
-     * @methodName: getInstance
-     * @author: Wenyue Li
-     * @description: 
-     * @date: 12:41 上午 2019/10/22
-     * @param
-     * @return Person.ShopKeeper
-     **/
-    public static ShopKeeper getInstance(){
-        return singleton;
-    }
-    /**
-     * @methodName: changeShopKeeperName
-     * @author: Wenyue Li
-     * @description: 为店主改名，其实就是创建个店主，打印店主名，表示已经生成
-     * @date: 12:10 上午 2019/10/22
-     * @param name:
-     * @return void
-     **/
-    public void changeShopKeeperName(String name){
-        setName(name);
-        System.out.print("当前店主为："+ name);
+
+    /** @update: 更新了此单例类的实现方式 - Shidan Cheng */
+    private static class ShopKeeperHolder {
+        private static final ShopKeeper INSTANCE = new ShopKeeper();
     }
 
+    private ShopKeeper() {
+        super(ConstantTable.SHOP_KEEPER_NAME, PersonType.ShopKeeper);
+    }
+
+    public static ShopKeeper getInstance() {
+        return ShopKeeperHolder.INSTANCE;
+    }
 }

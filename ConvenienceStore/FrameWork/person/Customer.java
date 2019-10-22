@@ -3,24 +3,18 @@ package person;
 import utils.enums.PersonType;
 
 /**
- * 
+ * @className: Customer
+ * @author: Wenyue Li
+ * @description: 顾客 具体类
+ * @designPattern: AbstractFactory
+ * @date: 7:09 下午 2019/10/22
+ * @version: v1.1
  */
 public class Customer extends Person {
 
-    private static int index=0;
-    /**
-     * @methodName: ShopAssistant
-     * @author: Wenyue Li
-     * @description: 生成顾客，每次生成顾客++，并打印顾客人数
-     * @date: 12:48 上午 2019/10/22
-     * @param name:
-     * @return
-     **/
+    /** @update: 更新了构造器的形式 - Shidan Cheng */
     public Customer(String name) {
-        setName(name);
-        setType(PersonType.Customer);
-        index++;
-        System.out.print("当前顾客人数为："+ index);
+        super(name,PersonType.Customer);
     }
 
 

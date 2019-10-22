@@ -13,6 +13,8 @@ import java.util.Map;
  * @version: v1.0
  */
 public class ConstantTable {
+    public static String SHOP_KEEPER_NAME = "MANAGER_NAME";
+
     public final static int SHOPPING_CART_DEFAULT_SIZE = 5;
     public final static int FOOD_COMBO_SIZE = 3;
 

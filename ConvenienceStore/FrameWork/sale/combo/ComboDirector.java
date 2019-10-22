@@ -16,9 +16,7 @@ public class ComboDirector {
     }
 
     private void makeFoodCombo() {
-        comboBuilder.addDrink();
-        comboBuilder.addPastry();
-        comboBuilder.addSnack();
+        comboBuilder.makeCombo();
 
         //以下部分仅供测试输出使用
         int price = comboBuilder.getComboPrice();
@@ -26,6 +24,13 @@ public class ComboDirector {
         System.out.printf(">>> 套餐价格: %d[%d - %d]元\n", price, (int)(price + reduce), reduce);
     }
 
+    /**
+     * 获取制作的食品套餐
+     *
+     * @methodName: getFoodCombo
+     * @param: []
+     * @return: sale.combo.FoodCombo
+     */
     public FoodCombo getFoodCombo() {
         return comboBuilder.getFoodCombo();
     }

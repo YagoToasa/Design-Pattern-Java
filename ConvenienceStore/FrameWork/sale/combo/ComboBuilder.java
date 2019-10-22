@@ -18,16 +18,28 @@ public abstract class ComboBuilder {
         this.comboPrice = -reducedPrice;
     }
 
-    public void addDrink() {
+    protected void addDrink() {
         System.out.println("> 抱歉, 该套餐不含饮品!");
     }
 
-    public void addPastry() {
+    protected void addPastry() {
         System.out.println("> 抱歉, 该套餐不含糕点!");
     }
 
-    public void addSnack() {
+    protected void addSnack() {
         System.out.println("> 抱歉, 该套餐不含零食!");
+    }
+
+    /**
+     * 制作套餐
+     *
+     * @methodName: makeCombo
+     * @return: void
+     */
+    public void makeCombo(){
+        addDrink();
+        addPastry();
+        addSnack();
     }
 
     /**

@@ -29,7 +29,7 @@ public class PrototypeDemo {
         Map<String, Food> foodPrototypeMap = new HashMap<>();
 
         FOOD_ITEM_TYPE_MAP.forEach((k, v) -> {
-            foodPrototypeMap.put(k, foodProxy.createFood(k, v));
+            foodPrototypeMap.put(k, foodProxy.createFood(k));
         });
         System.out.println("> 初始化食物原型映射表 [Completed]");
         System.out.println("---");

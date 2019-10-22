@@ -3,31 +3,29 @@ package factory;
 import person.Customer;
 
 /**
- * 
+ * @className: CustomerFactory
+ * @author: Wenyue Li
+ * @description: 顾客工厂
+ * @designPattern: AbstractFactory, Singleton
+ * @date: 1:05 上午 2019/10/22
  */
 public class CustomerFactory extends AbstractFactory {
-    private volatile static CustomerFactory singleton=new CustomerFactory();
-    //单例模式
-    public static CustomerFactory getInstance(){
-        return singleton;
+
+    /** @update: 更新了单例模式的实现形式 - Shidan Cheng */
+    private static class CustomerFactoryHolder {
+        private static final CustomerFactory INSTANCE = new CustomerFactory();
     }
-    /**
-     * @methodName: createCustomer
-     * @author: Wenyue Li
-     * @description:
-     * @date: 1:05 上午 2019/10/22
-     * @param name:
-     * @return Person.Customer
-     **/
+
+    private CustomerFactory() {
+    }
+
+    public static final CustomerFactory getInstance() {
+        return CustomerFactoryHolder.INSTANCE;
+    }
+
     @Override
-    public Customer createCustomer(String name){
-        new Customer(name);
-        return null;
-    }
-    /**
-     * Default constructor
-     */
-    public CustomerFactory() {
+    public Customer createCustomer(String name) {
+        return new Customer(name);
     }
 
 }

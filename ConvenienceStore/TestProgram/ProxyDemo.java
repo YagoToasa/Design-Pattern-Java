@@ -27,7 +27,7 @@ public class ProxyDemo {
 
         FOOD_ITEM_TYPE_MAP.forEach((k, v) -> {
             System.out.printf(">>> 制作食品:%s",k);
-            foodCreatedMap.put(k, foodProxy.createFood(k, v));
+            foodCreatedMap.put(k, foodProxy.createFood(k));
             System.out.println("[√]");
         });
         System.out.println("> 通过食品工厂代理制作食品 [Completed]");

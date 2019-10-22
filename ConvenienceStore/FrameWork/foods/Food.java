@@ -26,7 +26,6 @@ public abstract class Food implements Cloneable {
         this.price = PriceTable.FOOD_PRICE_MAP.get(name);
         this.state = new Normal(FOOD_SHELF_LIFE_MAP.get(name));
         this.type = type;
-
     }
 
     /**
@@ -121,5 +120,15 @@ public abstract class Food implements Cloneable {
      */
     public String getName() {
         return name;
+    }
+
+    /**
+     * 获取食品类型
+     *
+     * @methodName: getType
+     * @return: String
+     */
+    public String getType() {
+        return type;
     }
 }

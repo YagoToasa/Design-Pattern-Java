@@ -3,37 +3,28 @@ package factory;
 import person.ShopAssistant;
 /**
  * @className: ShopAssistantFactory
- * @description:店员工厂，单例
  * @author: Wenyue Li
+ * @description: 店员工厂
+ * @designPattern: AbstractFactory, Singleton
  * @date: 8:42 下午 2019/10/21
- * @version: v1.0
- */
-/**
- * 
+ * @version: v1.1
  */
 public class ShopAssistantFactory extends AbstractFactory {
-    private volatile static ShopAssistantFactory singleton=new ShopAssistantFactory();
-    //单例模式
-    public static ShopAssistantFactory getInstance(){
-        return singleton;
+    /** @update: 更新了单例模式的实现形式 - Shidan Cheng */
+    private static class ShopAssistantFactoryHolder {
+        private static final ShopAssistantFactory INSTANCE = new ShopAssistantFactory();
     }
-    /**
-     * @methodName: createShopAssistant
-     * @author: Wenyue Li
-     * @description: 
-     * @date: 1:05 上午 2019/10/22
-     * @param name: 
-     * @return Person.ShopAssistant
-     **/
+
+    private ShopAssistantFactory() {
+    }
+
+    public static final ShopAssistantFactory getInstance() {
+        return ShopAssistantFactoryHolder.INSTANCE;
+    }
+
     @Override
-    public ShopAssistant createShopAssistant(String name){
-        new ShopAssistant(name);
-        return null;
-    }
-    /**
-     * Default constructor
-     */
-    public ShopAssistantFactory() {
+    public ShopAssistant createShopAssistant(String name) {
+        return new ShopAssistant(name);
     }
 
 }

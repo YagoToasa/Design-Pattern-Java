@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 /**
  * @className: Application
- * @description:
- * @author: Shidan Cheng
- * @date: 5:54 下午 2019/10/22
+ * @description: 欢乐便利店 主应用
  * @version: v1.0
  */
 public class Application {
@@ -24,7 +22,7 @@ public class Application {
         System.out.println("*-=======================   Design Patterns  =========================-*");
         System.out.println("|                      [d]  Directory                                  |");
         System.out.println("|                      [q]  Exit                                       |");
-        System.out.println("|                      [1]  Abstract Factory                           |");
+        System.out.println("|                      [1]  AbstractFactory                            |");
         System.out.println("|                      [2]  Builder                                    |");
         System.out.println("|                      [3]  Factory Method                             |");
         System.out.println("|                      [4]  Object Pool                                |");
@@ -70,7 +68,7 @@ public class Application {
                 case "q":
                     System.exit(0);break;
                 case "1":
-
+                    AbstractFactoryDemo.main(args);
                     break;
                 case "2":
                     BridgeDemo.main(args);

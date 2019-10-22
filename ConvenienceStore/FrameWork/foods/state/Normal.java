@@ -4,7 +4,7 @@ package foods.state;
  * @className: Normal
  * @author: Shidan Cheng
  * @description: 食品正常
- * @designPattern:
+ * @designPattern: State
  * @date: 10:37 上午 2019/10/22
  */
 public class Normal extends FoodState {
