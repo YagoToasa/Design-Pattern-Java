@@ -48,7 +48,7 @@ public class Application {
         System.out.println("|                     [24]  Strategy                                   |");
         System.out.println("|                     [25]  TemplateMethod                             |");
         System.out.println("|                     [26]  Visitor                                    |");
-        System.out.println("|                     [27]  Filer                                      |");
+        System.out.println("|                     [27]  Filter                                      |");
         System.out.println("|                     [28]  CompositeEntity                            |");
         System.out.println("|                     [29]  Specification                              |");
         System.out.println("|                     [30]  DoubleClickChecking                        |");
@@ -132,6 +132,7 @@ public class Application {
                 case "26":
                     break;
                 case "27":
+                    FilterDemo.main(args);
                     break;
                 case "28":
                     break;

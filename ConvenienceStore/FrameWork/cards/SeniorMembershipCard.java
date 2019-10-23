@@ -5,8 +5,8 @@ import utils.info.PriceTable;
 /**
  * @className: SeniorMembershipCard
  * @author: Yinan Cheng
- * @description:
- * @designPattern:
+ * @description: 生成高级会员卡
+ * @designPattern: factory method
  * @date: 21:17 2019/10/23
  */
 public class SeniorMembershipCard extends MembershipCard {

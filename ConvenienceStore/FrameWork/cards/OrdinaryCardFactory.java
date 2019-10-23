@@ -3,8 +3,8 @@ package cards;
 /**
  * @className: OrdinaryCardFactory
  * @author: Yinan Cheng
- * @description:
- * @designPattern:
+ * @description: 生成普通会员卡的工厂
+ * @designPattern: factory method
  * @date: 19:19 2019/10/23
  */
 public class OrdinaryCardFactory implements CardFactory {
