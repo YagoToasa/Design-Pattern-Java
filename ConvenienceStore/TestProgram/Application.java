@@ -74,6 +74,7 @@ public class Application {
                     BridgeDemo.main(args);
                     break;
                 case "3":
+                    FactoryMethodDemo.main(args);
                     break;
                 case "4":
                     break;
