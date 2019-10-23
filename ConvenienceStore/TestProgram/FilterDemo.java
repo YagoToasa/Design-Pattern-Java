@@ -18,17 +18,17 @@ import java.util.List;
 public class FilterDemo {
     public static void main(String[] args) {
         System.out.println("START =========================== Filter Demo ==========================");
-        Customer cyn=new Customer("程伊楠",67);
-        Customer lwy=new Customer("李文玥",197);
-        Customer zlw=new Customer("朱丽雯",43);
-        Customer csd=new Customer("程诗丹",92);
-        Customer llx=new Customer("刘岚心",56);
+        Customer customer1=new Customer("顾客1",67);
+        Customer customer2=new Customer("顾客2",197);
+        Customer customer3=new Customer("顾客3",43);
+        Customer customer4=new Customer("顾客4",92);
+        Customer customer5=new Customer("顾客5",56);
         List<Customer> customerList = new ArrayList<Customer>();
-        customerList.add(cyn);
-        customerList.add(lwy);
-        customerList.add(zlw);
-        customerList.add(csd);
-        customerList.add(llx);
+        customerList.add(customer1);
+        customerList.add(customer2);
+        customerList.add(customer3);
+        customerList.add(customer4);
+        customerList.add(customer5);
 
         Filter normalFilter = new NormalFilter();
         Filter ordinaryFilter = new OrdinaryFilter();

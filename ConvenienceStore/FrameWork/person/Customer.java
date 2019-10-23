@@ -24,6 +24,7 @@ public class Customer extends Person {
         this.expense=expense;
     }
 
+    /** @update: 获得某个客户的年花销 - Yinan Cheng */
     public int getExpense() {
         return expense;
     }
