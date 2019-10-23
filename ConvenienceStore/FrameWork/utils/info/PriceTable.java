@@ -17,6 +17,9 @@ public class PriceTable {
     public final static int A_COMBO_REDUCE_PRICE = 3;
     public final static int B_COMBO_REDUCE_PRICE = 5;
 
+    public final static int ORDINARY_CARD=20;
+    public final static int SENIOR_CARD=50;
+
     public final static Map<String, Integer> FOOD_PRICE_MAP = new HashMap<>();
 
     static {
