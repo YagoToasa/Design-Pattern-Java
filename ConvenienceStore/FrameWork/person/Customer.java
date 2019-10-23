@@ -11,11 +11,20 @@ import utils.enums.PersonType;
  * @version: v1.1
  */
 public class Customer extends Person {
+    private int expense;
 
     /** @update: 更新了构造器的形式 - Shidan Cheng */
     public Customer(String name) {
         super(name,PersonType.Customer);
     }
 
+    /** @update: 重载了另一种Customer的构造函数，以处理FilterDemo - Yinan Cheng */
+    public Customer(String name,int expense){
+        super(name,PersonType.Customer);
+        this.expense=expense;
+    }
 
+    public int getExpense() {
+        return expense;
+    }
 }
