@@ -87,7 +87,7 @@
 
 ### Behavioral patterns
 
-- [ ] Chain Of Responsibility
+- [x] Chain Of Responsibility
 - [ ] Command
 - [ ] Interpreter
 - [x] Iterator
@@ -96,7 +96,7 @@
 - [ ] Null Object
 - [ ] Observer
 - [x] State
-- [ ] Strategy
+- [x] Strategy
 - [ ] Template Method
 - [ ] Visitor
 

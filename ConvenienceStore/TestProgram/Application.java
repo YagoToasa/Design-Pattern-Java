@@ -103,6 +103,7 @@ public class Application {
                     PrototypeDemo.main(args);
                     break;
                 case "15":
+                    ChainOfResponsibilityDemo.main(args);
                     break;
                 case "16":
                     break;
@@ -123,6 +124,7 @@ public class Application {
                     StateDemo.main(args);
                     break;
                 case "24":
+                    StrategyDemo.main(args);
                     break;
                 case "25":
                     break;

@@ -18,6 +18,14 @@ public class ConstantTable {
     public final static int SHOPPING_CART_DEFAULT_SIZE = 5;
     public final static int FOOD_COMBO_SIZE = 3;
 
+    public final static float ORDINARY_MEMBER_DISCOUNT = 0.95f;
+    public final static float PREMIUM_MEMBER_DISCOUNT = 0.85f;
+
+    public final static int CUSTOMER_CASH_BALANCE = 20;
+    public final static int CUSTOMER_WECHAT_BALANCE = 50;
+    public final static int CUSTOMER_ALIPAY_BALANCE = 100;
+
+
     public final static Map<String, Integer> FOOD_SHELF_LIFE_MAP = new HashMap<>();
     public final static Map<String, FoodType> FOOD_ITEM_TYPE_MAP = new HashMap<>();
 
