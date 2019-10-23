@@ -5,8 +5,8 @@ import utils.info.PriceTable;
 /**
  * @className: OrdinaryMembershipCard
  * @author: Yinan Cheng
- * @description:
- * @designPattern:
+ * @description: 生成普通会员卡
+ * @designPattern: factory method
  * @date: 19:19 2019/10/23
  */
 public class OrdinaryMembershipCard extends MembershipCard {

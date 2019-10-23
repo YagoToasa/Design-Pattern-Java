@@ -8,8 +8,8 @@ import java.util.List;
 /**
  * @className: OrdinaryFilter
  * @author: Yinan Cheng
- * @description:
- * @designPattern:
+ * @description: 过滤出下一年度建议办普通会员卡的顾客
+ * @designPattern: Filter
  * @date: 0:03 2019/10/24
  */
 public class OrdinaryFilter implements Filter{

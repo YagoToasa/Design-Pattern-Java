@@ -8,8 +8,8 @@ import java.util.List;
 /**
  * @className: NormalFilter
  * @author: Yinan Cheng
- * @description:
- * @designPattern:
+ * @description: 过滤出下一年度不建议办卡的顾客
+ * @designPattern: Filter
  * @date: 0:04 2019/10/24
  */
 public class NormalFilter implements Filter {
