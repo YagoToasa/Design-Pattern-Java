@@ -20,7 +20,7 @@ public class Customer extends Person {
 
     /** @update: 重载了另一种Customer的构造函数，以处理FilterDemo - Yinan Cheng */
     public Customer(String name,int expense){
-        super(name,PersonType.Customer);
+        this(name);
         this.expense=expense;
     }
 

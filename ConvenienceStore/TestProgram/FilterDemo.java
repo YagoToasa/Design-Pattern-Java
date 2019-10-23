@@ -11,8 +11,7 @@ import java.util.List;
 /**
  * @className: FilterDemo
  * @author: Yinan Cheng
- * @description:
- * @designPattern:
+ * @description: Filter 过滤器模式 测试程序
  * @date: 23:54 2019/10/23
  */
 public class FilterDemo {
