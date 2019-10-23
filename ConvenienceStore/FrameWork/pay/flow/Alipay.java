@@ -1,18 +1,19 @@
 package pay.flow;
-
 /**
- * 
+ * @className: Alipay
+ * @author: Wenyue Li
+ * @description: 支付宝付款 具体处理者
+ * @designPattern:
+ * @date: 5:44 下午 2019/10/23
  */
 public class Alipay extends CheckOutHandler {
 
-    /**
-     * Default constructor
-     */
-    @Override
-    public void Pay(){
-        System.out.print("您已使用Alipay支付！");
-    }
-    public Alipay() {
+    public Alipay(){
+
     }
 
+    @Override
+    public boolean checkOut(int payment) {
+        return false;
+    }
 }
