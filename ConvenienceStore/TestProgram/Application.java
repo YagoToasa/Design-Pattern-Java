@@ -107,6 +107,7 @@ public class Application {
                     ChainOfResponsibilityDemo.main(args);
                     break;
                 case "16":
+                    CommandDemo.main(args);
                     break;
                 case "17":
                     break;
@@ -130,6 +131,7 @@ public class Application {
                 case "25":
                     break;
                 case "26":
+                    VisitorDemo.main(args);
                     break;
                 case "27":
                     break;
