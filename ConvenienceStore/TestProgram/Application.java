@@ -97,6 +97,7 @@ public class Application {
                 case "11":
                     break;
                 case "12":
+                    FlyweightDemo.main(args);
                     break;
                 case "13":
                     break;
