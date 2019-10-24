@@ -14,11 +14,16 @@ public class NewSupplier extends AbstractSupplier {
 
     @Override
     public void excute() {
-        System.out.println("Log：此次从 "+supplierName+" 供应商处进货啦,所进货物是" +product);
+        System.out.println("Log：此次从 "+supplierName+" 供应商处进货啦，所进货物是"+foodProduct.getName());
     }
 
     @Override
     public void setProduct(String product) {
-        this.product=product;
+        foodProduct=foodProxy.createFood(product);
     }
+
+//    @Override
+//    public void setProduct(String product) {
+//        this.product=product;
+//    }
 }

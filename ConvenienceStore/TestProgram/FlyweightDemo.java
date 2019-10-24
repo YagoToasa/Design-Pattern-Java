@@ -22,7 +22,7 @@ public class FlyweightDemo {
 
         // 将新的供应商加入享元池
         AbstractSupplier supplier3 = supplierFactory.getSupplier("C");
-        supplier3.setProduct("三明治");
+        supplier3.setProduct("饭团");
         supplier3.excute();
 
         System.out.println("E N D ========================= Flyweight Demo =========================\n");
