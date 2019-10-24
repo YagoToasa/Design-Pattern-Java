@@ -1,6 +1,5 @@
 package pay.strategy;
 
-import utils.enums.PayType;
 
 /**
  * @className: Strategy
@@ -10,23 +9,30 @@ import utils.enums.PayType;
  * @date: 5:48 下午 2019/10/23
  */
 public abstract class Strategy {
-    /**
-     * @methodName: solve
-     * @author: Wenyue Li
-     * @description: 金额的打折方式（普通和vip）
-     * @date: 9:06 下午 2019/10/22
-     * @param [amount]
-     * @return void
-     **/
-    public void solve(float amount,PayType type){
+    protected float discount;
 
+    public Strategy(float discount) {
+        this.discount = discount;
     }
 
     /**
-     * Default constructor
+     * 获取顾客应付的金额
+     *
+     * @methodName: getPayment
+     * @param originalTotalCost: int 初始总金额
+     * @return: int
      */
-    public Strategy() {
+    public int getPayment(int originalTotalCost){
+        return (int)(originalTotalCost * this.discount);
     }
 
-
+    /**
+     * 获取优惠比率——仅为测试输出模型而设置
+     *
+     * @methodName: getDiscount
+     * @return: float
+     */
+    public float getDiscount() {
+        return discount;
+    }
 }

@@ -20,7 +20,8 @@ public abstract class Person {
         this.type = type;
 
         // 用于测试程序的输出
-        System.out.printf(">>> 生成-人物-类型: %s\t姓名: %s;[√]\n", this.type, this.name.toString());
+
+        System.out.printf(">>> 生成-人物-类型: %s\t姓名: %s;[√]\n", this.type.toString(), this.name);
     }
 
     public PersonType getPersonType() {
