@@ -3,8 +3,8 @@ package cards;
 /**
  * @className: SeniorCardFactory
  * @author: Yinan Cheng
- * @description:
- * @designPattern:
+ * @description: 生产高级会员卡的工厂
+ * @designPattern: factory method
  * @date: 21:16 2019/10/23
  */
 public class SeniorCardFactory implements CardFactory {

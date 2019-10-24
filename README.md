@@ -69,7 +69,7 @@
 
 - [x] Abstract Factory
 - [x] Builder
-- [ ] Factory Method
+- [x] Factory Method
 - [ ] Object Pool
 - [x] Prototype
 - [x] Singleton
@@ -102,7 +102,7 @@
 
 ### Unknown patterns
 
-- [ ] Filter 
+- [x] Filter 
 - [ ] Composite Entity 
 - [ ] Specification 
 - [ ] Double Click Checking 

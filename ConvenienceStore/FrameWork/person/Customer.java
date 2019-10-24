@@ -12,6 +12,7 @@ import utils.info.ConstantTable;
  * @version: v1.1
  */
 public class Customer extends Person {
+    private int expense;
 
     private int cash;
     private int balanceInAlipay;
@@ -37,6 +38,17 @@ public class Customer extends Person {
         return balanceInWeChat;
     }
 
+    /** @update: 重载了另一种Customer的构造函数，以处理FilterDemo - Yinan Cheng */
+    public Customer(String name,int expense){
+        this(name);
+        this.expense=expense;
+    }
+
+    /** @update: 获得某个客户的年花销 - Yinan Cheng */
+    public int getExpense() {
+        return expense;
+    }
+  
     public void setCash(int cash){
         this.cash = cash;
     }
