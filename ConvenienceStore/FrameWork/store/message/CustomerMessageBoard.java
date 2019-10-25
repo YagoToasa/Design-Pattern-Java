@@ -17,7 +17,6 @@ import java.util.HashMap;
  * @version: v1.0
  */
 public class CustomerMessageBoard implements Mediator {
-
     //存储有哪些人可能会用到该留言板
     private HashMap<String, Person> personMap;
     //内部使用统计每一种type都有哪些人名

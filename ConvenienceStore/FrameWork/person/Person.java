@@ -66,4 +66,3 @@ public abstract class Person {
     public Mediator getMediator() { return this.mediator; }
 
 }
-}
