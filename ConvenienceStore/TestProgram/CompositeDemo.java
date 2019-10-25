@@ -11,6 +11,7 @@ import java.util.*;
  */
 public class CompositeDemo {
     public static void main(String[] args) {
+        System.out.println("START =========================== Composite Demo ==========================");
         ShopKeeper shopkeeper = ShopKeeper.getInstance();
         ShopAssistant sa1 = new ShopAssistant("SA1","收银");
         ShopAssistant sa2 = new ShopAssistant("SA2","清洁");
@@ -40,6 +41,8 @@ public class CompositeDemo {
         System.out.println("--------------------");
 
         shopkeeper.printList();
+        
+        System.out.println("E N D =========================== Composite Demo ==========================\n");
 
     }
 
