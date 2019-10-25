@@ -2,6 +2,10 @@ package person;
 
 import utils.enums.PersonType;
 import utils.info.ConstantTable;
+import store.message.Mediator;
+import java.util.Scanner;
+import store.message.CustomerMessageBoard;
+
 
 /**
  * @className: Customer
@@ -17,6 +21,8 @@ public class Customer extends Person {
     private int cash;
     private int balanceInAlipay;
     private int balanceInWeChat;
+
+
 
     /** @update: 更新了构造器的形式 - Shidan Cheng */
     public Customer(String name) {
@@ -75,4 +81,28 @@ public class Customer extends Person {
         System.out.println("--------------------");
 
     }
+
+    /**
+     *此人通过该方法写下留言
+     *
+     * @methodName: sendMessage
+     * @author: Xian Zhou
+     * @date:2019/10/25
+     * @param:Mediator
+     * @return:void
+     */
+    public void sendMessage(String message) {
+
+        Scanner s = new Scanner(System.in);
+        System.out.println(this.name+"你好！请在留言板中记下您的留言");
+
+        message = s.nextLine();
+
+        System.out.println("正在将留言录入留言板");
+
+        this.getMediator().getMessage(message, this.name);
+
+        System.out.println("留言成功");
+    }
+
 }
