@@ -1,15 +1,13 @@
-package factory;
-
-import person.Customer;
+package person;
 
 /**
  * @className: CustomerFactory
  * @author: Wenyue Li
  * @description: 顾客工厂
- * @designPattern: AbstractFactory, Singleton
+ * @designPattern: Singleton
  * @date: 1:05 上午 2019/10/22
  */
-public class CustomerFactory extends AbstractFactory {
+public class CustomerFactory{
 
     /** @update: 更新了单例模式的实现形式 - Shidan Cheng */
     private static class CustomerFactoryHolder {
@@ -23,7 +21,6 @@ public class CustomerFactory extends AbstractFactory {
         return CustomerFactoryHolder.INSTANCE;
     }
 
-    @Override
     public Customer createCustomer(String name) {
         return new Customer(name);
     }

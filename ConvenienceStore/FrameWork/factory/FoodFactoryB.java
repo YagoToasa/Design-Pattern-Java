@@ -8,25 +8,26 @@ import utils.enums.FoodType;
 import utils.info.ConstantTable;
 
 /**
- * @className: FoodFactory
+ * @className: FoodFactoryB
  * @author: Shidan Cheng
- * @description: 食品工厂A
- * @designPattern: Proxy, Singleton, AbstractFactory
- * @date: 9:29 上午 2019/10/22
+ * @description: 食品工厂B
+ * @designPattern:  AbstractFactory
+ * @date: 8:26 下午 2019/10/25
+ * @version: v1.0
  */
-public class FoodFactory implements AbstractFactory {
-    private String factoryName = "A工厂";
+public class FoodFactoryB implements AbstractFactory {
+    private String factoryName = "B工厂";
 
     private static class FoodFactoryHolder {
-        private static final FoodFactory INSTANCE = new FoodFactory();
+        private static final FoodFactoryB INSTANCE = new FoodFactoryB();
     }
 
-    private FoodFactory() {
+    private FoodFactoryB() {
 
     }
 
-    public static final FoodFactory getInstance() {
-        return FoodFactoryHolder.INSTANCE;
+    public static final FoodFactoryB getInstance() {
+        return FoodFactoryB.FoodFactoryHolder.INSTANCE;
     }
 
     @Override
@@ -56,6 +57,5 @@ public class FoodFactory implements AbstractFactory {
     public Food createPastry(String name) {
         return new Pastry(name, this.factoryName);
     }
-
 
 }

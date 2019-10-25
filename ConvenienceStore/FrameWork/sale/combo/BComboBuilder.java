@@ -3,7 +3,6 @@ package sale.combo;
 import factory.FoodFactory;
 import foods.Food;
 import foods.FoodProxy;
-import utils.enums.FoodType;
 import utils.info.PriceTable;
 
 /**

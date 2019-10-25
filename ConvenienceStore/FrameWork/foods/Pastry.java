@@ -20,6 +20,10 @@ public class Pastry extends Food implements WorldObserver {
     public Pastry(String name) {
         super(name, "糕点");
     }
+    public Pastry(String name, String place){
+        this(name);
+        this.place = place;
+    }
 
     @Override
     public Food createClone(PatternType patternType) {

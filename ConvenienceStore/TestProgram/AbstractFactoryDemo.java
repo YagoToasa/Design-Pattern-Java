@@ -1,9 +1,7 @@
 import factory.AbstractFactory;
-import factory.CustomerFactory;
 import factory.FoodFactory;
-import factory.ShopAssistantFactory;
+import factory.FoodFactoryB;
 import foods.Food;
-import person.Customer;
 import utils.info.ConstantTable;
 
 import java.util.ArrayList;
@@ -23,14 +21,25 @@ public class AbstractFactoryDemo {
         AbstractFactory foodFactory = FoodFactory.getInstance();
         Set<String> nameSet = ConstantTable.FOOD_ITEM_TYPE_MAP.keySet();
         List<Food> foodList = new ArrayList<>();
-        System.out.println("> 开始生产食品");
-
+        System.out.println("> 食品工厂A, 生产食品");
         for (String key : nameSet) {
             Food food = foodFactory.createFood(key);
-            System.out.printf(">>> 生成-食品-名称: %s\t类型: %s[√]\n",key.toString(),food.getType());
+            System.out.printf(">>> 生成-食品-名称: %s\t类型: %s\t生产方: %s[√]\n",key.toString(),food.getType(),food.getPlace());
             foodList.add(food);
         }
-        System.out.println("> 开始生产食品 [Completed]");
+        System.out.println("> 食品工厂A, 生产食品 [Completed]");
+
+        System.out.println("---");
+
+        AbstractFactory foodFactoryB = FoodFactoryB.getInstance();
+        System.out.println("> 食品工厂B, 生产食品");
+        for (String key : nameSet) {
+            Food food = foodFactoryB.createFood(key);
+            System.out.printf(">>> 生成-食品-名称: %s\t类型: %s\t生产方: %s[√]\n",key.toString(),food.getType(),food.getPlace());
+            foodList.add(food);
+        }
+        System.out.println("> 食品工厂B, 生产食品 [Completed]");
+
         System.out.println("E N D ====================== AbstractFactory Demo ======================\n");
     }
 }

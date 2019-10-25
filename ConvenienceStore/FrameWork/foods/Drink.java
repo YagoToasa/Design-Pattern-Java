@@ -18,6 +18,10 @@ public class Drink extends Food implements WorldObserver {
         super(name, "饮品");
     }
 
+    public Drink(String name, String place){
+        this(name);
+        this.place = place;
+    }
 
     @Override
     public Food createClone(PatternType patternType) {

@@ -21,6 +21,10 @@ public class Snack extends Food implements WorldObserver {
         super(name, "零食");
     }
 
+    public Snack(String name, String place){
+        this(name);
+        this.place = place;
+    }
     @Override
     public Food createClone(PatternType patternType) {
         try {

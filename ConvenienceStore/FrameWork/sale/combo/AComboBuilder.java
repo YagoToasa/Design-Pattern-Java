@@ -1,11 +1,8 @@
 package sale.combo;
 
-import factory.AbstractFactory;
 import factory.FoodFactory;
 import foods.Food;
 import foods.FoodProxy;
-import foods.Pastry;
-import utils.enums.FoodType;
 import utils.info.PriceTable;
 
 /**

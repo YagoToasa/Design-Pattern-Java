@@ -20,12 +20,18 @@ public abstract class Food implements Cloneable {
     protected String name;              //食品名称
     protected String type;              //食品类型
     protected int price;                //食品价格
+    protected String place = "未知";     //食品生产商
 
-    public Food(String name, String type) {
+    public Food(String name, String foodType) {
         this.name = name;
         this.price = PriceTable.FOOD_PRICE_MAP.get(name);
         this.state = new Normal(FOOD_SHELF_LIFE_MAP.get(name));
-        this.type = type;
+        this.type = foodType;
+    }
+
+    public Food(String name, String foodType, String place) {
+        this(name,foodType);
+        this.place = place;
     }
 
     /**
@@ -130,5 +136,15 @@ public abstract class Food implements Cloneable {
      */
     public String getType() {
         return type;
+    }
+
+    /**
+     * 获取食品产地
+     *
+     * @methodName: getPlace
+     * @return: java.lang.String
+     */
+    public String getPlace() {
+        return place;
     }
 }
