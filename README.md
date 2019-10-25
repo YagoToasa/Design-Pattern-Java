@@ -81,24 +81,24 @@
 - [ ] Composite
 - [x] Decorator
 - [ ] Facade
-- [ ] Flyweight
+- [x] Flyweight
 - [ ] Private Class Data
 - [x] Proxy
 
 ### Behavioral patterns
 
 - [x] Chain Of Responsibility
-- [ ] Command
+- [x] Command
 - [ ] Interpreter
 - [x] Iterator
 - [ ] Mediator
 - [ ] Memento
 - [ ] Null Object
-- [ ] Observer
+- [x] Observer
 - [x] State
 - [x] Strategy
 - [ ] Template Method
-- [ ] Visitor
+- [x] Visitor
 
 ### Unknown patterns
 

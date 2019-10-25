@@ -62,11 +62,13 @@ public class Application {
             symbol = scanner.next();
         }
         while (!symbol.equals("q")) {
-            switch (symbol){
+            switch (symbol) {
                 case "d":
-                    showDirectory();break;
+                    showDirectory();
+                    break;
                 case "q":
-                    System.exit(0);break;
+                    System.exit(0);
+                    break;
                 case "1":
                     AbstractFactoryDemo.main(args);
                     break;
@@ -122,6 +124,7 @@ public class Application {
                 case "21":
                     break;
                 case "22":
+                    ObserverDemo.main(args);
                     break;
                 case "23":
                     StateDemo.main(args);
