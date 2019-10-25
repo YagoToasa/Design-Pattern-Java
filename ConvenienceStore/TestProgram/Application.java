@@ -118,8 +118,10 @@ public class Application {
                     IteratorDemo.main(args);
                     break;
                 case "19":
+                    MediatorDemo.main(args);
                     break;
                 case "20":
+                    MementoDemo.main(args);
                     break;
                 case "21":
                     break;
