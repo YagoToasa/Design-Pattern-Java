@@ -76,9 +76,9 @@
 
 ### Structural patterns
 
-- [ ] Adapter
+- [x] Adapter
 - [x] Bridge
-- [ ] Composite
+- [x] Composite
 - [x] Decorator
 - [ ] Facade
 - [x] Flyweight
@@ -91,7 +91,7 @@
 - [x] Command
 - [ ] Interpreter
 - [x] Iterator
-- [ ] Mediator
+- [x] Mediator
 - [ ] Memento
 - [ ] Null Object
 - [x] Observer

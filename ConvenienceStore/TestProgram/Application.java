@@ -87,11 +87,13 @@ public class Application {
                     SingletonDemo.main(args);
                     break;
                 case "7":
+                    AdaptorDemo.main(args);
                     break;
                 case "8":
                     BridgeDemo.main(args);
                     break;
                 case "9":
+                    CompositeDemo.main(args);
                     break;
                 case "10":
                     DecoratorDemo.main(args);
