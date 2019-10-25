@@ -2,8 +2,12 @@ package foods;
 
 import foods.state.FoodState;
 import foods.state.Normal;
+import foods.state.Spoilage;
 import utils.enums.PatternType;
 import utils.info.PriceTable;
+import world.WorldObserver;
+
+import java.util.Observer;
 
 import static utils.info.ConstantTable.FOOD_SHELF_LIFE_MAP;
 
@@ -15,7 +19,7 @@ import static utils.info.ConstantTable.FOOD_SHELF_LIFE_MAP;
  * @date: 8:48 上午 2019/10/22
  * @version: v1.0
  */
-public abstract class Food implements Cloneable {
+public abstract class Food implements Cloneable, WorldObserver {
     protected FoodState state;          //食品品质
     protected String name;              //食品名称
     protected String type;              //食品类型
@@ -30,7 +34,7 @@ public abstract class Food implements Cloneable {
     }
 
     public Food(String name, String foodType, String place) {
-        this(name,foodType);
+        this(name, foodType);
         this.place = place;
     }
 
@@ -54,6 +58,8 @@ public abstract class Food implements Cloneable {
             System.out.printf(">>> 克隆-食品原型: %s", this.name);
         } else if (patternType == PatternType.Iterator) {
             System.out.printf(">>> 添加-食品: %s", this.name);
+        } else if (patternType == PatternType.Observer) {
+            return;
         } else {
             System.out.printf(">>> 制作-食品: %s", this.name);
         }
@@ -80,21 +86,33 @@ public abstract class Food implements Cloneable {
      * @return: void
      */
     public void describeFoodBriefInformation() {
-        System.out.printf("食品名称:%-5s\t类型:%-5s\t售价:%d元;\n", this.name, this.type, this.price);
+        System.out.printf("食品名称:%-5s\t类型:%5s\t售价:%d元;\n", this.name, this.type, this.price);
+    }
+
+    /**
+     * 测试 观测者模式的辅助函数
+     *
+     * @methodName: describeFoodLifeInformation
+     * @return: void
+     */
+    public void describeFoodLifeInformation() {
+        System.out.printf("食品名称:%-5s\t距离过期还剩:%5d天\n", this.name, this.state.getRemainDays());
     }
 
 
     /**
      * 设置食品的品质状态
-     * 测试 State 状态模式的辅助方法
      *
      * @methodName: testStateDesignPattern
      * @param state: FoodState
+     * @param type : 用于更改测试输出内容
      * @return: void
      */
-    public void setFoodState(FoodState state) {
+    public void setFoodState(FoodState state, PatternType type) {
         this.state = state;
-        System.out.println("> 调整食品状态-剩余保质期时间: " + state.getRemainDays());
+        if (type == PatternType.State) {
+            System.out.println("> 调整食品状态-剩余保质期时间: " + state.getRemainDays());
+        }
     }
 
     /**
@@ -146,5 +164,12 @@ public abstract class Food implements Cloneable {
      */
     public String getPlace() {
         return place;
+    }
+
+    @Override
+    public void update() {
+        if (this.state.changeTheState()) {
+            this.state = new Spoilage(this.state.getRemainDays());
+        }
     }
 }

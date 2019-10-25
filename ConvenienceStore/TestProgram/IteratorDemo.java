@@ -16,6 +16,8 @@ import java.util.Map;
 public class IteratorDemo {
     public static void main(String[] args) {
         try {
+            System.out.println("START ========================= Iterator Demo ==========================");
+
             Map<String, Food> foodPrototypeMap = PrototypeDemo.initFoodPrototype();
 
             ShoppingCart shoppingCart = new ShoppingCart(5);
@@ -31,11 +33,11 @@ public class IteratorDemo {
 
             System.out.println("> 检查购物车中的商品");
             Iterator iterator = new ShoppingCartIterator(shoppingCart);
-            while (iterator.hasNext()){
+            while (iterator.hasNext()) {
                 iterator.next().describeFoodBriefInformation();
             }
             System.out.println("> 检查购物车中的商品 [Complete]");
-
+            System.out.println("E N D ========================= Iterator Demo ==========================\n");
         } catch (Exception e) {
             System.out.println(e);
         }

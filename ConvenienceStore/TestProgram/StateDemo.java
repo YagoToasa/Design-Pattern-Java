@@ -3,6 +3,7 @@ import foods.Food;
 import foods.state.FoodState;
 import foods.state.Normal;
 import foods.state.Spoilage;
+import utils.enums.PatternType;
 
 /**
  * @className: StateDemo
@@ -20,13 +21,13 @@ public class StateDemo {
         Food cola = new Drink("可乐");
         cola.describeFoodDetailInformation();
         System.out.println("---");
-        cola.setFoodState(normal);
+        cola.setFoodState(normal, PatternType.State);
         cola.describeFoodDetailInformation();
         System.out.println("---");
-        cola.setFoodState(normalNearSpoilage);
+        cola.setFoodState(normalNearSpoilage, PatternType.State);
         cola.describeFoodDetailInformation();
         System.out.println("---");
-        cola.setFoodState(spoilage);
+        cola.setFoodState(spoilage, PatternType.State);
         cola.describeFoodDetailInformation();
         System.out.println("E N D =========================== State Demo ===========================\n");
     }

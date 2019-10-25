@@ -4,10 +4,10 @@ package foods.state;
  * @className: FoodState
  * @author: Shidan Cheng
  * @description: 食品状态类
- * @designPattern: State
+ * @designPattern: State, Prototype
  * @date: 10:33 上午 2019/10/22
  */
-public abstract class FoodState {
+public abstract class FoodState implements Cloneable {
     protected String state;             //食品品质
     protected int remainDays;           //食品距离过期的剩余天数
 
@@ -26,7 +26,7 @@ public abstract class FoodState {
      */
     public boolean changeTheState() {
         this.remainDays--;
-        if (this.remainDays <= 0 && this.state.equals("正常")) {
+        if (this.remainDays < 0 && this.state.equals("正常")) {
             return true;
         }
         return false;
@@ -55,4 +55,16 @@ public abstract class FoodState {
      * @return: void
      */
     public abstract void describePriceAdjustment();
+
+    @Override
+    public FoodState clone() {
+        try {
+            return (FoodState) super.clone();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
 }

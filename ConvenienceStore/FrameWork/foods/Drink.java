@@ -1,5 +1,6 @@
 package foods;
 
+import foods.state.FoodState;
 import foods.state.Spoilage;
 import utils.enums.PatternType;
 import world.WorldObserver;
@@ -28,19 +29,13 @@ public class Drink extends Food implements WorldObserver {
         try {
             createCloneHeader(patternType);
             Food result = (Food) this.clone();
+            FoodState state = (FoodState) this.state.clone();
+            result.setFoodState(state, PatternType.NULL);
             return result;
         } catch (CloneNotSupportedException e) {
             System.out.println("[x]");
         }
         return null;
     }
-
-    @Override
-    public void update() {
-        if (this.state.changeTheState()) {
-            this.state = new Spoilage(this.state.getRemainDays());
-        }
-    }
-
 
 }

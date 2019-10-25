@@ -38,5 +38,6 @@ public enum PatternType {
     CompositeEntity,
     Specification,
     DoubleClickChecking,
+    NULL,
 }
 

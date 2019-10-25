@@ -92,7 +92,7 @@ public class WorldClock {
      * @return: void
      */
     public void updateTheWorld() {
-        this.day = this.day + 1;
+        this.day++;
         for (WorldObserver observer : worldObserversList) {
             observer.update();
         }
