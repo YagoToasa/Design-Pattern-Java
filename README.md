@@ -1,6 +1,6 @@
 # Design-Pattern-Java
 
-![](https://img.shields.io/badge/Language-Java-green)	![](https://img.shields.io/badge/Number%20of%20team-10-orange)  ![](https://img.shields.io/github/last-commit/YagoToasa/Design-Pattern-Java)
+![](https://img.shields.io/badge/Language-Java-green)	![](https://img.shields.io/badge/Number%20of%20team-9-orange)  ![](https://img.shields.io/github/last-commit/YagoToasa/Design-Pattern-Java)
 ## 分支命名规范
 - 李小明 学号: 123456
 - 123456_XiaomingLi
@@ -104,5 +104,5 @@
 
 - [x] Filter 
 - [ ] Composite Entity 
-- [ ] Specification 
+- [x] Specification 
 - [ ] Double Click Checking 

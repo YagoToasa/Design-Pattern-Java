@@ -48,7 +48,7 @@ public class Application {
         System.out.println("|                     [24]  Strategy                                   |");
         System.out.println("|                     [25]  TemplateMethod                             |");
         System.out.println("|                     [26]  Visitor                                    |");
-        System.out.println("|                     [27]  Filter                                      |");
+        System.out.println("|                     [27]  Filter                                     |");
         System.out.println("|                     [28]  CompositeEntity                            |");
         System.out.println("|                     [29]  Specification                              |");
         System.out.println("|                     [30]  DoubleClickChecking                        |");
@@ -73,7 +73,7 @@ public class Application {
                     AbstractFactoryDemo.main(args);
                     break;
                 case "2":
-                    BridgeDemo.main(args);
+                    BuilderDemo.main(args);
                     break;
                 case "3":
                     FactoryMethodDemo.main(args);
@@ -104,7 +104,7 @@ public class Application {
                 case "13":
                     break;
                 case "14":
-                    PrototypeDemo.main(args);
+                    ProxyDemo.main(args);
                     break;
                 case "15":
                     ChainOfResponsibilityDemo.main(args);
@@ -143,6 +143,7 @@ public class Application {
                 case "28":
                     break;
                 case "29":
+                    SpecificationDemo.main(args);
                     break;
                 case "30":
                     break;

@@ -22,6 +22,9 @@ public class Drink extends Food implements WorldObserver {
     public Drink(String name, String place){
         this(name);
         this.place = place;
+        if (this.place == "A工厂") {
+            this.price = this.price - 1;
+        }
     }
 
     @Override

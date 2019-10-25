@@ -24,6 +24,9 @@ public class Pastry extends Food implements WorldObserver {
     public Pastry(String name, String place){
         this(name);
         this.place = place;
+        if (this.place == "A工厂") {
+            this.price = this.price + 1;
+        }
     }
 
     @Override
