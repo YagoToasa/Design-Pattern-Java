@@ -82,7 +82,7 @@
 - [x] Decorator
 - [ ] Facade
 - [x] Flyweight
-- [ ] Private Class Data
+- [x] Private Class Data
 - [x] Proxy
 
 ### Behavioral patterns
@@ -105,4 +105,4 @@
 - [x] Filter 
 - [x] Composite Entity 
 - [x] Specification 
-- [ ] Double Click Checking 
+- [x] Double Click Checking 
