@@ -15,6 +15,7 @@ import java.util.Scanner;
  **/
 public class ShopAssistant extends Person {
 
+
     private String duty;
 
     /** @update: 更新了构造器的形式 - Shidan Cheng */
@@ -62,7 +63,7 @@ public class ShopAssistant extends Person {
 
 
     /**
-     *记下留言，给客户回复，给店员回复
+     * 记下留言，给客户回复，给店员回复
      *
      * @methodName: sendMessage, giveReply, giveThanks
      * @author: Xian Zhou
@@ -91,4 +92,5 @@ public class ShopAssistant extends Person {
 
         System.out.println("留言成功");
     }
+
 }
