@@ -11,7 +11,9 @@ import utils.enums.PersonType;
  * @date: 8:42 下午 2019/10/21
  * @version: v1.1
  */
-public abstract class Person {
+
+/** @update:  继承自IsPerson类 Design-Pattern：Null Object - Kunyu Chen */
+public abstract class Person implements IsPerson{
     protected String name;      //人物名称
     protected PersonType type;  //人物类型，eg：顾客、店主、店员
 
@@ -64,5 +66,31 @@ public abstract class Person {
      * @return:void
      */
     public Mediator getMediator() { return this.mediator; }
+
+    /**
+     *
+     *
+     * @methodName: isNull
+     * @author:Kunyu Chen
+     * @date:2019/10/26
+     * @param:
+     * @return:boolean
+     */
+    public boolean isNull(){
+        return false;
+    }
+    /**
+     *
+     *
+     * @methodName: showPerson
+     * @author:Kunyu Chen
+     * @date:2019/10/26
+     * @param:
+     * @return:void
+     */
+    public void showPerson() {
+        //可以将测试程序的输出写在这里，也可以写在上面
+        //System.out.printf(">>> 生成-人物-类型: %s\t姓名: %s;[√]\n", this.type.toString(), this.name);
+    }
 
 }
