@@ -104,6 +104,7 @@ public class Application {
                     FlyweightDemo.main(args);
                     break;
                 case "13":
+                    System.out.println("private class data设计模式无测试代码");
                     break;
                 case "14":
                     ProxyDemo.main(args);
@@ -151,6 +152,7 @@ public class Application {
                     SpecificationDemo.main(args);
                     break;
                 case "30":
+                    LockDemo.main(args);
                     break;
                 default:
                     System.out.println("> [ERROR] 指令不存在!");
