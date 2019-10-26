@@ -2,6 +2,14 @@ import calculator.*;
 
 import java.util.HashMap;
 
+
+/**
+ * @className: Calculator
+ * @description: 解释器类
+ * @author: Liwen Zhu
+ * @date: 19:51 2019/10/26
+ * @version: v1.0
+ */
 public class InterpreterDemo {
     public static void main(String[] args) {
 
