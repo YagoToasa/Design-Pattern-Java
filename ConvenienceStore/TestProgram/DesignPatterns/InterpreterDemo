@@ -1,5 +1,6 @@
-import calculator.*;
+package DesignPatterns;
 
+import calculator.*;
 import java.util.HashMap;
 
 
