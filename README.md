@@ -89,7 +89,7 @@
 
 - [x] Chain Of Responsibility
 - [x] Command
-- [ ] Interpreter
+- [x] Interpreter
 - [x] Iterator
 - [x] Mediator
 - [ ] Memento
