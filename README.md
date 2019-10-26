@@ -92,7 +92,7 @@
 - [x] Interpreter
 - [x] Iterator
 - [x] Mediator
-- [ ] Memento
+- [x] Memento
 - [x] Null Object
 - [x] Observer
 - [x] State
