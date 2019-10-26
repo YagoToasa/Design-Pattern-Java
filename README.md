@@ -93,7 +93,7 @@
 - [x] Iterator
 - [x] Mediator
 - [ ] Memento
-- [ ] Null Object
+- [x] Null Object
 - [x] Observer
 - [x] State
 - [x] Strategy
