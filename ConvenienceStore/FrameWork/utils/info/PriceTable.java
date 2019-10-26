@@ -24,8 +24,8 @@ public class PriceTable {
 
     static {
         //Drink
-        FOOD_PRICE_MAP.put("可乐", 3);
-        FOOD_PRICE_MAP.put("雪碧", 3);
+        FOOD_PRICE_MAP.put("可乐", 5);
+        FOOD_PRICE_MAP.put("雪碧", 4);
         FOOD_PRICE_MAP.put("矿泉水", 2);
         //Snack
         FOOD_PRICE_MAP.put("巧克力", 8);

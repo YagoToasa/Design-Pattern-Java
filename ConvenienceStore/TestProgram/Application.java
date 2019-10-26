@@ -1,4 +1,4 @@
-import factory.AbstractFactory;
+import DesignPatterns.*;
 
 import java.util.Scanner;
 
@@ -48,7 +48,7 @@ public class Application {
         System.out.println("|                     [24]  Strategy                                   |");
         System.out.println("|                     [25]  TemplateMethod                             |");
         System.out.println("|                     [26]  Visitor                                    |");
-        System.out.println("|                     [27]  Filter                                      |");
+        System.out.println("|                     [27]  Filter                                     |");
         System.out.println("|                     [28]  CompositeEntity                            |");
         System.out.println("|                     [29]  Specification                              |");
         System.out.println("|                     [30]  DoubleClickChecking                        |");
@@ -73,7 +73,7 @@ public class Application {
                     AbstractFactoryDemo.main(args);
                     break;
                 case "2":
-                    BridgeDemo.main(args);
+                    BuilderDemo.main(args);
                     break;
                 case "3":
                     FactoryMethodDemo.main(args);
@@ -87,11 +87,13 @@ public class Application {
                     SingletonDemo.main(args);
                     break;
                 case "7":
+                    AdaptorDemo.main(args);
                     break;
                 case "8":
                     BridgeDemo.main(args);
                     break;
                 case "9":
+                    CompositeDemo.main(args);
                     break;
                 case "10":
                     DecoratorDemo.main(args);
@@ -102,9 +104,10 @@ public class Application {
                     FlyweightDemo.main(args);
                     break;
                 case "13":
+                    System.out.println("private class data设计模式无测试代码");
                     break;
                 case "14":
-                    PrototypeDemo.main(args);
+                    ProxyDemo.main(args);
                     break;
                 case "15":
                     ChainOfResponsibilityDemo.main(args);
@@ -113,6 +116,7 @@ public class Application {
                     CommandDemo.main(args);
                     break;
                 case "17":
+                    InterpreterDemo.main(args);
                     break;
                 case "18":
                     IteratorDemo.main(args);
@@ -143,10 +147,13 @@ public class Application {
                     FilterDemo.main(args);
                     break;
                 case "28":
+                    CompositeEntityDemo.main(args);
                     break;
                 case "29":
+                    SpecificationDemo.main(args);
                     break;
                 case "30":
+                    LockDemo.main(args);
                     break;
                 default:
                     System.out.println("> [ERROR] 指令不存在!");

@@ -1,6 +1,6 @@
 # Design-Pattern-Java
 
-![](https://img.shields.io/badge/Language-Java-green)	![](https://img.shields.io/badge/Number%20of%20team-10-orange)  ![](https://img.shields.io/github/last-commit/YagoToasa/Design-Pattern-Java)
+![](https://img.shields.io/badge/Language-Java-green)	![](https://img.shields.io/badge/Number%20of%20team-9-orange)  ![](https://img.shields.io/github/last-commit/YagoToasa/Design-Pattern-Java)
 ## 分支命名规范
 - 李小明 学号: 123456
 - 123456_XiaomingLi
@@ -63,7 +63,7 @@
 
 
 ## 30种设计模式
-**只有完成了相应的Demo才算完成，Demo请放在TestProgram文件夹下，输出格式参见`BuilderDemo.java`**
+**只有完成了相应的Demo才算完成，Demo请放在TestProgram文件夹下，输出格式参见`DesignPatterns.BuilderDemo.java`**
 
 ### Creational patterns
 
@@ -76,13 +76,13 @@
 
 ### Structural patterns
 
-- [ ] Adapter
+- [x] Adapter
 - [x] Bridge
-- [ ] Composite
+- [x] Composite
 - [x] Decorator
 - [ ] Facade
 - [x] Flyweight
-- [ ] Private Class Data
+- [x] Private Class Data
 - [x] Proxy
 
 ### Behavioral patterns
@@ -91,7 +91,7 @@
 - [x] Command
 - [ ] Interpreter
 - [x] Iterator
-- [ ] Mediator
+- [x] Mediator
 - [ ] Memento
 - [ ] Null Object
 - [x] Observer
@@ -103,6 +103,6 @@
 ### Unknown patterns
 
 - [x] Filter 
-- [ ] Composite Entity 
-- [ ] Specification 
-- [ ] Double Click Checking 
+- [x] Composite Entity 
+- [x] Specification 
+- [x] Double Click Checking 

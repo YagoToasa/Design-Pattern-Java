@@ -3,9 +3,11 @@ package store.message;
 import person.Person;
 import person.Customer;
 import person.ShopAssistant;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+
 /**
  * @className: CustomerMessageBoard
  * @author: Xian Zhou
@@ -15,7 +17,6 @@ import java.util.HashMap;
  * @version: v1.0
  */
 public class CustomerMessageBoard implements Mediator {
-
     //存储有哪些人可能会用到该留言板
     private HashMap<String, Person> personMap;
     //内部使用统计每一种type都有哪些人名
@@ -41,9 +42,6 @@ public class CustomerMessageBoard implements Mediator {
     public void register(String personName, Person person) {
 
         personMap.put(personName, person);
-
-
-
         if (person instanceof Customer) {
             interMap.put("Customer", personName);
         } else if (person instanceof ShopAssistant) {
@@ -63,7 +61,7 @@ public class CustomerMessageBoard implements Mediator {
     public void getMessage(String message, String personName) {
         //将留言存入留言板
         messages.add(new Date().toString()
-                + " [" + personName +"] : " + message);
+                + " [" + personName + "] : " + message);
         //通过中介者告诉店员有客户留言了需给以回复
         if (personMap.get(personName) instanceof Customer) {
 
@@ -85,7 +83,6 @@ public class CustomerMessageBoard implements Mediator {
      * @param: String message
      * @return: void
      */
-
     public static void addMessage(String message) {
 
         messages.add(new Date().toString()
@@ -100,16 +97,14 @@ public class CustomerMessageBoard implements Mediator {
      * @param: null
      * @return: void
      */
-
-    public void showMessages(){
+    public void showMessages() {
 
         System.out.println("-------------------------- Message Bord ------------------------------\n");
-        for(String m : messages){
+        for (String m : messages) {
             System.out.println(m);
         }
         System.out.println("\n----------------------------------------------------------------------\n\n");
     }
-
 
 
 }

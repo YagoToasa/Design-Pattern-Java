@@ -1,10 +1,10 @@
 package foods;
 
 
-import utils.enums.FoodType;
-
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @className: FoodRepository
@@ -15,6 +15,7 @@ import java.util.List;
  */
 public class FoodRepository {
     private List<Food> foodList = new ArrayList<>();
+    private Map<String, Integer> foodItemNumMap = new HashMap<>();
 
     private static class FoodRepositoryHolder {
         private static final FoodRepository INSTANCE = new FoodRepository();
@@ -75,12 +76,12 @@ public class FoodRepository {
     }
 
     /**
-     * 统计食品的库存信息并打印
+     * 获取食品的库存信息映射表
      *
-     * @methodName: countItemsByType
-     * @return: void
+     * @methodName: getFoodItemNumMap
+     * @return: java.util.Map<java.lang.String,java.lang.Integer>
      */
-    public void countItemsByType() {
+    public Map<String, Integer> getFoodItemNumMap() {
         int drink = 0;
         int pastry = 0;
         int snack = 0;
@@ -93,9 +94,10 @@ public class FoodRepository {
                 pastry++;
             }
         }
-        System.out.println("> 仓库剩余饮品总数目: " + drink);
-        System.out.println("> 仓库剩余零食总数目: " + snack);
-        System.out.println("> 仓库剩余糕点总数目: " + pastry);
+        foodItemNumMap.put("饮品",drink);
+        foodItemNumMap.put("零食",pastry);
+        foodItemNumMap.put("糕点",snack);
+        return foodItemNumMap;
     }
 
     /**
