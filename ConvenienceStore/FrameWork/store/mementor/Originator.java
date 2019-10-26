@@ -1,5 +1,8 @@
 package store.mementor;
+import foods.FoodRepository;
+
 import java.util.HashMap;
+import java.util.Map;
 /**
  * @className: Origintor
  * @author: Xian Zhou
@@ -10,7 +13,7 @@ import java.util.HashMap;
  */
 public class Originator {
     // 暂用哈希表存储当前库存状态
-    private HashMap<String, String> state;
+    private Map<String, Integer> state;
 
     public Originator() {
         state = new HashMap();
@@ -25,7 +28,7 @@ public class Originator {
      * @return: DataMemento
      */
     public store.mementor.DataMemento createMemento() {
-        return new Memento(state);
+        return new Memento((HashMap) state);
     }
 
     /**
@@ -50,22 +53,14 @@ public class Originator {
 
     }
 
-    //当前的状态，等待调用仓库处返回值
-    public void testState1() {
-        state.put("bread", "50");
-        state.put("sweet", "20");
-        state.put("coffee", "5");
-
-    }
-
-    //仓库变动后的状态，等待调用仓库处返回值
-    public void testState2() {
-        state.put("bread", "40");
-        state.put("sweet", "20");
-        state.put("coffee", "5");
 
 
-    }
+    public void testState1(FoodRepository foodRepository){
+        state = foodRepository.getFoodItemNumMap();
+    };
+
+
+
 
     /**
      * @className: Memento
@@ -77,13 +72,13 @@ public class Originator {
      */
     private class Memento implements store.mementor.DataMemento {
 
-        private HashMap<String, String> state;
+        private Map<String, Integer> state;
 
         private Memento(HashMap state) {
             this.state = new HashMap(state);
         }
 
-        private HashMap getState() {
+        private Map getState() {
             return state;
         }
 
