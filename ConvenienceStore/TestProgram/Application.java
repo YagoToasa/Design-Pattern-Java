@@ -116,7 +116,7 @@ public class Application {
                     CommandDemo.main(args);
                     break;
                 case "17":
-                    Interpreter.main(args);
+                    InterpreterDemo.main(args);
                     break;
                 case "18":
                     IteratorDemo.main(args);
