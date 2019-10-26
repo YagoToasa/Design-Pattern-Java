@@ -1,3 +1,5 @@
+package DesignPatterns;
+
 import foods.Drink;
 import foods.Food;
 import foods.state.FoodState;
@@ -6,7 +8,7 @@ import foods.state.Spoilage;
 import utils.enums.PatternType;
 
 /**
- * @className: StateDemo
+ * @className: DesignPatterns.StateDemo
  * @description: State 状态模式 测试程序
  * @author: Shidan Cheng
  * @date: 12:39 下午 2019/10/22

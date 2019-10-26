@@ -1,9 +1,11 @@
+package DesignPatterns;
+
 import world.WorldClock;
 
 import java.util.Optional;
 
 /**
- * @className: SingletonDemo
+ * @className: DesignPatterns.SingletonDemo
  * @description: SingleDemo 单例模式 测试程序
  * @author: Shidan Cheng
  * @date: 9:04 下午 2019/10/22

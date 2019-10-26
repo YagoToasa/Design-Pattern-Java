@@ -1,3 +1,5 @@
+package DesignPatterns;
+
 import store.mementor.Originator;
 import store.mementor.DataCareTaker;
 

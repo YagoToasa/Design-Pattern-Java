@@ -1,10 +1,12 @@
+package DesignPatterns;
+
 import pay.strategy.CheckOutContext;
 import pay.strategy.OrdinaryMemberStrategy;
 import pay.strategy.PremiumMemberStrategy;
 import pay.strategy.Strategy;
 
 /**
- * @className: StrategyDemo
+ * @className: DesignPatterns.StrategyDemo
  * @author: Shidan Cheng
  * @description: Strategy 策略模式 测试程序
  * @date: 7:48 下午 2019/10/23

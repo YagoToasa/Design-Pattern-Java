@@ -1,3 +1,5 @@
+package DesignPatterns;
+
 import factory.AbstractFactory;
 import factory.FoodFactory;
 import factory.FoodFactoryB;
@@ -9,7 +11,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @className: AbstractFactoryDemo
+ * @className: DesignPatterns.AbstractFactoryDemo
  * @description: AbstractFactory 抽象工厂模式 测试程序
  * @author: Shidan Cheng
  * @date: 6:43 下午 2019/10/22

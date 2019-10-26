@@ -1,9 +1,9 @@
-
+package DesignPatterns;
 
 import person.*;
 import java.util.*;
 /**
- * @className: CompositeDemo
+ * @className: DesignPatterns.CompositeDemo
  * @description: COMPOSITE PATTERN TEST
  * @author: Lanxin Liu
  * @date: 20:03 2019/10/25

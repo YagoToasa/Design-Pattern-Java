@@ -1,3 +1,5 @@
+package DesignPatterns;
+
 import foods.Drink;
 import foods.Food;
 import foods.Pastry;
@@ -9,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @className: SpecificationDemo
+ * @className: DesignPatterns.SpecificationDemo
  * @description: Specification 规格模式 测试程序
  * @author: Shidan Cheng
  * @date: 11:50 下午 2019/10/25

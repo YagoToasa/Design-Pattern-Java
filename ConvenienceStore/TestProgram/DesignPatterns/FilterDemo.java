@@ -1,3 +1,5 @@
+package DesignPatterns;
+
 import filters.Filter;
 import filters.NormalFilter;
 import filters.OrdinaryFilter;
@@ -9,7 +11,7 @@ import java.util.List;
 
 
 /**
- * @className: FilterDemo
+ * @className: DesignPatterns.FilterDemo
  * @author: Yinan Cheng
  * @description: Filter 过滤器模式 测试程序
  * @date: 23:54 2019/10/23

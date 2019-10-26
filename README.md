@@ -63,7 +63,7 @@
 
 
 ## 30种设计模式
-**只有完成了相应的Demo才算完成，Demo请放在TestProgram文件夹下，输出格式参见`BuilderDemo.java`**
+**只有完成了相应的Demo才算完成，Demo请放在TestProgram文件夹下，输出格式参见`DesignPatterns.BuilderDemo.java`**
 
 ### Creational patterns
 
@@ -103,6 +103,6 @@
 ### Unknown patterns
 
 - [x] Filter 
-- [ ] Composite Entity 
+- [x] Composite Entity 
 - [x] Specification 
 - [ ] Double Click Checking 

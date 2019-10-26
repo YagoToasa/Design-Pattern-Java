@@ -1,3 +1,5 @@
+package DesignPatterns;
+
 import factory.FoodFactory;
 import foods.Food;
 import foods.FoodProxy;
@@ -9,7 +11,7 @@ import java.util.Map;
 import static utils.info.ConstantTable.FOOD_ITEM_TYPE_MAP;
 
 /**
- * @className: PrototypeDemo
+ * @className: DesignPatterns.PrototypeDemo
  * @description: Prototype 原型模式 测试程序
  * @author: Shidan Cheng
  * @date: 1:30 下午 2019/10/22

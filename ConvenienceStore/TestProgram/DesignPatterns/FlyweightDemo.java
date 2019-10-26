@@ -1,8 +1,10 @@
+package DesignPatterns;
+
 import suppliers.AbstractSupplier;
 import suppliers.SupplierFactory;
 
 /**
- * @className: FlyweightDemo
+ * @className: DesignPatterns.FlyweightDemo
  * @author: Yinan Cheng
  * @description: Flyweight 享元模式 测试程序
  * @date: 13:40 2019/10/24

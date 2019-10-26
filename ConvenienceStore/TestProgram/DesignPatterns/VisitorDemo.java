@@ -1,8 +1,10 @@
+package DesignPatterns;
+
 import decoration.furniture.*;
 import decoration.visitor.*;
 
 /**
- * @className: VisitorDemo
+ * @className: DesignPatterns.VisitorDemo
  * @author: Siqian Wu
  * @description: Visitor模式测试类
  * @designPattern: Visitor

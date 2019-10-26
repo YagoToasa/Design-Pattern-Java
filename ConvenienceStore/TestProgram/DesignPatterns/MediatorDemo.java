@@ -1,3 +1,5 @@
+package DesignPatterns;
+
 import store.message.CustomerMessageBoard;
 import store.message.Mediator;
 import person.Person;

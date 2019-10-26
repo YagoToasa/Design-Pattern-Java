@@ -1,10 +1,12 @@
+package DesignPatterns;
+
 import cards.CardFactory;
 import cards.MembershipCard;
 import cards.OrdinaryCardFactory;
 import cards.SeniorCardFactory;
 
 /**
- * @className: FactoryMethodDemo
+ * @className: DesignPatterns.FactoryMethodDemo
  * @author: Yinan Cheng
  * @description: Factory method 工厂模式 测试程序
  * @date: 19:59 2019/10/23

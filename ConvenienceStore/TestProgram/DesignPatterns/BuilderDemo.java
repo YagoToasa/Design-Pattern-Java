@@ -1,7 +1,9 @@
+package DesignPatterns;
+
 import sale.combo.*;
 
 /**
- * @className: BuilderDemo
+ * @className: DesignPatterns.BuilderDemo
  * @description: Builder 建造者模式 测试程序
  * @author: Shidan Cheng
  * @date: 3:53 下午 2019/10/22

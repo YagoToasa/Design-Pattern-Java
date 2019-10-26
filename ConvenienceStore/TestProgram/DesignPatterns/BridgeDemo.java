@@ -1,7 +1,9 @@
+package DesignPatterns;
+
 import coupons.*;
 
 /**
- * @className: BridgeDemo
+ * @className: DesignPatterns.BridgeDemo
  * @description: Bridge 桥梁模式 测试程序
  * @author: Shidan Cheng
  * @date: 3:04 上午 2019/10/22

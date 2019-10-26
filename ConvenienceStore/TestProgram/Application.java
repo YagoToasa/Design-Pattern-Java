@@ -1,4 +1,4 @@
-import factory.AbstractFactory;
+import DesignPatterns.*;
 
 import java.util.Scanner;
 
@@ -145,6 +145,7 @@ public class Application {
                     FilterDemo.main(args);
                     break;
                 case "28":
+                    CompositeEntityDemo.main(args);
                     break;
                 case "29":
                     SpecificationDemo.main(args);

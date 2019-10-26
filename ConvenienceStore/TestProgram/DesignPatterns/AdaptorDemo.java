@@ -1,9 +1,9 @@
-
+package DesignPatterns;
 
 import adapter.*;
 
 /**
- * @className: AdaptorDemo
+ * @className: DesignPatterns.AdaptorDemo
  * @description: 适配器模式测试
  * @author: Lanxin Liu
  * @date: 20:54 2019/10/24

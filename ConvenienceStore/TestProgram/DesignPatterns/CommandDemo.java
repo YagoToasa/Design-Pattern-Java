@@ -1,7 +1,9 @@
+package DesignPatterns;
+
 import decoration.command.*;
 
 /**
- * @className: CommandDemo
+ * @className: DesignPatterns.CommandDemo
  * @author: Siqian Wu
  * @description: Command模式测试类
  * @designPattern: Command

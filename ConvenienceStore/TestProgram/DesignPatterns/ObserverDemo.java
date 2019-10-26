@@ -1,3 +1,5 @@
+package DesignPatterns;
+
 import factory.FoodFactory;
 import foods.Food;
 import foods.FoodProxy;
@@ -11,7 +13,7 @@ import java.util.Map;
 import static utils.info.ConstantTable.FOOD_ITEM_TYPE_MAP;
 
 /**
- * @className: ObserverDemo
+ * @className: DesignPatterns.ObserverDemo
  * @author: Shidan Cheng
  * @description: Observer 观察者模式 测试程序
  * @date: 9:51 下午 2019/10/25

@@ -1,3 +1,5 @@
+package DesignPatterns;
+
 import factory.FoodFactory;
 import foods.Food;
 import foods.FoodProxy;
@@ -8,7 +10,7 @@ import java.util.Map;
 import static utils.info.ConstantTable.FOOD_ITEM_TYPE_MAP;
 
 /**
- * @className: ProxyDemo
+ * @className: DesignPatterns.ProxyDemo
  * @description: Proxy 代理模式 测试程序
  * @author: Shidan Cheng
  * @date: 3:29 下午 2019/10/22

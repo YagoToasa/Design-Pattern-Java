@@ -1,10 +1,12 @@
+package DesignPatterns;
+
 import sale.coffee.AddMilk;
 import sale.coffee.AddSugar;
 import sale.coffee.BasicCoffee;
 import sale.coffee.CoffeeMachine;
 
 /**
- * @className: DecoratorDemo
+ * @className: DesignPatterns.DecoratorDemo
  * @description: Decorator 装饰者模式 测试程序
  * @author: Shidan Cheng
  * @date: 1:11 上午 2019/10/22

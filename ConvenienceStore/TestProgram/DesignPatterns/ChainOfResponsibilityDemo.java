@@ -1,3 +1,5 @@
+package DesignPatterns;
+
 import pay.flow.Alipay;
 import pay.flow.Cash;
 import pay.flow.CheckOutHandler;
@@ -5,7 +7,7 @@ import pay.flow.WeChat;
 import person.Customer;
 
 /**
- * @className: ChainOfResponsibilityDemo
+ * @className: DesignPatterns.ChainOfResponsibilityDemo
  * @author: Shidan Cheng
  * @description: Chain of Responsibility 责任链模式 测试程序
  * @date: 8:32 下午 2019/10/23

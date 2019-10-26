@@ -1,3 +1,5 @@
+package DesignPatterns;
+
 import foods.Food;
 import shopping.Iterator;
 import shopping.ShoppingCart;
@@ -7,7 +9,7 @@ import utils.enums.PatternType;
 import java.util.Map;
 
 /**
- * @className: IteratorDemo
+ * @className: DesignPatterns.IteratorDemo
  * @description: Iterator 迭代器模式 测试程序
  * @author: Shidan Cheng
  * @date: 11:37 下午 2019/10/21
