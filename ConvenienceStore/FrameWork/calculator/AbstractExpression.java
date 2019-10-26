@@ -1,13 +1,17 @@
 package calculator;
 
+import java.util.HashMap;
+
 /**
- * @interfaceName: AbstractExpression
- * @author: Shidan Cheng
- * @description: 抽象基类
- * @designPattern: Interpreter
- * @date: 9:00 上午 2019/10/23
+ * @className: AbstractExpression
+ * @description: 解释器类
+ * @author: Liwen Zhu
+ * @date: 19:51 2019/10/26
  * @version: v1.0
  */
 public interface AbstractExpression {
-    public int interpreter();
+
+    // 每个表达式都必须有一个解释操作
+    public int interprete(HashMap<String, Integer> var);
+
 }
