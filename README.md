@@ -5,7 +5,7 @@
 - FrameWork: 游戏的依赖框架
 - TestProgream: 基于设计模式的应用, 分别展示30个设计模式, 请运行Application.java
 - GameProgram: 基于游戏流程的应用, 请运行GameApplication.java
-- 请将FrameWork及TestProgram设施为SourceRoot
+- 请将FrameWork及TestProgram设置为SourceRoot
 
 
 
