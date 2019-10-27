@@ -1,6 +1,14 @@
 # Design-Pattern-Java
 
 ![](https://img.shields.io/badge/Language-Java-green)	![](https://img.shields.io/badge/Number%20of%20team-9-orange)  ![](https://img.shields.io/github/last-commit/YagoToasa/Design-Pattern-Java)
+## 结构说明：
+- FrameWork: 游戏的依赖框架
+- TestProgream: 基于设计模式的应用, 分别展示30个设计模式, 请运行Application.java
+- GameProgram: 基于游戏流程的应用, 请运行GameApplication.java
+- 请将FrameWork及TestProgram设施为SourceRoot
+
+
+
 ## 分支命名规范
 - 李小明 学号: 123456
 - 123456_XiaomingLi
@@ -63,8 +71,6 @@
 
 
 ## 30种设计模式
-**只有完成了相应的Demo才算完成，Demo请放在TestProgram文件夹下，输出格式参见`DesignPatterns.BuilderDemo.java`**
-
 ### Creational patterns
 
 - [x] Abstract Factory
