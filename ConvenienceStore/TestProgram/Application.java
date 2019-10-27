@@ -101,6 +101,7 @@ public class Application {
                     DecoratorDemo.main(args);
                     break;
                 case "11":
+                    FacadeDemo.main(args);
                     break;
                 case "12":
                     FlyweightDemo.main(args);

@@ -10,19 +10,19 @@ package store.machine;
 public class Coffeemaker {
 
     public void checkUp(){
-        System.out.println("Coffeemaker checkup!");
-        System.out.println("检查咖啡豆");
-        System.out.println("检查牛奶");
+        System.out.println("检查咖啡机!");
+        System.out.println("检查咖啡豆!");
+        System.out.println("检查牛奶!");
     }
     public void startUp(){
-        System.out.println("Coffeemaker startup!");
+        System.out.println("开启咖啡机!");
     }
 
     public void shutDown(){
-        System.out.println("Coffeemaker shutdown!");
+        System.out.println("关闭咖啡机!");
     }
 
     public void cleanUp(){
-        System.out.println("Coffeemaker cleanup!");
+        System.out.println("清洗咖啡机!");
     }
 }

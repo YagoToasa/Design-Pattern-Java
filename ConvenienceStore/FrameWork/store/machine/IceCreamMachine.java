@@ -11,19 +11,19 @@ package store.machine;
 
 public class IceCreamMachine {
     public void checkUp(){
-        System.out.println("IceCreamMachine checkup!");
-        System.out.println("检查制冷剂");
-        System.out.println("检查奶油");
+        System.out.println("检查冰淇淋机!");
+        System.out.println("检查制冷剂!");
+        System.out.println("检查奶油!");
     }
     public void startUp(){
-        System.out.println("IceCreamMachine startup!");
+        System.out.println("开启冰淇淋机!");
     }
 
     public void shutDown(){
-        System.out.println("IceCreamMachine shutdown!");
+        System.out.println("关闭冰淇淋机!");
     }
 
     public void cleanUp(){
-        System.out.println("IceCreamMachine cleanup!");
+        System.out.println("清洗冰淇淋机!");
     }
 }

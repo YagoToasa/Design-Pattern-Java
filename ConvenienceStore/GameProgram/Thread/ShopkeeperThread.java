@@ -4,6 +4,7 @@ import cards.CardFactory;
 import cards.MembershipCard;
 import cards.OrdinaryCardFactory;
 import cards.SeniorCardFactory;
+import coupons.*;
 import factory.AbstractFactory;
 import factory.FoodFactoryA;
 import factory.FoodFactoryB;
@@ -12,10 +13,12 @@ import foods.lookup.ProductBy;
 import foods.lookup.base.Specification;
 import person.Customer;
 import person.Person;
+import person.ShopAssistant;
 import sale.combo.AComboBuilder;
 import sale.combo.BComboBuilder;
 import sale.combo.ComboBuilder;
 import sale.combo.ComboDirector;
+import store.summary.StoreDailySummary;
 import utils.info.ConstantTable;
 import utils.info.PriceTable;
 
@@ -33,10 +36,14 @@ import static GameProgram.Thread.Common.*;
 public class ShopkeeperThread implements Runnable {
     static public Scanner scanner = new Scanner(System.in);
     static private List<Person> hiredShopAssistant = new ArrayList<>();
+    static private StoreDailySummary storeDailySummary= new StoreDailySummary();
+    static private int couponSum = 0;
 
     @Override
     public void run() {
+        storeDailySummary.storeDailySummary();
         initFoodPrototypeList();
+        initShopAssistant();
         showBlackboard();
         System.out.printf("[%s]> 请选择您要进行的操作: ", shopKeeper.getName());
         String command = "";
@@ -58,11 +65,25 @@ public class ShopkeeperThread implements Runnable {
                     showCustomerInfo();
                     break;
                 case "5":
+                    hiringAdditionalStaff();
+                    break;
                 case "6":
-                    showMessageInfo();
+                    showMakeCouponsInfo();
                     break;
                 case "7":
+                    showMessageInfo();
+                    break;
+                case "8":
+
+                    System.out.printf("[%s]> [CLOSE] 关闭所有器械的电源!\n", shopKeeper.getName());
+                    storeDailySummary.shutDownAll();
+                    System.out.printf("[%s]> [CLOSE] 进行大扫除!\n", shopKeeper.getName());
                     worldClock.updateTheWorld();
+                    getShopAssistantOutput();
+                    System.out.printf("[%s]> [OPEN] 检查所有器械!\n", shopKeeper.getName());
+                    storeDailySummary.checkUpAll();
+                    System.out.printf("[%s]> [OPEN] 开启所有器械的电源!\n", shopKeeper.getName());
+                    storeDailySummary.startUpAll();
                     break;
                 case "q":
                     System.exit(0);
@@ -70,7 +91,6 @@ public class ShopkeeperThread implements Runnable {
                 default:
                     System.out.printf("[%s]> [ERROR] 指令不存在!\n", shopKeeper.getName());
                     break;
-
             }
             showBlackboard();
             System.out.printf("[%s]> 请选择您要进行的操作: ", shopKeeper.getName());
@@ -86,18 +106,233 @@ public class ShopkeeperThread implements Runnable {
         System.out.printf("                     %5s                         \n", convenienceStore.getName());
         System.out.printf("                     第%d天                       \n", worldClock.getDay());
         System.out.printf("                     季节: %s                    \n", worldClock.getSeason());
+        System.out.printf("                     人气值: %s                    \n", couponSum);
         System.out.println("* ============================================= *");
         System.out.println("@=                   1. 设置店铺                =@");
         System.out.println("@=                   2. 查看仓库                =@");
         System.out.println("@=                   3. 进购食品                =@");
         System.out.println("@=                   4. 查看顾客                =@");
         System.out.println("@=                   5. 招聘店员                =@");
-        System.out.println("@=                   6. 查看留言板              =@");
-        System.out.println("@=                   7. 结束本天                =@");
+        System.out.println("@=                   6. 制作优惠券[提升人气值]    =@");
+        System.out.println("@=                   7. 查看留言板              =@");
+        System.out.println("@=                   8. 结束本天                =@");
         System.out.println("@=                   q. 结束游戏                =@");
         System.out.println("* ============================================= *");
     }
 
+    /** ================================================================================= 菜单5【招聘店员】 START */
+    //5. 招聘店员
+    public void hiringAdditionalStaff(){
+        hiringAdditionalStaffBlackBoard();
+        System.out.printf("[%s]> 请选择您要招募的店员: ", shopKeeper.getName());
+        String command = "";
+        if (scanner.hasNext()) {
+            command = scanner.next();
+        }
+        while (!command.equals("")) {
+            switch (command) {
+                case "0":
+                case "1":
+                case "2":
+                    hireStaff(Integer.parseInt(command));
+                    break;
+                case "q":
+                    return;
+                default:
+                    System.out.printf("[%s]> [ERROR] 店员不存在!\n", shopKeeper.getName());
+                    break;
+            }
+            hiringAdditionalStaffBlackBoard();
+            System.out.printf("[%s]> 请选择您要招募的店员: ", shopKeeper.getName());
+            if (scanner.hasNext()) {
+                command = scanner.next();
+            }
+        }
+    }
+    //5. 招聘店员
+    public void hireStaff(int index){
+        if (index >= shopAssistantList.size() || index < 0) {
+            System.out.printf("[%s]> [ERROR] 店员不存在!\n", shopKeeper.getName());
+        }else{
+            ShopAssistant shopAssistant = shopAssistantList.get(index);
+            if (hiredShopAssistant.contains(shopAssistant)){
+                System.out.printf("[%s]> [ERROR] 店员已被招募过!\n", shopKeeper.getName());
+            }else{
+                hiredShopAssistant.add(shopAssistant);
+                if (shopAssistant.getDuty().equals("制作咖啡")){
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 500);
+                }else if (shopAssistant.getDuty().equals("制作冰淇淋")){
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 300);
+                } else {
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 200);
+                }
+                System.out.printf("[%s]> [SUCCESS] 店员招募成功!\n", shopKeeper.getName());
+            }
+        }
+
+    }
+
+    //5. 招聘店员展板
+    public void hiringAdditionalStaffBlackBoard(){
+        System.out.println("* -------------------店员列表--------------------*");
+        for (int i = 0; i < shopAssistantList.size(); i++) {
+            System.out.printf("|-店员编号:\t%d\n", i);
+            System.out.printf("| 店员姓名:\t%s\n", shopAssistantList.get(i).getName());
+            String duty = shopAssistantList.get(i).getDuty();
+            System.out.printf("| 店员技能:\t%s\n", duty);
+            String effect = "";
+            int cost = 0;
+            if (duty.equals("制作咖啡")){
+                effect = "每天赚取100元";
+                cost = 500;
+            } else if (duty.equals("制作冰淇淋")){
+                effect = "每天赚取50元";
+                cost = 300;
+            } else {
+                effect = "每天赚取25元";
+                cost = 200;
+            }
+            System.out.printf("| 店员效果:\t%s\n", effect);
+            System.out.printf("| 招聘价格:\t%d\n", cost);
+            if (hiredShopAssistant.contains(shopAssistantList.get(i))){
+                System.out.printf("| 是否已招聘:\t是\n");
+            }else{
+                System.out.printf("| 是否已招聘:\t否\n");
+            }
+            System.out.println("|");
+        }
+        System.out.println("* ----------------------------------------------*");
+        System.out.println("* ============================================= *");
+        System.out.println("@=              请选择店员编号进行招募            =@");
+        System.out.println("@=                   q. 返回                    =@");
+        System.out.println("* ============================================= *");
+    }
+
+    //5. 获取店员盈利
+    public void getShopAssistantOutput(){
+        for (int i = 0; i < hiredShopAssistant.size(); i++){
+            ShopAssistant shopAssistant = (ShopAssistant) hiredShopAssistant.get(i);
+            String duty = shopAssistant.getDuty();
+            int outPut = 0;
+            if (duty.equals("制作咖啡")){
+                outPut = 100;
+            } else if (duty.equals("制作冰淇淋")){
+                outPut = 50;
+            } else {
+                outPut = 25;
+            }
+            convenienceStore.setMoney(convenienceStore.getMoney() + outPut);
+        }
+    }
+    /** ================================================================================= 菜单5【招聘店员】 E N D */
+    /** ================================================================================= 菜单6【制作优惠券】 START */
+    //6. 制作优惠券
+    public static void showMakeCouponsInfo(){
+        Discount discount30off = new DiscountRateThree();
+        Discount discount50off = new DiscountRateFive();
+        Discount discount70off = new DiscountRateSeven();
+        Coupon drinksCoupon = null;
+        Coupon snacksCoupon = null;
+        Coupon pastryCoupon = null;
+
+        showMakeCouponsInfoBlackBoard();
+        System.out.printf("[%s]> 请选择您要进行的操作: ", shopKeeper.getName());
+        String command = "";
+        if (scanner.hasNext()) {
+            command = scanner.next();
+        }
+        while (!command.equals("")) {
+            switch (command) {
+                case "1":
+                    drinksCoupon= new DrinksCoupon(discount30off);
+                    drinksCoupon.discribeCouponInfo();
+                    couponSum +=30;
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 2);
+                    break;
+                case "2":
+                    drinksCoupon= new DrinksCoupon(discount50off);
+                    drinksCoupon.discribeCouponInfo();
+                    couponSum +=50;
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 3);
+                    break;
+                case "3":
+                    drinksCoupon= new DrinksCoupon(discount70off);
+                    drinksCoupon.discribeCouponInfo();
+                    couponSum +=70;
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 5);
+                    break;
+                case "4":
+                    pastryCoupon = new PastryCoupon(discount30off);
+                    pastryCoupon.discribeCouponInfo();
+                    couponSum +=30;
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 2);
+                    break;
+                case "5":
+                    pastryCoupon = new PastryCoupon(discount50off);
+                    pastryCoupon.discribeCouponInfo();
+                    couponSum +=50;
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 3);
+                    break;
+                case "6":
+                    pastryCoupon = new PastryCoupon(discount70off);
+                    pastryCoupon.discribeCouponInfo();
+                    couponSum +=70;
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 5);
+                    break;
+                case "7":
+                    snacksCoupon = new SnacksCoupon(discount30off);
+                    snacksCoupon.discribeCouponInfo();
+                    couponSum +=30;
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 2);
+                    break;
+                case "8":
+                    snacksCoupon = new SnacksCoupon(discount50off);
+                    snacksCoupon.discribeCouponInfo();
+                    couponSum +=50;
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 2);
+                    break;
+                case "9":
+                    snacksCoupon = new SnacksCoupon(discount70off);
+                    snacksCoupon.discribeCouponInfo();
+                    couponSum +=70;
+                    convenienceStore.setMoney(convenienceStore.getMoney() - 5);
+                    break;
+                case "q":
+                    return;
+                default:
+                    System.out.printf("[%s]> [ERROR] 指令不存在!\n", shopKeeper.getName());
+                    break;
+            }
+            showMakeCouponsInfoBlackBoard();
+            System.out.printf("[%s]> 请选择您要进行的操作, 一次只能制作一张: ", shopKeeper.getName());
+            if (scanner.hasNext()) {
+                command = scanner.next();
+            }
+        }
+    }
+
+    //6. 制作优惠券展板
+    public static void showMakeCouponsInfoBlackBoard(){
+
+        System.out.println("* ===================== 说明 ================== *");
+        System.out.printf("                当前人气值： %d\n",couponSum);
+        System.out.printf("                人气值每满500, 顾客数目加1\n");
+        ConstantTable.CUSTOMER_NUMBER += couponSum/500;
+        System.out.printf("                当前每分钟顾客数目： %d\n",ConstantTable.CUSTOMER_NUMBER);
+        System.out.println("* --------------------------------------------- *");
+        System.out.println("@=             1. 饮品30%off优惠券[人气+30][$2]  =@");
+        System.out.println("@=             2. 饮品50%off优惠券[人气+50][$3]  =@");
+        System.out.println("@=             3. 饮品70%off优惠券[人气+70][$5]  =@");
+        System.out.println("@=             4. 糕点30%off优惠券[人气+30][$2]  =@");
+        System.out.println("@=             5. 糕点50%off优惠券[人气+50][$3]  =@");
+        System.out.println("@=             6. 糕点70%off优惠券[人气+70][$5]  =@");
+        System.out.println("@=             7. 零食30%off优惠券[人气+30][$2]  =@");
+        System.out.println("@=             8. 零食50%off优惠券[人气+50][$3]  =@");
+        System.out.println("@=             9. 零食70%off优惠券[人气+70][$5]  =@");
+        System.out.println("@=                   q. 返回                    =@");
+        System.out.println("* ============================================= *");
+    }
+    /** ================================================================================= 菜单6【制作优惠券】 E N D */
 
     /** ================================================================================= 菜单4【查看顾客】 START */
     //4. 查看顾客
@@ -111,17 +346,9 @@ public class ShopkeeperThread implements Runnable {
         while (!command.equals("")) {
             switch (command) {
                 case "0":
-                    servingCustomer(Integer.parseInt(command));
-                    break;
                 case "1":
-                    servingCustomer(Integer.parseInt(command));
-                    break;
                 case "2":
-                    servingCustomer(Integer.parseInt(command));
-                    break;
                 case "3":
-                    servingCustomer(Integer.parseInt(command));
-                    break;
                 case "4":
                     servingCustomer(Integer.parseInt(command));
                     break;
@@ -237,15 +464,15 @@ public class ShopkeeperThread implements Runnable {
                 MembershipCard cardOrdinary = ordinaryCardFactory.getCard(customer.getName());
                 cardOrdinary.showMemberShipCard();
                 customer.buy(PriceTable.ORDINARY_CARD);
-                convenienceStore.setMoney(convenienceStore.getMoney()+PriceTable.ORDINARY_CARD);
+                convenienceStore.setMoney(convenienceStore.getMoney() + PriceTable.ORDINARY_CARD);
                 System.out.printf("[%s]> [SUCCESS] 成功办理普通会员卡, 获得金钱%d!\n", shopKeeper.getName(), PriceTable.ORDINARY_CARD);
                 customerList.remove(customer);
             } else if (info.equals("办理高级会员卡")) {
-                CardFactory seniorCardFactory=new SeniorCardFactory();
-                MembershipCard cardSenior=seniorCardFactory.getCard(customer.getName());
+                CardFactory seniorCardFactory = new SeniorCardFactory();
+                MembershipCard cardSenior = seniorCardFactory.getCard(customer.getName());
                 cardSenior.showMemberShipCard();
                 customer.buy(PriceTable.SENIOR_CARD);
-                convenienceStore.setMoney(convenienceStore.getMoney()+PriceTable.SENIOR_CARD);
+                convenienceStore.setMoney(convenienceStore.getMoney() + PriceTable.SENIOR_CARD);
                 System.out.printf("[%s]> [SUCCESS] 成功办理普通会员卡, 获得金钱%d!\n", shopKeeper.getName(), PriceTable.SENIOR_CARD);
                 customerList.remove(customer);
 
@@ -274,8 +501,8 @@ public class ShopkeeperThread implements Runnable {
 
 
     /** ================================================================================= 菜单4【查看顾客】 START */
-    /** ================================================================================= 菜单6【查看留言板】 START */
-    //6. 查看留言板
+    /** ================================================================================= 菜单7【查看留言板】 START */
+    //7. 查看留言板
     public static void showMessageInfo() {
         shopKeeper.addMediator(messageBoard);
         showMessageInfoBlackBoard();
@@ -297,7 +524,6 @@ public class ShopkeeperThread implements Runnable {
                 default:
                     System.out.printf("[%s]> [ERROR] 指令不存在!\n", shopKeeper.getName());
                     break;
-
             }
             showMessageInfoBlackBoard();
             System.out.printf("[%s]> 请选择您要进行的操作: ", shopKeeper.getName());
@@ -307,7 +533,7 @@ public class ShopkeeperThread implements Runnable {
         }
     }
 
-    //6. 查看留言板展板
+    //7. 查看留言板展板
     public static void showMessageInfoBlackBoard() {
         messageBoard.showMessages();
         System.out.println("* ============================================= *");
@@ -317,7 +543,7 @@ public class ShopkeeperThread implements Runnable {
         System.out.println("* ============================================= *");
     }
 
-    //6.1 回复留言板
+    //7.1 回复留言板
     public static void replyMessageBoard() {
         String message = "";
         System.out.printf("[%s]> 请输入您要回复的内容: ", shopKeeper.getName());
@@ -326,7 +552,7 @@ public class ShopkeeperThread implements Runnable {
 
         shopKeeper.sendMessage(message);
     }
-    /** ================================================================================= 菜单6【查看留言板】 E N D */
+    /** ================================================================================= 菜单7【查看留言板】 E N D */
 
     /** ================================================================================= 菜单3【进购食品】 START */
     //3. 进购食品
@@ -518,6 +744,7 @@ public class ShopkeeperThread implements Runnable {
         System.out.printf("| 店铺名称:   \t%s\n", convenienceStore.getName());
         System.out.printf("| 店长昵称:   \t%s\n", shopKeeper.getName());
         System.out.printf("| 店铺资金:   \t%s元\n", convenienceStore.getMoney());
+        System.out.printf("| 人 气 值:    \t%s\n", couponSum);
         Map<String, Integer> map = foodRepository.getFoodItemNumMap();
         System.out.println("*--------------------店铺库存--------------------*");
         System.out.printf("| 店铺库存饮品:\t%d个\n", map.get("饮品"));
@@ -667,6 +894,15 @@ public class ShopkeeperThread implements Runnable {
             foodPrototypeList.add(foodByA);
             foodPrototypeList.add(foodByB);
         }
+    }
+
+    public static void initShopAssistant(){
+        shopAssistantList.add(new ShopAssistant("Jack","制作咖啡"));
+        shopAssistantList.add(new ShopAssistant("Lilith","制作豆浆"));
+        shopAssistantList.add(new ShopAssistant("Lilith","制作冰淇淋"));
+
+
+
     }
 }
 

@@ -21,15 +21,12 @@ public class CustomerThread implements Runnable {
     String[] nameList = {"Jessica", "Glen", "Jacqueline", "Brittany", "James", "Katherine", "Elliott", "Jacob", "Clover", "Carlota"};
 
 
-    private static int initCustomerNum = ConstantTable.CUSTOMER_NUMBER;
-
-
 
     @Override
     public void run() {
         while (true) {
             try {
-                while (customerList.size() < initCustomerNum) {
+                while (customerList.size() < ConstantTable.CUSTOMER_NUMBER) {
                     Random r = new Random();
                     int i = r.nextInt(nameList.length);
                     Customer customer = customerFactory.createCustomer(nameList[i]);

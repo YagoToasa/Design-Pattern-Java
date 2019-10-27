@@ -13,12 +13,12 @@ import java.util.Map;
  * @version: v1.0
  */
 public class ConstantTable {
-    public final static int CUSTOMER_NUMBER = 5;
+    public static int CUSTOMER_NUMBER = 5;
     public static boolean TEST_PROGRAM = true;
     public static String SHOP_KEEPER_NAME = "猫咪不吃鱼";
     public static String STORE_NAME = "欢乐便利店";
 
-    public final static int SHOPPING_CART_DEFAULT_SIZE = 5;
+    public static int SHOPPING_CART_DEFAULT_SIZE = 5;
     public final static int FOOD_COMBO_SIZE = 3;
 
     public final static float ORDINARY_MEMBER_DISCOUNT = 0.95f;

@@ -12,18 +12,18 @@ package store.machine;
 
 public class MicrowaveOven {
     public void checkUp(){
-        System.out.println("MicrowaveOven checkup!");
-        System.out.println("检查微波炉托盘");
+        System.out.println("检查微波炉!");
+        System.out.println("检查微波炉托盘!");
     }
     public void startUp(){
-        System.out.println("MicrowaveOven startup!");
+        System.out.println("开启微波炉!");
     }
 
     public void shutDown(){
-        System.out.println("MicrowaveOven shutdown!");
+        System.out.println("关闭微波炉!");
     }
 
     public void cleanUp(){
-        System.out.println("MicrowaveOven cleanup!");
+        System.out.println("清洗微波炉!");
     }
 }

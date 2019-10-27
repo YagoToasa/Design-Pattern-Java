@@ -43,12 +43,12 @@ public class StoreDailySummary {
      * @return: void
      */
     public void startUpAll(){
-        System.out.println("start the machine!");
+        System.out.println("开始开启器械!");
         coffeeMaker.startUp();
         iceCreamMachine.startUp();
         deepFreezer.startUp();
         microwaveOven.startUp();
-        System.out.println("start machine finished!");
+        System.out.println("器械开启完成[Completed]!");
         System.out.println("————");
     }
 
@@ -60,12 +60,12 @@ public class StoreDailySummary {
      * @return: void
      */
     public void shutDownAll(){
-        System.out.println("begin to close the machine!");
+        System.out.println("开始关闭器械!");
         coffeeMaker.shutDown();
         iceCreamMachine.shutDown();
         deepFreezer.shutDown();
         microwaveOven.shutDown();
-        System.out.println("machine closed!");
+        System.out.println("器械关闭完成[Completed]!");
         System.out.println("————");
     }
     /**
@@ -76,12 +76,12 @@ public class StoreDailySummary {
      * @return: void
      */
     public void checkUpAll(){
-        System.out.println("check the machine!");
+        System.out.println("开始检查器械!");
         coffeeMaker.checkUp();
         iceCreamMachine.checkUp();
         deepFreezer.checkUp();
         microwaveOven.checkUp();
-        System.out.println("check machine finished!");
+        System.out.println("器械检查完成[Completed]!");
         System.out.println("————");
     }
 
@@ -93,12 +93,12 @@ public class StoreDailySummary {
      * @return: void
      */
     public void cleanUpAll(){
-        System.out.println("clean the machine!");
+        System.out.println("开始清洗器械!");
         coffeeMaker.cleanUp();
         iceCreamMachine.cleanUp();
         deepFreezer.cleanUp();
         microwaveOven.cleanUp();
-        System.out.println("clean machine finished!");
+        System.out.println("器械清洗完成[Completed]!");
         System.out.println("————");
     }
 }

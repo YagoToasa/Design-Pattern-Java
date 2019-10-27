@@ -1,4 +1,4 @@
-package TestProgram.DesignPatterns;
+package DesignPatterns;
 
 import store.summary.StoreDailySummary;
 

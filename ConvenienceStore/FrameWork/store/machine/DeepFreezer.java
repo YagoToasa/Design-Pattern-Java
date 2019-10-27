@@ -9,18 +9,18 @@ package store.machine;
  */
 public class DeepFreezer {
     public void checkUp(){
-        System.out.println("DeepFreezer checkup!");
-        System.out.println("检查制冷剂");
+        System.out.println("检查制冷机!");
+        System.out.println("检查制冷剂!");
     }
     public void startUp(){
-        System.out.println("DeepFreezer startup!");
+        System.out.println("开启制冷机!");
     }
 
     public void shutDown(){
-        System.out.println("DeepFreezer shutdown!");
+        System.out.println("关闭制冷机!");
     }
 
     public void cleanUp(){
-        System.out.println("DeepFreezer cleanup!");
+        System.out.println("清洗制冷机!");
     }
 }
