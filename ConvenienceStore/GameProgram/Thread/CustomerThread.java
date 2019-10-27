@@ -20,8 +20,6 @@ import static GameProgram.Thread.Common.*;
 public class CustomerThread implements Runnable {
     String[] nameList = {"Jessica", "Glen", "Jacqueline", "Brittany", "James", "Katherine", "Elliott", "Jacob", "Clover", "Carlota"};
 
-
-
     @Override
     public void run() {
         while (true) {
