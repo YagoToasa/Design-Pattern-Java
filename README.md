@@ -97,7 +97,7 @@
 - [x] Observer
 - [x] State
 - [x] Strategy
-- [ ] Template Method
+- [x] Template Method
 - [x] Visitor
 
 ### Unknown patterns
