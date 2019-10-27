@@ -7,8 +7,8 @@ import person.*;
  * @author: Kunyu Chen
  * @description: Null Object模式测试类
  * @designPattern: Null Object
- * @date: 2019-10-26
- * @version: v1.0
+ * @date: 2019-10-27
+ * @version: v2.0
  */
 public class NullObjectDemo {
     public static void main(String[] args){
@@ -18,16 +18,16 @@ public class NullObjectDemo {
 
         //生成店员
         IsPerson person1= personFactory.getPerson("Peter","ShopAssistant");
-        person1.show();
+        person1.showPerson();
         //生成顾客
         IsPerson person2= personFactory.getPerson("Alex","Customer");
-        person2.show();
+        person2.showPerson();
         //没有这个PersonType
         IsPerson person3= personFactory.getPerson("Alex","Cook");
-        person3.show();
+        person3.showPerson();
         //名字为空
         IsPerson person4 = personFactory.getPerson(null,"ShopAssistant");
-        person4.show();
+        person4.showPerson();
 
         System.out.println("E N D ========================= Visitor Demo =========================");
     }
