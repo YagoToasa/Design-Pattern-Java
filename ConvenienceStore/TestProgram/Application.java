@@ -79,6 +79,7 @@ public class Application {
                     FactoryMethodDemo.main(args);
                     break;
                 case "4":
+                    ObjectPoolDemo.main(args);
                     break;
                 case "5":
                     PrototypeDemo.main(args);
