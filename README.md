@@ -70,7 +70,7 @@
 - [x] Abstract Factory
 - [x] Builder
 - [x] Factory Method
-- [ ] Object Pool
+- [x] Object Pool
 - [x] Prototype
 - [x] Singleton
 
@@ -80,7 +80,7 @@
 - [x] Bridge
 - [x] Composite
 - [x] Decorator
-- [ ] Facade
+- [x] Facade
 - [x] Flyweight
 - [x] Private Class Data
 - [x] Proxy
