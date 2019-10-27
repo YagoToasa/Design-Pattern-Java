@@ -1,4 +1,5 @@
 import DesignPatterns.*;
+import DesignPatterns.TemplateMethodDemo;
 
 import java.util.Scanner;
 
@@ -128,6 +129,7 @@ public class Application {
                     MementoDemo.main(args);
                     break;
                 case "21":
+                    NullObjectDemo.main(args);
                     break;
                 case "22":
                     ObserverDemo.main(args);
@@ -139,6 +141,7 @@ public class Application {
                     StrategyDemo.main(args);
                     break;
                 case "25":
+                    TemplateMethodDemo.main(args);
                     break;
                 case "26":
                     VisitorDemo.main(args);
