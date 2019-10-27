@@ -9,5 +9,5 @@ package cards;
  */
 public abstract class MembershipCard {
     protected String name;
-    public abstract void createMembershipCard();
+    public abstract void showMemberShipCard();
 }
