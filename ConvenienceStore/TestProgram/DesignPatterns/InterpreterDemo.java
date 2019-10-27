@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 /**
  * @className: Calculator
- * @description: 解释器类
+ * @description: 解释器模式测试程序
  * @author: Liwen Zhu
  * @date: 19:51 2019/10/26
  * @version: v1.0
