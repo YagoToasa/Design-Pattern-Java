@@ -1,8 +1,8 @@
 package DesignPatterns;
 
-import factory.FoodFactory;
+import factory.FoodFactoryA;
 import foods.Food;
-import foods.FoodProxy;
+import foods.FoodProxyA;
 import foods.FoodRepository;
 import utils.enums.PatternType;
 import world.WorldClock;
@@ -22,11 +22,11 @@ import static utils.info.ConstantTable.FOOD_ITEM_TYPE_MAP;
 public class ObserverDemo {
     public static Map<String, Food> initFoodPrototype() {
         System.out.println("> 初始化食物原型映射表");
-        FoodProxy foodProxy = new FoodProxy(FoodFactory.getInstance());
+        FoodProxyA foodProxyA = new FoodProxyA(FoodFactoryA.getInstance());
         Map<String, Food> foodPrototypeMap = new HashMap<>();
 
         FOOD_ITEM_TYPE_MAP.forEach((k, v) -> {
-            foodPrototypeMap.put(k, foodProxy.createFood(k));
+            foodPrototypeMap.put(k, foodProxyA.createFood(k));
         });
         System.out.println("> 初始化食物原型映射表 [Completed]");
         return foodPrototypeMap;
@@ -73,6 +73,7 @@ public class ObserverDemo {
         worldClock.updateTheWorld();
         System.out.println("> 当前世界时钟天数为: DAY = " + worldClock.getDay());
         foodRepository.show();
+
         System.out.println("---");
         System.out.println("> 世界时钟又过了一天，所有的观测者(食品)，更新其保质期");
         worldClock.updateTheWorld();

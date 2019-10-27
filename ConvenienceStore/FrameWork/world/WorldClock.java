@@ -1,8 +1,12 @@
 package world;
 
 
-import java.util.ArrayList;
+import foods.Food;
+import utils.enums.SeasonType;
+
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @className: WorldClock
@@ -13,7 +17,8 @@ import java.util.List;
  */
 public class WorldClock {
     private int day = 1;                                                    //世界天数
-    private List<WorldObserver> worldObserversList = new ArrayList<>();     //观测者列表
+    private SeasonType season;
+    private Set<WorldObserver> worldObserversSet = new HashSet<>();         //观测者列表
 
     private static class WorldClockHolder {
         private static final WorldClock INSTANCE = new WorldClock();
@@ -21,6 +26,7 @@ public class WorldClock {
 
     private WorldClock() {
         this.day = 1;
+        this.season = (SeasonType.values())[(this.day / 20) % 3];
     }
 
     /**
@@ -32,7 +38,6 @@ public class WorldClock {
     public static final WorldClock getInstance() {
         return WorldClockHolder.INSTANCE;
     }
-
 
 
     /**
@@ -59,13 +64,13 @@ public class WorldClock {
 
     /**
      * 添加观测者
-     * 
+     *
      * @methodName: addObserver
      * @param observer: WorldObserver
      * @return: boolean
      */
     public boolean addObserver(WorldObserver observer) {
-        if (worldObserversList.add(observer)) {
+        if (worldObserversSet.add(observer)) {
             return true;
         }
         return false;
@@ -79,7 +84,7 @@ public class WorldClock {
      * @return: boolean
      */
     public boolean deleteObserver(WorldObserver observer) {
-        if (worldObserversList.remove(observer)) {
+        if (worldObserversSet.remove(observer)) {
             return true;
         }
         return false;
@@ -87,15 +92,30 @@ public class WorldClock {
 
     /**
      * 更新世界信息
-     * 
+     *
      * @methodName: updateTheWorld
      * @return: void
      */
     public void updateTheWorld() {
         this.day++;
-        for (WorldObserver observer : worldObserversList) {
+        this.season = (SeasonType.values())[(this.day / 20) % 3];
+        for (WorldObserver observer : worldObserversSet) {
             observer.update();
         }
     }
 
+    /**
+     * 刷新观测者列表
+     *
+     * @methodName: refreshObserverSet
+     * @param: []
+     * @return: void
+     */
+    public void refreshObserverSet(List<Food> foodList) {
+        worldObserversSet = new HashSet<>(foodList);
+    }
+
+    public SeasonType getSeason() {
+        return season;
+    }
 }

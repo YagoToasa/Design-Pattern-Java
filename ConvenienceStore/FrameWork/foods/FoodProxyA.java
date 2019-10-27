@@ -1,7 +1,7 @@
 package foods;
 
 import factory.AbstractFactory;
-import factory.FoodFactory;
+import factory.FoodFactoryA;
 
 
 /**
@@ -11,30 +11,30 @@ import factory.FoodFactory;
  * @designPattern: Proxy
  * @date: 8:31 上午 2019/10/22
  */
-public class FoodProxy implements AbstractFactory {
-    FoodFactory foodFactory;
+public class FoodProxyA implements AbstractFactory {
+    FoodFactoryA foodFactoryA;
 
-    public FoodProxy(FoodFactory foodFactory) {
-        this.foodFactory = foodFactory;
+    public FoodProxyA(FoodFactoryA foodFactoryA) {
+        this.foodFactoryA = foodFactoryA;
     }
 
     @Override
     public Food createFood(String name) {
-        return foodFactory.createFood(name);
+        return foodFactoryA.createFood(name);
     }
 
     @Override
     public Food createDrink(String name) {
-        return foodFactory.createDrink(name);
+        return foodFactoryA.createDrink(name);
     }
 
     @Override
     public Food createSnack(String name) {
-        return foodFactory.createSnack(name);
+        return foodFactoryA.createSnack(name);
     }
 
     @Override
     public Food createPastry(String name) {
-        return foodFactory.createPastry(name);
+        return foodFactoryA.createPastry(name);
     }
 }

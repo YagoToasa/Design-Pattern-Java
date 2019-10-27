@@ -1,8 +1,8 @@
 package DesignPatterns;
 
-import factory.FoodFactory;
+import factory.FoodFactoryA;
 import foods.Food;
-import foods.FoodProxy;
+import foods.FoodProxyA;
 import utils.enums.PatternType;
 
 import java.util.HashMap;
@@ -27,11 +27,11 @@ public class PrototypeDemo {
      */
     public static Map<String, Food> initFoodPrototype() {
         System.out.println("> 初始化食物原型映射表");
-        FoodProxy foodProxy = new FoodProxy(FoodFactory.getInstance());
+        FoodProxyA foodProxyA = new FoodProxyA(FoodFactoryA.getInstance());
         Map<String, Food> foodPrototypeMap = new HashMap<>();
 
         FOOD_ITEM_TYPE_MAP.forEach((k, v) -> {
-            foodPrototypeMap.put(k, foodProxy.createFood(k));
+            foodPrototypeMap.put(k, foodProxyA.createFood(k));
         });
         System.out.println("> 初始化食物原型映射表 [Completed]");
         System.out.println("---");

@@ -7,10 +7,16 @@ package store.message;
  * @date: 日期
  * @version: v1.0 版本
  */
+
 import person.Person;
+import utils.enums.PersonType;
 
 public interface Mediator {
     public abstract void register(String personName, Person person);
 
-    public abstract void getMessage(String message, String personName);
+    public abstract void getMessage(String message, String personName, PersonType type);
+
+    public abstract void showMessages();
+
+    public abstract void clean();
 }

@@ -1,7 +1,7 @@
 package DesignPatterns;
 
 import factory.AbstractFactory;
-import factory.FoodFactory;
+import factory.FoodFactoryA;
 import factory.FoodFactoryB;
 import foods.Food;
 import utils.info.ConstantTable;
@@ -20,7 +20,7 @@ import java.util.Set;
 public class AbstractFactoryDemo {
     public static void main(String[] args) {
         System.out.println("START ====================== AbstractFactory Demo ======================");
-        AbstractFactory foodFactory = FoodFactory.getInstance();
+        AbstractFactory foodFactory = FoodFactoryA.getInstance();
         Set<String> nameSet = ConstantTable.FOOD_ITEM_TYPE_MAP.keySet();
         List<Food> foodList = new ArrayList<>();
         System.out.println("> 食品工厂A, 生产食品");

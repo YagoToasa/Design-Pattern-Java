@@ -35,5 +35,20 @@ public class ConvenienceStore extends StoreDailySummary {
         storeHouse.setStoreHouse(doorType, floorType, lightType, shelvesType, signboardType, windowType, curtainType);
     }
 
+    public void setName(String name) {
 
+        convenienceStoreData.setName(name);
+    }
+
+    public String getName(){
+        return convenienceStoreData.getName();
+    }
+
+    public void setMoney(int money){
+        convenienceStoreData.setMoney(money);
+    }
+
+    public int getMoney(){
+        return convenienceStoreData.getMoney();
+    }
 }

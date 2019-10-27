@@ -60,7 +60,6 @@ public class MementoDemo {
             mOriginator.testState1(foodRepository);
         }
 
-
         //展示当前状态
         mOriginator.showState();
 

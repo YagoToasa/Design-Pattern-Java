@@ -39,5 +39,6 @@ public enum PatternType {
     Specification,
     DoubleClickChecking,
     NULL,
+    TEST,
 }
 

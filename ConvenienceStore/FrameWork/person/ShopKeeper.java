@@ -1,6 +1,8 @@
 package person;
 
 import java.util.*;
+
+import utils.enums.PatternType;
 import utils.enums.PersonType;
 import utils.info.ConstantTable;
 
@@ -15,6 +17,11 @@ import utils.info.ConstantTable;
 public class ShopKeeper extends Person {
 
     ArrayList<ShopAssistant> sa = new ArrayList<ShopAssistant>();
+
+    @Override
+    public void showPerson() {
+
+    }
 
     /** @update: 更新了此单例类的实现方式 - Shidan Cheng */
     private static class ShopKeeperHolder {
@@ -56,4 +63,11 @@ public class ShopKeeper extends Person {
             System.out.println();
         }
     }
+
+    /** @update: 修改实现方式，以满足游戏要求 -- Shidan Cheng */
+    public void sendMessage(String message) {
+        this.getMediator().getMessage(message, this.name, PersonType.ShopKeeper);
+    }
+
+
 }

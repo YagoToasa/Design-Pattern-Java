@@ -1,5 +1,6 @@
 package store;
 
+import utils.info.ConstantTable;
 import world.WorldClock;
 import world.WorldObserver;
 
@@ -12,7 +13,8 @@ import world.WorldObserver;
  */
 public class ConvenienceStoreDataClass implements WorldObserver {
     private int day;
-    private String name;
+    private String name = ConstantTable.STORE_NAME;
+    private int money  = ConstantTable.STORE_INIT_MONEY;
 
     @Override
     public void update() {
@@ -39,4 +41,19 @@ public class ConvenienceStoreDataClass implements WorldObserver {
         return day;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public int getMoney() {
+        return money;
+    }
 }

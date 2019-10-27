@@ -1,8 +1,8 @@
 package DesignPatterns;
 
-import factory.FoodFactory;
+import factory.FoodFactoryA;
 import foods.Food;
-import foods.FoodProxy;
+import foods.FoodProxyA;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +20,7 @@ public class ProxyDemo {
     public static void main(String[] args) {
         System.out.println("START =========================== Proxy Demo ===========================");
         System.out.println("> 获取食品工厂代理");
-        FoodProxy foodProxy = new FoodProxy(FoodFactory.getInstance());
+        FoodProxyA foodProxyA = new FoodProxyA(FoodFactoryA.getInstance());
         System.out.println("> 获取食品工厂代理 [Completed]");
         System.out.println("---");
 
@@ -29,7 +29,7 @@ public class ProxyDemo {
 
         FOOD_ITEM_TYPE_MAP.forEach((k, v) -> {
             System.out.printf(">>> 制作食品:%s",k);
-            foodCreatedMap.put(k, foodProxy.createFood(k));
+            foodCreatedMap.put(k, foodProxyA.createFood(k));
             System.out.println("[√]");
         });
         System.out.println("> 通过食品工厂代理制作食品 [Completed]");

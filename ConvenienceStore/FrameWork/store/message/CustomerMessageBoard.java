@@ -3,7 +3,10 @@ package store.message;
 import person.Person;
 import person.Customer;
 import person.ShopAssistant;
+import utils.enums.PersonType;
+import utils.info.ConstantTable;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -56,24 +59,38 @@ public class CustomerMessageBoard implements Mediator {
      * @methodName: GetMessage
      * @param: String message, String personName
      * @return: void
+     * @update: 为了最终游戏的流程更改实现方式
+     * @updateBy: Shidan Cheng
      */
+
     @Override
-    public void getMessage(String message, String personName) {
+    public void getMessage(String message, String personName, PersonType personType) {
         //将留言存入留言板
-        messages.add(new Date().toString()
-                + " [" + personName + "] : " + message);
-        //通过中介者告诉店员有客户留言了需给以回复
-        if (personMap.get(personName) instanceof Customer) {
-
-            ((ShopAssistant) (personMap.get(interMap
-                    .get("ShopAssistant")))).giveReply();
-            //通过中介者告诉店员有店员留言了需给以回复
-        } else if (personMap.get(personName) instanceof ShopAssistant) {
-
-            ((ShopAssistant) (personMap.get(interMap.get("ShopAssistant"))))
-                    .giveThanks();
+        Date date = new Date();
+        String type;
+        if (personType.toString().equals("Customer")) {
+            type = "顾客";
+        } else if (personType.toString().equals("ShopAssistant")) {
+            type = "店员";
+        } else {
+            type = "店长";
         }
+        DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
+        messages.add(dateFormat.format(date)
+                + "  [" + type + "]" + personName + ": " + message);
 
+
+//        //通过中介者告诉店员有客户留言了需给以回复
+//        if (personMap.get(personName) instanceof Customer) {
+//
+//            ((ShopAssistant) (personMap.get(interMap
+//                    .get("ShopAssistant")))).giveReply();
+//            //通过中介者告诉店员有店员留言了需给以回复
+//        } else if (personMap.get(personName) instanceof ShopAssistant) {
+//
+//            ((ShopAssistant) (personMap.get(interMap.get("ShopAssistant"))))
+//                    .giveThanks();
+//        }
     }
 
     /**
@@ -97,14 +114,33 @@ public class CustomerMessageBoard implements Mediator {
      * @param: null
      * @return: void
      */
-    public void showMessages() {
 
-        System.out.println("-------------------------- Message Bord ------------------------------\n");
-        for (String m : messages) {
-            System.out.println(m);
+    /** @update: 更新了输出的格式 -Shidan Cheng */
+    @Override
+    public void showMessages() {
+        if (ConstantTable.TEST_PROGRAM) {
+            System.out.println("-------------------------- Message Bord ------------------------------\n");
+
+            for (String m : messages) {
+                System.out.println(m);
+            }
+            System.out.println("\n----------------------------------------------------------------------\n\n");
+        } else {
+            System.out.println("* ==================  留言板  ================== *");
+            if (messages.isEmpty()) {
+                System.out.println("            ヾ(´･ω･｀)ﾉ 现在没有留言呢！");
+            } else {
+                for (String m : messages) {
+                    System.out.println(m);
+                }
+            }
+            System.out.println("* ============================================= *");
         }
-        System.out.println("\n----------------------------------------------------------------------\n\n");
+
     }
 
-
+    @Override
+    public void clean() {
+        messages.clear();
+    }
 }

@@ -29,13 +29,13 @@ public class StoreHouse {
     }
 
     public void descStoreHouseInfo() {
-        System.out.println("店门类型:" + door.getType());
-        System.out.println("窗户类型:" + window.getType());
-        System.out.println("窗帘类型:" + curtain.getType());
-        System.out.println("地板类型:" + floor.getType());
-        System.out.println("灯光类型:" + light.getType());
-        System.out.println("货架类型:" + shelves.getType());
-        System.out.println("招牌类型:" + signboard.getType());
+        System.out.println("| 店门类型:" + door.getType());
+        System.out.println("| 窗户类型:" + window.getType());
+        System.out.println("| 窗帘类型:" + curtain.getType());
+        System.out.println("| 地板类型:" + floor.getType());
+        System.out.println("| 灯光类型:" + light.getType());
+        System.out.println("| 货架类型:" + shelves.getType());
+        System.out.println("| 招牌类型:" + signboard.getType());
 
     }
 }

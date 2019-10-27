@@ -39,12 +39,17 @@ public abstract class Food implements Cloneable, WorldObserver {
     }
 
     /**
-     * 返回一个克隆的食品
+     * 返回一个克隆的食品: 编写模式Demo时用
      *
      * @methodName: createDeepClone
      * @return: foods.Food
      */
     public abstract Food createClone(PatternType patternType);
+
+
+    public Food createClone(){
+        return this.createClone(PatternType.NULL);
+    }
 
     /**
      * 辅助方法, 根据不同的模式调整输出克隆文本信息
@@ -58,7 +63,7 @@ public abstract class Food implements Cloneable, WorldObserver {
             System.out.printf(">>> 克隆-食品原型: %s", this.name);
         } else if (patternType == PatternType.Iterator) {
             System.out.printf(">>> 添加-食品: %s", this.name);
-        } else if (patternType == PatternType.Observer) {
+        } else if (patternType == PatternType.Observer || patternType == PatternType.NULL) {
             return;
         } else {
             System.out.printf(">>> 制作-食品: %s", this.name);
@@ -86,7 +91,7 @@ public abstract class Food implements Cloneable, WorldObserver {
      * @return: void
      */
     public void describeFoodBriefInformation() {
-        System.out.printf("食品名称:%-5s\t类型:%5s\t售价:%d元;\n", this.name, this.type, this.price);
+        System.out.printf("食品名称:%-5s\t类型:%5s\t进价:%d元;\n", this.name, this.type, this.price);
     }
 
     /**
@@ -96,7 +101,8 @@ public abstract class Food implements Cloneable, WorldObserver {
      * @return: void
      */
     public void describeFoodLifeInformation() {
-        System.out.printf("食品名称:%-5s\t距离过期还剩:%5d天\n", this.name, this.state.getRemainDays());
+        float discountPrice = (float) this.price * this.state.getDiscountDependByState();
+        System.out.printf("食品名称:%-5s\t距离过期还剩:%5d天\t进价:%5d元\t建议售价:%.0f元\n", this.name, this.state.getRemainDays(),this.price,discountPrice*2);
     }
 
 

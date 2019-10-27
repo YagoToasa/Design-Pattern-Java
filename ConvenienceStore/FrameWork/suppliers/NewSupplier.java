@@ -19,7 +19,7 @@ public class NewSupplier extends AbstractSupplier {
 
     @Override
     public void setProduct(String product) {
-        foodProduct=foodProxy.createFood(product);
+        foodProduct= foodProxyA.createFood(product);
     }
 
 //    @Override

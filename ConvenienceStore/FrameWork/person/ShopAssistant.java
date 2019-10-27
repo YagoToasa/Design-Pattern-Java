@@ -79,18 +79,12 @@ public class ShopAssistant extends Person {
         CustomerMessageBoard.addMessage("我们已解决一些问题，请及时查看");
     }
 
+
+    /** @update: 修改实现方式，以满足游戏要求 -- Shidan Cheng */
     public void sendMessage(String message) {
-
-        Scanner s = new Scanner(System.in);
-        System.out.println(this.name + "你好！请在留言板中记下您的留言");
-
-        message = s.nextLine();
-
-        System.out.println("正在将留言录入留言板");
-
-        this.getMediator().getMessage(message, this.name);
-
-        System.out.println("留言成功");
+        this.getMediator().getMessage(message, this.name,this.type);
     }
+
+
 
 }

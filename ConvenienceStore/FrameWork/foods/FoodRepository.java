@@ -1,6 +1,9 @@
 package foods;
 
 
+import foods.state.FoodState;
+import world.WorldClock;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -108,5 +111,16 @@ public class FoodRepository {
      */
     public List<Food> getFoodList() {
         return foodList;
+    }
+
+    public void deleteExpiredFood(){
+        List<Food> foodListNew = new ArrayList<>();
+        for (Food food : foodList) {
+            if (food.state.getRemainDays() > 0){
+                foodListNew.add(food);
+            }
+        }
+        this.foodList = foodListNew;
+        WorldClock.getInstance().refreshObserverSet(this.foodList);
     }
 }

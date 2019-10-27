@@ -27,6 +27,7 @@ public class Drink extends Food implements WorldObserver {
         }
     }
 
+
     @Override
     public Food createClone(PatternType patternType) {
         try {

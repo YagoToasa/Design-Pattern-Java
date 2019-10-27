@@ -1,8 +1,8 @@
 package sale.combo;
 
-import factory.FoodFactory;
+import factory.FoodFactoryA;
 import foods.Food;
-import foods.FoodProxy;
+import foods.FoodProxyA;
 import utils.info.PriceTable;
 
 /**
@@ -14,7 +14,7 @@ import utils.info.PriceTable;
  * @version: v1.0
  */
 public class AComboBuilder extends ComboBuilder {
-    FoodProxy foodProxy = new FoodProxy(FoodFactory.getInstance());
+    FoodProxyA foodProxyA = new FoodProxyA(FoodFactoryA.getInstance());
 
     public AComboBuilder() {
         super(PriceTable.A_COMBO_REDUCE_PRICE);
@@ -22,7 +22,7 @@ public class AComboBuilder extends ComboBuilder {
 
     @Override
     protected void addDrink() {
-        Food food = foodProxy.createFood("可乐");
+        Food food = foodProxyA.createFood("可乐");
         System.out.printf(">>> A套餐-添加-饮品: %s", food.getName());
         this.foodCombo.addItem(food);
         this.comboPrice += food.getPrice();
@@ -30,7 +30,7 @@ public class AComboBuilder extends ComboBuilder {
 
     @Override
     protected void addPastry() {
-        Food food = foodProxy.createFood("蛋挞");
+        Food food = foodProxyA.createFood("蛋挞");
         System.out.printf(">>> A套餐-添加-糕点: %s", food.getName());
         this.foodCombo.addItem(food);
         this.comboPrice += food.getPrice();
@@ -38,7 +38,7 @@ public class AComboBuilder extends ComboBuilder {
 
     @Override
     protected void addSnack() {
-        Food food = foodProxy.createFood("薯片");
+        Food food = foodProxyA.createFood("薯片");
         System.out.printf(">>> A套餐-添加-零食: %s", food.getName());
         this.foodCombo.addItem(food);
         this.comboPrice += food.getPrice();

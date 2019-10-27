@@ -1,7 +1,9 @@
 package person;
 
 import store.message.Mediator;
+import utils.enums.PatternType;
 import utils.enums.PersonType;
+import utils.info.ConstantTable;
 
 /**
  * @className: Person
@@ -12,13 +14,13 @@ import utils.enums.PersonType;
  * @version: v1.1
  */
 
-/** @update:  继承自IsPerson类 Design-Pattern：Null Object - Kunyu Chen */
-public abstract class Person implements IsPerson{
+/** @update: 继承自IsPerson类 Design-Pattern：Null Object - Kunyu Chen */
+public abstract class Person implements IsPerson {
     protected String name;      //人物名称
     protected PersonType type;  //人物类型，eg：顾客、店主、店员
 
-    /** @update:  添加了中介者 Design-Pattern：Mediator - Xian Zhou */
-    protected Mediator mediator ;
+    /** @update: 添加了中介者 Design-Pattern：Mediator - Xian Zhou */
+    protected Mediator mediator;
 
     /** @update: 更新了抽象构造器的形式 - Shidan Cheng */
     public Person(String name, PersonType type) {
@@ -26,10 +28,10 @@ public abstract class Person implements IsPerson{
         this.type = type;
 
         // 用于测试程序的输出
-
-        System.out.printf(">>> 生成-人物-类型: %s\t姓名: %s;[√]\n", this.type.toString(), this.name);
+        if (ConstantTable.TEST_PROGRAM) {
+            System.out.printf(">>> 生成-人物-类型: %s\t姓名: %s;[√]\n", this.type.toString(), this.name);
+        }
     }
-
 
     /**
      *此人通过预备留言，加入留言板
@@ -40,7 +42,7 @@ public abstract class Person implements IsPerson{
      * @param:Mediator
      * @return:void
      */
-    public  void addMediator(Mediator mediator){
+    public void addMediator(Mediator mediator) {
         this.mediator = mediator;
         mediator.register(this.name, this);
     }
@@ -56,6 +58,7 @@ public abstract class Person implements IsPerson{
     public void setName(String name) {
         this.name = name;
     }
+
     /**
      *返回中介者
      *
@@ -65,7 +68,9 @@ public abstract class Person implements IsPerson{
      * @param:Mediator
      * @return:void
      */
-    public Mediator getMediator() { return this.mediator; }
+    public Mediator getMediator() {
+        return this.mediator;
+    }
 
     /**
      *
@@ -76,21 +81,12 @@ public abstract class Person implements IsPerson{
      * @param:
      * @return:boolean
      */
-    public boolean isNull(){
+    public boolean isNull() {
         return false;
     }
-    /**
-     *
-     *
-     * @methodName: showPerson
-     * @author:Kunyu Chen
-     * @date:2019/10/26
-     * @param:
-     * @return:void
-     */
-    public void showPerson() {
-        //可以将测试程序的输出写在这里，也可以写在上面
-        //System.out.printf(">>> 生成-人物-类型: %s\t姓名: %s;[√]\n", this.type.toString(), this.name);
+
+    public void showPerson(){
+
     }
 
 }

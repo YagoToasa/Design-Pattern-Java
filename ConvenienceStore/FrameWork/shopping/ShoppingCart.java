@@ -42,7 +42,12 @@ public class ShoppingCart {
         } else {
             throw new Exception("> 抱歉, 不提供该尺寸的购物车!");
         }
-        System.out.printf("> 获取 购物车[容量:%d] * 1\n",this.maxSize);
+        if (ConstantTable.TEST_PROGRAM) {
+            if (ConstantTable.TEST_PROGRAM) {
+                System.out.printf("> 获取 购物车[容量:%d] * 1\n", this.maxSize);
+            }
+        }
+
     }
 
     /**
@@ -130,7 +135,9 @@ public class ShoppingCart {
             }
             currentSize--;
         }
-        System.out.println("成功删除购物车中的商品!");
+        if (ConstantTable.TEST_PROGRAM) {
+            System.out.println("成功删除购物车中的商品!");
+        }
         return true;
     }
 

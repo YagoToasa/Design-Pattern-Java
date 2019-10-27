@@ -1,10 +1,6 @@
 package factory;
 
 import foods.Food;
-import foods.FoodProxy;
-import person.Customer;
-import person.ShopAssistant;
-import utils.enums.FoodType;
 
 /**
  * @className: AbstractFactory

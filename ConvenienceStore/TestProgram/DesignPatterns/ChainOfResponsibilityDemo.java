@@ -32,6 +32,7 @@ public class ChainOfResponsibilityDemo {
         System.out.println("> 假设: 小明消费了88元, 且其付款顺序为: 余额->支付宝->微信");
         cash.setNextHandle(alipay);
         alipay.setNextHandle(wechat);
+        wechat.setNextHandle(null);
         cash.checkOut(payment,customer1);
         System.out.println("---");
         System.out.println("> 假设: 小红消费了88元, 且其付款顺序为: 支付宝->微信->余额");

@@ -15,12 +15,12 @@ public class FactoryMethodDemo {
     public static void main(String[] args) {
         System.out.println("START ====================== Factory Method Demo =======================");
         CardFactory ordinaryCardFactory=new OrdinaryCardFactory();
-        MembershipCard cardOrdinary=ordinaryCardFactory.getCard("物理全");
-        cardOrdinary.createMembershipCard();
+        MembershipCard cardOrdinary=ordinaryCardFactory.getCard("顾客A");
+        cardOrdinary.showMemberShipCard();
 
         CardFactory seniorCardFactory=new SeniorCardFactory();
-        MembershipCard cardSenior=seniorCardFactory.getCard("抖森");
-        cardSenior.createMembershipCard();
+        MembershipCard cardSenior=seniorCardFactory.getCard("顾客B");
+        cardSenior.showMemberShipCard();
         System.out.println("E N D ====================== Factory Method Demo =======================\n");
     }
 }

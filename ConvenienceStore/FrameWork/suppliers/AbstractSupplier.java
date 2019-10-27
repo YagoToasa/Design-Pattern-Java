@@ -1,8 +1,8 @@
 package suppliers;
 
-import factory.FoodFactory;
+import factory.FoodFactoryA;
 import foods.Food;
-import foods.FoodProxy;
+import foods.FoodProxyA;
 
 /**
  * @className: AbstractSupplier
@@ -15,7 +15,7 @@ public abstract class AbstractSupplier {
     protected String supplierName;
     //protected String product;
     protected Food foodProduct;
-    FoodProxy foodProxy = new FoodProxy(FoodFactory.getInstance());
+    FoodProxyA foodProxyA = new FoodProxyA(FoodFactoryA.getInstance());
 
     public AbstractSupplier(String supplierName) {
         this.supplierName = supplierName;

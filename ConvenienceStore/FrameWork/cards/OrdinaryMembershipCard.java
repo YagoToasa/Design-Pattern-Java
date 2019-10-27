@@ -15,7 +15,7 @@ public class OrdinaryMembershipCard extends MembershipCard {
     }
 
     @Override
-    public void createMembershipCard() {
+    public void showMemberShipCard() {
         System.out.println("普通会员卡创建成功啦！");
         System.out.println("持卡者姓名："+this.name);
         System.out.println("此卡的价格为"+ PriceTable.ORDINARY_CARD);

@@ -14,18 +14,18 @@ import utils.info.ConstantTable;
  * @designPattern: Proxy, Singleton, AbstractFactory
  * @date: 9:29 上午 2019/10/22
  */
-public class FoodFactory implements AbstractFactory {
+public class FoodFactoryA implements AbstractFactory {
     private String factoryName = "A工厂";
 
     private static class FoodFactoryHolder {
-        private static final FoodFactory INSTANCE = new FoodFactory();
+        private static final FoodFactoryA INSTANCE = new FoodFactoryA();
     }
 
-    private FoodFactory() {
+    private FoodFactoryA() {
 
     }
 
-    public static final FoodFactory getInstance() {
+    public static final FoodFactoryA getInstance() {
         return FoodFactoryHolder.INSTANCE;
     }
 

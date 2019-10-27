@@ -1,5 +1,7 @@
 package sale.combo;
 
+import utils.info.ConstantTable;
+
 /**
  * @className: ComboDirector
  * @author: Shidan Cheng
@@ -18,11 +20,22 @@ public class ComboDirector {
     private void makeFoodCombo() {
         comboBuilder.makeCombo();
 
-        //以下部分仅供测试输出使用
-        int price = comboBuilder.getComboPrice();
-        int reduce = comboBuilder.getReducedPrice();
-        System.out.printf(">>> 套餐价格: %d[%d - %d]元\n", price, (int)(price + reduce), reduce);
+
+        if (ConstantTable.TEST_PROGRAM) {
+            //以下部分仅供测试输出使用
+            int price = comboBuilder.getComboPrice();
+            int reduce = comboBuilder.getReducedPrice();
+            System.out.printf(">>> 套餐价格: %d[%d - %d]元\n", price, (int) (price + reduce), reduce);
+        }
     }
+
+
+    public int getComboPrice(){
+        return comboBuilder.getComboPrice();
+    }
+
+
+
 
     /**
      * 获取制作的食品套餐
