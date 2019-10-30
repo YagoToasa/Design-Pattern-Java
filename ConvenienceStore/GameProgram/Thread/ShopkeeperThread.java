@@ -12,7 +12,10 @@ import foods.*;
 import foods.lookup.ProductBy;
 import foods.lookup.base.Specification;
 import person.Customer;
+import person.*;
 import person.Person;
+import person.IsPerson;
+import person.PersonFactory;
 import person.ShopAssistant;
 import sale.combo.AComboBuilder;
 import sale.combo.BComboBuilder;
@@ -21,6 +24,7 @@ import sale.combo.ComboDirector;
 import store.summary.StoreDailySummary;
 import utils.info.ConstantTable;
 import utils.info.PriceTable;
+
 
 import java.util.*;
 
@@ -74,6 +78,9 @@ public class ShopkeeperThread implements Runnable {
                     showMessageInfo();
                     break;
                 case "8":
+                    showSecuritySystem();
+                    break;
+                case "9":
 
                     System.out.printf("[%s]> [CLOSE] 关闭所有器械的电源!\n", shopKeeper.getName());
                     storeDailySummary.shutDownAll();
@@ -102,24 +109,52 @@ public class ShopkeeperThread implements Runnable {
 
     //main 展板
     public static void showBlackboard() {
-        System.out.println("* ============================================= *");
+        System.out.println("* ============================================== *");
         System.out.printf("                     %5s                         \n", convenienceStore.getName());
         System.out.printf("                     第%d天                       \n", worldClock.getDay());
         System.out.printf("                     季节: %s                    \n", worldClock.getSeason());
         System.out.printf("                     人气值: %s                    \n", couponSum);
-        System.out.println("* ============================================= *");
-        System.out.println("@=                   1. 设置店铺                =@");
-        System.out.println("@=                   2. 查看仓库                =@");
-        System.out.println("@=                   3. 进购食品                =@");
-        System.out.println("@=                   4. 查看顾客                =@");
-        System.out.println("@=                   5. 招聘店员                =@");
+        System.out.println("* ============================================== *");
+        System.out.println("@=                   1. 设置店铺                 =@");
+        System.out.println("@=                   2. 查看仓库                 =@");
+        System.out.println("@=                   3. 进购食品                 =@");
+        System.out.println("@=                   4. 查看顾客                 =@");
+        System.out.println("@=                   5. 招聘店员                 =@");
         System.out.println("@=                   6. 制作优惠券[提升人气值]    =@");
-        System.out.println("@=                   7. 查看留言板              =@");
-        System.out.println("@=                   8. 结束本天                =@");
-        System.out.println("@=                   q. 结束游戏                =@");
-        System.out.println("* ============================================= *");
+        System.out.println("@=                   7. 查看留言板               =@");
+        System.out.println("@=                   8. 安保系统                 =@");
+        System.out.println("@=                   9. 结束本天                 =@");
+        System.out.println("@=                   q. 结束游戏                 =@");
+        System.out.println("* ============================================== *");
     }
 
+    /** ================================================================================= 菜单8【安保系统】 START */
+    //8. 安保系统
+    public void showSecuritySystem(){
+
+        PersonFactory personFactory = new PersonFactory();
+
+        System.out.println("*------------------查看安保系统------------------*");
+
+        for(Map.Entry<String, String> entry: VisitorsMap.entrySet())
+        {
+            IsPerson nperson= personFactory.getPerson(entry.getKey(),entry.getValue());
+            if(entry.getValue()=="Customer"){
+                System.out.println("| 一位叫做"+entry.getKey()+"的顾客前来购物——");
+            }
+            else if(entry.getValue()=="ShopAssistant"){
+                System.out.println("| 一位叫做"+entry.getKey()+"的店员前来上班——");
+            }
+            else {
+                System.out.println("| 一位不合法人士来访——");
+                System.out.println("| 姓名: "+ entry.getKey()+ " 类型: "+entry.getValue());
+            }
+            nperson.showPerson();
+            System.out.println("***");
+        }
+        System.out.println("*-----------------------------------------------*");
+
+    }
     /** ================================================================================= 菜单5【招聘店员】 START */
     //5. 招聘店员
     public void hiringAdditionalStaff(){

@@ -77,7 +77,7 @@ public abstract class Person implements IsPerson {
      *
      * @methodName: isNull
      * @author:Kunyu Chen
-     * @date:2019/10/26
+     * @date:2019/10/30
      * @param:
      * @return:boolean
      */
@@ -86,7 +86,7 @@ public abstract class Person implements IsPerson {
     }
 
     public void showPerson(){
-
+        System.out.println("| 欢迎来到欢乐便利店！");
     }
 
 }

@@ -49,7 +49,15 @@ public class Common {
         customerBuyMap.put(12, "蛋黄酥");
     }
 
+    public static Map<String, String> VisitorsMap = new HashMap<>();
 
+    static{
+        VisitorsMap.put("Peter", "ShopAssistant");
+        VisitorsMap.put("Alex", "Customer");
+        VisitorsMap.put("Tom", "Thief");
+        VisitorsMap.put(null, "ShopAssistant");
+        VisitorsMap.put("Susan",null);
+    }
 
 
 
