@@ -22,6 +22,7 @@ import store.summary.StoreDailySummary;
 import utils.info.ConstantTable;
 import utils.info.PriceTable;
 
+
 import java.util.*;
 
 import static GameProgram.Thread.Common.*;
@@ -391,6 +392,7 @@ public class ShopkeeperThread implements Runnable {
             System.out.printf("[%s]> [ERROR] 顾客不存在!\n", shopKeeper.getName());
         } else {
             Customer customer = customerList.get(index);
+            customer.addMediator(messageBoard);
             String info = customerBuyMap.get(customer.getBuyType());
             List<Food> foodList = foodRepository.getFoodList();
             if (info.equals("A套餐")) {
@@ -424,6 +426,9 @@ public class ShopkeeperThread implements Runnable {
                     customer.buy(director.getComboPrice());
                     convenienceStore.setMoney(convenienceStore.getMoney() + director.getComboPrice());
                     System.out.printf("[%s]> [SUCCESS] 成功出售A套餐, 获得金钱%d!\n", shopKeeper.getName(), director.getComboPrice());
+                    System.out.printf("该顾客已留言:");
+                    customer.sendMessage(messageList.get(index));
+                    System.out.println(messageList.get(index));
                     customerList.remove(customer);
                 }
             } else if (info.equals("B套餐")) {
@@ -457,6 +462,10 @@ public class ShopkeeperThread implements Runnable {
                     customer.buy(director.getComboPrice());
                     convenienceStore.setMoney(convenienceStore.getMoney() + director.getComboPrice());
                     System.out.printf("[%s]> [SUCCESS] 成功出售B套餐, 获得金钱%d!\n", shopKeeper.getName(), director.getComboPrice());
+
+                    System.out.printf("该顾客已留言\n");
+                    customer.sendMessage(messageList.get(index));
+                    System.out.println(messageList.get(index));
                     customerList.remove(customer);
                 }
             } else if (info.equals("办理普通会员卡")) {
@@ -466,6 +475,9 @@ public class ShopkeeperThread implements Runnable {
                 customer.buy(PriceTable.ORDINARY_CARD);
                 convenienceStore.setMoney(convenienceStore.getMoney() + PriceTable.ORDINARY_CARD);
                 System.out.printf("[%s]> [SUCCESS] 成功办理普通会员卡, 获得金钱%d!\n", shopKeeper.getName(), PriceTable.ORDINARY_CARD);
+                System.out.printf("该顾客已留言:");
+                customer.sendMessage(messageList.get(index));
+                System.out.println(messageList.get(index));
                 customerList.remove(customer);
             } else if (info.equals("办理高级会员卡")) {
                 CardFactory seniorCardFactory = new SeniorCardFactory();
@@ -473,7 +485,10 @@ public class ShopkeeperThread implements Runnable {
                 cardSenior.showMemberShipCard();
                 customer.buy(PriceTable.SENIOR_CARD);
                 convenienceStore.setMoney(convenienceStore.getMoney() + PriceTable.SENIOR_CARD);
-                System.out.printf("[%s]> [SUCCESS] 成功办理普通会员卡, 获得金钱%d!\n", shopKeeper.getName(), PriceTable.SENIOR_CARD);
+                System.out.printf("[%s]> [SUCCESS] 成功办理高级会员卡, 获得金钱%d!\n", shopKeeper.getName(), PriceTable.SENIOR_CARD);
+                System.out.printf("该顾客已留言:");
+                customer.sendMessage(messageList.get(index));
+                System.out.println(messageList.get(index));
                 customerList.remove(customer);
 
             } else {
@@ -489,6 +504,9 @@ public class ShopkeeperThread implements Runnable {
                     customer.buy(pay);
                     convenienceStore.setMoney(convenienceStore.getMoney() + pay);
                     System.out.printf("[%s]> [SUCCESS] 成功出售商品, 获得金钱%d!\n", shopKeeper.getName(), pay);
+                    System.out.printf("该顾客已留言:");
+                    customer.sendMessage(messageList.get(index));
+                    System.out.println(messageList.get(index));
                     customerList.remove(customer);
                     foodList.remove(food);
                 } else {

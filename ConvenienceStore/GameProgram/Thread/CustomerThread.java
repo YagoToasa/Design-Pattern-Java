@@ -19,6 +19,7 @@ import static GameProgram.Thread.Common.*;
  */
 public class CustomerThread implements Runnable {
     String[] nameList = {"Jessica", "Glen", "Jacqueline", "Brittany", "James", "Katherine", "Elliott", "Jacob", "Clover", "Carlota"};
+    String[] message = {"谢谢！", "服务态度很好。", "购物体验很棒。", "有更新请及时通知！", "希望提供共享充电宝的服务", "店长的态度很好", "服务员有点少，结账速度较慢"};
 
     @Override
     public void run() {
@@ -32,6 +33,7 @@ public class CustomerThread implements Runnable {
                     customer.setBuyType(j);
                     customer.setCheckOutFlow(i / 2);
                     customerList.add(customer);
+                    messageList.add(message[i]);
                 }
                 Thread.sleep(5000);
             } catch (Exception e) {

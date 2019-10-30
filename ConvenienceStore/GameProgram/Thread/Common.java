@@ -27,6 +27,9 @@ public class Common {
     public static ShopKeeper shopKeeper = ShopKeeper.getInstance();
     public static ShopAssistantFactory shopAssistantFactory = ShopAssistantFactory.getInstance();
     public static List<Customer> customerList = new ArrayList<>();
+
+    public static List<String> messageList = new ArrayList<>();
+
     public static List<ShopAssistant> shopAssistantList = new ArrayList<>();
     public static Mediator messageBoard = new CustomerMessageBoard();
     public static List<Food> foodPrototypeList;
