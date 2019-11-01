@@ -21,7 +21,7 @@ public class SupplierFactory {
         supplierMap.put("B", supplierB);
     }
 
-    public static SupplierFactory getThreadFactory() {
+    public static SupplierFactory getSupplierFactory() {
         return supplierFactory;
     }
 

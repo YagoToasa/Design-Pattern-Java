@@ -9,7 +9,7 @@ import utils.info.ConstantTable;
  * @className: Person
  * @author: Wenyue Li
  * @description: 人物 抽象类
- * @designPattern: AbstractFactory
+ * @designPattern:
  * @date: 8:42 下午 2019/10/21
  * @version: v1.1
  */

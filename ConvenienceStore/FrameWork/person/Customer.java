@@ -17,7 +17,6 @@ import store.message.CustomerMessageBoard;
  * @className: Customer
  * @author: Wenyue Li
  * @description: 顾客 具体类
- * @designPattern: AbstractFactory
  * @date: 7:09 下午 2019/10/22
  * @version: v1.1
  */

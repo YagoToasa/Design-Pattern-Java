@@ -13,7 +13,7 @@ public class FlyweightDemo {
     public static void main(String[] args) {
         System.out.println("START =========================== Flyweight Demo ==========================");
         // 获取享元工厂
-        SupplierFactory supplierFactory = SupplierFactory.getThreadFactory();
+        SupplierFactory supplierFactory = SupplierFactory.getSupplierFactory();
 
         AbstractSupplier supplier2 = supplierFactory.getSupplier("B");
         supplier2.setProduct("巧克力");

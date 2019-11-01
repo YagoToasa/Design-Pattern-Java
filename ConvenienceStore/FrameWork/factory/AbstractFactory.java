@@ -5,7 +5,7 @@ import foods.Food;
 /**
  * @className: AbstractFactory
  * @author: Wenyue Li
- * @description: 食品工厂的基类
+ * @description: 食品工厂的接口类
  * @designPattern: AbstractFactory
  * @date: 8:42 下午 2019/10/21
  * @version: v1.0
