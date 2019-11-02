@@ -81,7 +81,6 @@ public class ShopkeeperThread implements Runnable {
                     showSecuritySystem();
                     break;
                 case "9":
-
                     System.out.printf("[%s]> [CLOSE] 关闭所有器械的电源!\n", shopKeeper.getName());
                     storeDailySummary.shutDownAll();
                     System.out.printf("[%s]> [CLOSE] 进行大扫除!\n", shopKeeper.getName());
@@ -91,6 +90,9 @@ public class ShopkeeperThread implements Runnable {
                     storeDailySummary.checkUpAll();
                     System.out.printf("[%s]> [OPEN] 开启所有器械的电源!\n", shopKeeper.getName());
                     storeDailySummary.startUpAll();
+                    break;
+                case "10":
+                    cheatMode();
                     break;
                 case "q":
                     System.exit(0);
@@ -120,7 +122,7 @@ public class ShopkeeperThread implements Runnable {
         System.out.println("@=                   3. 进购食品                 =@");
         System.out.println("@=                   4. 查看顾客                 =@");
         System.out.println("@=                   5. 招聘店员                 =@");
-        System.out.println("@=                   6. 制作优惠券[提升人气值]    =@");
+        System.out.println("@=                   6. 制作优惠券[提升人气值]     =@");
         System.out.println("@=                   7. 查看留言板               =@");
         System.out.println("@=                   8. 安保系统                 =@");
         System.out.println("@=                   9. 结束本天                 =@");
@@ -966,7 +968,24 @@ public class ShopkeeperThread implements Runnable {
         shopAssistantList.add(new ShopAssistant("Lilith","制作豆浆"));
         shopAssistantList.add(new ShopAssistant("Lilith","制作冰淇淋"));
 
+    }
 
+    public static void cheatMode(){
+        System.out.println("* =================== Cheat Mode =============== *");
+        System.out.println("@=      Σ( ° △ °|||)︴ 为什么不遵循说明书？         =@");
+        System.out.println("@=                                               =@");
+        System.out.println("@=               金钱调整为99999999               =@");
+        System.out.println("@=                所有物品数目增加10               =@");
+        System.out.println("@=          请不要滥用此功能，仅为调试BUG使用        =@");
+        System.out.println("* ============================================== *");
+        convenienceStore.setMoney(99999999);
+        for (Food f: foodPrototypeList
+             ) {
+            for (int i = 0; i < 99; i++) {
+                foodRepository.addFood(f.createClone());
+            }
+
+        }
 
     }
 }

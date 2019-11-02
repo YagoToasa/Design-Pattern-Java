@@ -31,7 +31,7 @@ public class CustomerThread implements Runnable {
                     Customer customer = customerFactory.createCustomer(nameList[i]);
                     int j = r.nextInt(customerBuyMap.size() - 1);
                     customer.setBuyType(j);
-                    customer.setCheckOutFlow(i / 2);
+                    customer.setCheckOutFlow(i % 3);
                     customerList.add(customer);
                     messageList.add(message[i]);
                 }

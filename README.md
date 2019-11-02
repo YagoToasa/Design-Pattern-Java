@@ -1,12 +1,14 @@
 # Design-Pattern-Java
 
 ![](https://img.shields.io/badge/Language-Java-green)	![](https://img.shields.io/badge/Number%20of%20team-9-orange)  ![](https://img.shields.io/github/last-commit/YagoToasa/Design-Pattern-Java)
-## 结构说明：
-- FrameWork: 游戏的依赖框架
-- TestProgream: 基于设计模式的应用, 分别展示30个设计模式, 请运行Application.java
-- GameProgram: 基于游戏流程的应用, 请运行GameApplication.java
-- 请将FrameWork及TestProgram设置为SourceRoot
-
+## 目录结构说明：
+1. `FrameWork`: 程序所依赖的框架
+2. `TestProgram`: 基于设计模式的Demo, 分别展示30个设计模式, 请运行文件夹下的`Application.java`
+3. `GameProgram`: 基于游戏流程的程序, 请运行文件夹下的`GameApplication.java`
+    - `Thread/CustomerThread`: 生成便利店顾客的线程
+    - `Thread/ShopkeeperThread`: 便利店店长的主线程
+    - `Common`: 共享变量
+- 注意事项: 请将FrameWork及TestProgram设置为SourceRoot
 
 
 ## 分支命名规范
