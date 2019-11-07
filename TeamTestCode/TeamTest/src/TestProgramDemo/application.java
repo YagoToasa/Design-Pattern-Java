@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class demo {
+public class application {
     private static Scanner scanner = new Scanner(System.in);
     private static String symbol = "";
 
