@@ -1,3 +1,9 @@
+package TestProgramDemo;
+
+import TestProgramDemo.PatternRealizationDemo.BridgeDemo;
+import TestProgramDemo.PatternRealizationDemo.BuilderDemo;
+import TestProgramDemo.PatternRealizationDemo.ProxyDemo;
+
 import java.util.Scanner;
 
 public class application {
@@ -87,10 +93,10 @@ public class application {
 
                     break;
                 case "11":
-
+                    BuilderDemo.main(args);
                     break;
                 case "12":
-
+                    BridgeDemo.main(args);
                     break;
                 case "13":
 
@@ -120,7 +126,7 @@ public class application {
 
                     break;
                 case "22":
-
+                    ProxyDemo.main(args);
                     break;
                 case "23":
 
