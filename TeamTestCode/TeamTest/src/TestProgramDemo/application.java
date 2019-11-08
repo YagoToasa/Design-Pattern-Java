@@ -3,6 +3,9 @@ package TestProgramDemo;
 import TestProgramDemo.PatternRealizationDemo.BridgeDemo;
 import TestProgramDemo.PatternRealizationDemo.BuilderDemo;
 import TestProgramDemo.PatternRealizationDemo.ProxyDemo;
+import TestProgramDemo.PatternRealizationDemo.CompositeDemo;
+import TestProgramDemo.PatternRealizationDemo.NullObjectDemo;
+import TestProgramDemo.PatternRealizationDemo.TemplateMethodDemo;
 
 import java.util.Scanner;
 
@@ -72,7 +75,7 @@ public class application {
 
                     break;
                 case "4":
-
+                    TemplateMethodDemo.main(args);
                     break;
                 case "5":
 
@@ -111,10 +114,10 @@ public class application {
 
                     break;
                 case "17":
-
+                    NullObjectDemo.main(args);
                     break;
                 case "18":
-
+                    CompositeDemo.main(args);
                     break;
                 case "19":
 
