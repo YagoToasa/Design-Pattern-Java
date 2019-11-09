@@ -7,6 +7,7 @@ import TestProgramDemo.PatternRealizationDemo.CompositeDemo;
 import TestProgramDemo.PatternRealizationDemo.NullObjectDemo;
 import TestProgramDemo.PatternRealizationDemo.TemplateMethodDemo;
 import TestProgramDemo.PatternRealizationDemo.StrategyDemo;
+import TestProgramDemo.PatternRealizationDemo.PrototypeDemo;
 import TestProgramDemo.PatternRealizationDemo.ChainOfResponsibilityDemo;
 
 import java.util.Scanner;
