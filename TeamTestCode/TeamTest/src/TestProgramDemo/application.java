@@ -6,6 +6,9 @@ import TestProgramDemo.PatternRealizationDemo.ProxyDemo;
 import TestProgramDemo.PatternRealizationDemo.CompositeDemo;
 import TestProgramDemo.PatternRealizationDemo.NullObjectDemo;
 import TestProgramDemo.PatternRealizationDemo.TemplateMethodDemo;
+import TestProgramDemo.PatternRealizationDemo.StrategyDemo;
+import TestProgramDemo.PatternRealizationDemo.PrototypeDemo;
+import TestProgramDemo.PatternRealizationDemo.ChainOfResponsibilityDemo;
 
 import java.util.Scanner;
 
@@ -93,7 +96,7 @@ public class application {
 
                     break;
                 case "10":
-
+                    StrategyDemo.main(args);
                     break;
                 case "11":
                     BuilderDemo.main(args);
@@ -108,7 +111,7 @@ public class application {
 
                     break;
                 case "15":
-
+                    PrototypeDemo.main(args);
                     break;
                 case "16":
 
@@ -132,7 +135,7 @@ public class application {
                     ProxyDemo.main(args);
                     break;
                 case "23":
-
+                    ChainOfResponsibilityDemo.main(args);
                     break;
                 case "24":
 
