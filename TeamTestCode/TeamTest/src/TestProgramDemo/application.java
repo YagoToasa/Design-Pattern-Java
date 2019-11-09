@@ -1,11 +1,6 @@
 package TestProgramDemo;
 
-import TestProgramDemo.PatternRealizationDemo.BridgeDemo;
-import TestProgramDemo.PatternRealizationDemo.BuilderDemo;
-import TestProgramDemo.PatternRealizationDemo.ProxyDemo;
-import TestProgramDemo.PatternRealizationDemo.CompositeDemo;
-import TestProgramDemo.PatternRealizationDemo.NullObjectDemo;
-import TestProgramDemo.PatternRealizationDemo.TemplateMethodDemo;
+import TestProgramDemo.PatternRealizationDemo.*;
 
 import java.util.Scanner;
 
@@ -51,7 +46,7 @@ public class application {
         System.out.println("*-====================================================================-*");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         welcome();
         System.out.printf("> 请输入指令: ");
         if (scanner.hasNext()) {
@@ -102,7 +97,7 @@ public class application {
                     BridgeDemo.main(args);
                     break;
                 case "13":
-
+                    AdapterWithFacadeDemo.main(args);
                     break;
                 case "14":
 
@@ -123,7 +118,7 @@ public class application {
 
                     break;
                 case "20":
-
+                    AdapterWithFacadeDemo.main(args);
                     break;
                 case "21":
 
@@ -135,7 +130,7 @@ public class application {
 
                     break;
                 case "24":
-
+                    InterpreterDemo.main(args);
                     break;
                 default:
                     System.out.println("> [ERROR] 指令不存在!");
