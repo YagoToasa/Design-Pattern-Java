@@ -1,17 +1,6 @@
 package TestProgramDemo;
 
-import TestProgramDemo.PatternRealizationDemo.BridgeDemo;
-import TestProgramDemo.PatternRealizationDemo.BuilderDemo;
-import TestProgramDemo.PatternRealizationDemo.ProxyDemo;
-import TestProgramDemo.PatternRealizationDemo.CompositeDemo;
-import TestProgramDemo.PatternRealizationDemo.NullObjectDemo;
-import TestProgramDemo.PatternRealizationDemo.TemplateMethodDemo;
-import TestProgramDemo.PatternRealizationDemo.StrategyDemo;
-import TestProgramDemo.PatternRealizationDemo.PrototypeDemo;
-import TestProgramDemo.PatternRealizationDemo.ChainOfResponsibilityDemo;
-import TestProgramDemo.PatternRealizationDemo.ObserverDemo;
-import TestProgramDemo.PatternRealizationDemo.IteratorDemo;
-import TestProgramDemo.PatternRealizationDemo.StateDemo;
+import TestProgramDemo.PatternRealizationDemo.*;
 
 import java.util.Scanner;
 
@@ -93,10 +82,10 @@ public class application {
                     StateDemo.main(args);
                     break;
                 case "8":
-
+                    CommandDemo.main(args);
                     break;
                 case "9":
-
+                    DecoratorDemo.main(args);
                     break;
                 case "10":
                     StrategyDemo.main(args);
@@ -126,7 +115,7 @@ public class application {
                     CompositeDemo.main(args);
                     break;
                 case "19":
-
+                    VisitorDemo.main(args);
                     break;
                 case "20":
 
