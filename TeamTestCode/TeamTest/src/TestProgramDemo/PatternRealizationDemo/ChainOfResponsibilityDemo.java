@@ -1,4 +1,4 @@
-package TeamTestCode.TeamTest.src.TestProgramDemo.PatternRealizationDemo;
+package TestProgramDemo.PatternRealizationDemo;
 import kitchen.order.orderform.Order;
 import kitchen.staff.Waiter;
 import kitchen.staff.chef.Chef;
@@ -13,8 +13,9 @@ public class ChainOfResponsibilityDemo {
     /**
      * 责任链模式测试
      */
-    public static void main(String[] args) throws CloneNotSupportedException {
-        System.out.println("START ========================= Chain Of Responsibility Demo =========================\n");
+    public static void main(String[] args) {
+        try{
+            System.out.println("START ========================= Chain Of Responsibility Demo =========================\n");
         Chef chef=Chef.getInstance();
         Waiter waiter = Waiter.getInstance();
         waiter.register(chef);
@@ -31,5 +32,8 @@ public class ChainOfResponsibilityDemo {
         chef.processMerchs(chef.getDishes());
         System.out.println("--责任链模式测试结束--");
         System.out.println("E N D ========================= Chain Of Responsibility Demo =========================\n");
+    }catch (Exception e){
+            System.out.println("[ERROR]操作错误！");
+        }
     }
 }

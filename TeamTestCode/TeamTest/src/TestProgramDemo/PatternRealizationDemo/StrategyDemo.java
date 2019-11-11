@@ -1,4 +1,4 @@
-package TeamTestCode.TeamTest.src.TestProgramDemo.PatternRealizationDemo;
+package TestProgramDemo.PatternRealizationDemo;
 import kitchen.ingredient.Egg;
 import kitchen.ingredient.Ingredient;
 /**
