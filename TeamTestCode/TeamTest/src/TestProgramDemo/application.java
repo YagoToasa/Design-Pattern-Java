@@ -9,6 +9,9 @@ import TestProgramDemo.PatternRealizationDemo.TemplateMethodDemo;
 import TestProgramDemo.PatternRealizationDemo.StrategyDemo;
 import TestProgramDemo.PatternRealizationDemo.PrototypeDemo;
 import TestProgramDemo.PatternRealizationDemo.ChainOfResponsibilityDemo;
+import TestProgramDemo.PatternRealizationDemo.ObserverDemo;
+import TestProgramDemo.PatternRealizationDemo.IteratorDemo;
+import TestProgramDemo.PatternRealizationDemo.StateDemo;
 
 import java.util.Scanner;
 
@@ -81,13 +84,13 @@ public class application {
                     TemplateMethodDemo.main(args);
                     break;
                 case "5":
-
+                    ObserverDemo.main(args);
                     break;
                 case "6":
-
+                    IteratorDemo.main(args);
                     break;
                 case "7":
-
+                    StateDemo.main(args);
                     break;
                 case "8":
 
