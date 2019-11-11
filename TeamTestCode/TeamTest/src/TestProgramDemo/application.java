@@ -73,13 +73,13 @@ public class application {
                     System.exit(0);
                     break;
                 case "1":
-
+                    SingletonDemo.main(args);
                     break;
                 case "2":
-
+                    AbstractFactoryDemo.main(args);
                     break;
                 case "3":
-
+                    FactoryMethodDemo.main(args);
                     break;
                 case "4":
                     TemplateMethodDemo.main(args);
