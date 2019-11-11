@@ -1,4 +1,4 @@
-package TeamTestCode.TeamTest.src.TestProgramDemo.PatternRealizationDemo;
+package TestProgramDemo.PatternRealizationDemo;
 import kitchen.order.orderform.Order;
 import kitchen.staff.Waiter;
 import kitchen.staff.chef.Chef;

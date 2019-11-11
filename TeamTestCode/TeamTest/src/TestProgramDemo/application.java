@@ -57,7 +57,7 @@ public class application {
         System.out.println("*-====================================================================-*");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         welcome();
         System.out.printf("> 请输入指令: ");
         if (scanner.hasNext()) {
