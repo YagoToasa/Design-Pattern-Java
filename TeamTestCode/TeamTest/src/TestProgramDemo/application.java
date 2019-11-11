@@ -61,13 +61,13 @@ public class application {
                     System.exit(0);
                     break;
                 case "1":
-
+                    SingletonDemo.main(args);
                     break;
                 case "2":
-
+                    AbstractFactoryDemo.main(args);
                     break;
                 case "3":
-
+                    FactoryMethodDemo.main(args);
                     break;
                 case "4":
                     TemplateMethodDemo.main(args);
@@ -97,7 +97,7 @@ public class application {
                     BridgeDemo.main(args);
                     break;
                 case "13":
-
+                    AdapterWithFacadeDemo.main(args);
                     break;
                 case "14":
 
@@ -118,7 +118,7 @@ public class application {
                     VisitorDemo.main(args);
                     break;
                 case "20":
-
+                    AdapterWithFacadeDemo.main(args);
                     break;
                 case "21":
 
@@ -130,7 +130,7 @@ public class application {
                     ChainOfResponsibilityDemo.main(args);
                     break;
                 case "24":
-
+                    InterpreterDemo.main(args);
                     break;
                 default:
                     System.out.println("> [ERROR] 指令不存在!");
