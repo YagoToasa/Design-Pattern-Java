@@ -24,9 +24,17 @@ public class BridgeDemo {
             order.adddish("麻婆豆腐");
             waiter.register(order);
             waiter.serve(order);
-            System.out.println("@>>> 桥接模式测试开始");
+            System.out.println("@>>> 桥接模式用例1测试开始");
             waiter.visit(order);
-            System.out.println("@>>> 桥接模式测试完成[Completed]");
+            System.out.println("@>>> 桥接模式用例1测试完成[Completed]");
+            Order order2 = new Order();
+            order2.setDiscount(0.9);
+            order2.adddish("水煮鱼");
+            waiter.register(order2);
+            waiter.serve(order2);
+            System.out.println("@>>> 桥接模式用例2测试开始");
+            waiter.visit(order);
+            System.out.println("@>>> 桥接模式用例2测试完成[Completed]");
             System.out.println("E N D =========================== Bridge Demo ==========================\n");
         }catch (Exception e){
             System.out.println("[ERROR]操作错误！");
