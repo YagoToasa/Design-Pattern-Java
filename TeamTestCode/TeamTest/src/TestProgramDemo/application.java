@@ -100,13 +100,13 @@ public class application {
                     AdapterWithFacadeDemo.main(args);
                     break;
                 case "14":
-
+                    FlyweightDemo.main(args);
                     break;
                 case "15":
                     PrototypeDemo.main(args);
                     break;
                 case "16":
-
+                    MementoDemo.main(args);
                     break;
                 case "17":
                     NullObjectDemo.main(args);
@@ -121,7 +121,7 @@ public class application {
                     AdapterWithFacadeDemo.main(args);
                     break;
                 case "21":
-
+                    MediatorDemo.main(args);
                     break;
                 case "22":
                     ProxyDemo.main(args);
